@@ -209,7 +209,7 @@ THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH H
 
 ++++
 <p align="center">
-  <img width="700" height="600" src="extracted-media/media/image67.png">
+  <img width="850" height="600" src="extracted-media/media/image67.png">
 </p>
 ++++
 image:[extracted-media/media/image67,width=624,height=186]
