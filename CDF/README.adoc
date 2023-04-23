@@ -118,34 +118,34 @@ link:#lab-4-sql-stream-builder[Lab 4 : SQL Stream Builder]
 For the ease of carrying out the workshop and considering the time at hand, we have already taken care of some of the steps that need to be considered before we can start with the actual Lab steps. The prerequisites that need to be in place are:
 
 [arabic]
+____
 . {blank}
 +
-____
 Flow Management Data Hub Cluster should be created and running.
-____
+
 . {blank}
 +
-____
+
 Streams Messaging Data Hub Cluster should be created and running.
-____
+
 . {blank}
 +
-____
+
 Stream analytics Data Hub cluster should be created and running.
-____
+
 . {blank}
 +
-____
+
 Data provider should be configured in SQL Stream Builder.
-____
+
 . {blank}
 +
-____
+
 Have access to the file syslog-to-kafka.json.
-____
+
 . {blank}
 +
-____
+
 Environment should be enabled as part of the CDF Data Service.
 ____
 
