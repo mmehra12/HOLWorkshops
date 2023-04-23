@@ -207,7 +207,12 @@ THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH H
 
 * Step 3 : Select the environment that is shared by the instructor and click on the *Ranger* quick link to access the Ranger UI
 
-image:extracted-media/media/image67.png[extracted-media/media/image67,width=624,height=186]
+++++
+<p align="center">
+  <img width="600" height="800" src="extracted-media/media/image67.png">
+</p>
+++++
+image:[extracted-media/media/image67,width=624,height=186]
 
 image:extracted-media/media/image103.png[extracted-media/media/image103,width=569,height=295]
 
