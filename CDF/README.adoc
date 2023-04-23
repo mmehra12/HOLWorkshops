@@ -163,15 +163,22 @@ ____
 * Open the shared link and login with the credentials assigned to you. <Will be shared by the instructor at the start>
 ____
 
-image:extracted-media/media/image88.png[extracted-media/media/image88,width=399,height=289, align="center"]
+++++
+<p align="center">
+  <img width="460" height="300" src="extracted-media/media/image88.png">
+</p>
+++++
+
 ____
 
 * You should land on the CDP Console as shown below.
 ____
 
-image:extracted-media/media/image101.png[extracted-media/media/image101,width=520,height=241]
-
-=== 
+++++
+<p align="center">
+  <img width="460" height="300" src="extracted-media/media/image101.png">
+</p>
+++++
 
 === *2. Verify permissions in Apache Ranger*
 
@@ -184,11 +191,19 @@ THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH H
 * Step 1 : Click on Management Console
 
 
-image:extracted-media/media/image34.png[extracted-media/media/image34,width=526,height=247]
+++++
+<p align="center">
+  <img width="460" height="300" src="extracted-media/media/image34.png">
+</p>
+++++
 
 * Step 2 : Click on Environments on the left tab
 
-image:extracted-media/media/image53.png[extracted-media/media/image53,width=564,height=221]
+++++
+<p align="center">
+  <img width="460" height="300" src="extracted-media/media/image53.png">
+</p>
+++++
 
 * Step 3 : Select the environment that is shared by the instructor and click on the *Ranger* quick link to access the Ranger UI
 
