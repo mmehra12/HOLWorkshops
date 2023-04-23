@@ -19,13 +19,13 @@ link:#lab-1-create-a-flow-using-the-flow-designer[Lab 1 : Create a Flow using th
 
 * link:#create-the-canvas-to-design-your-flow[2.1. Create the canvas to design your flow ]
 
-** link:#step-1-access-the-dataflow-dataservice-from-the-management-console[Step 1 : Access the DataFlow dataservice from the Management Console 9]
+** link:#step-1-access-the-dataflow-dataservice-from-the-management-console[Step 1 : Access the DataFlow dataservice from the Management Console]
 
 ** link:#step-2-got-to-the-flow-design[Step 2 : Got to the Flow Design 9]
 
-** link:#step-3-create-a-new-draft-this-will-be-the-main-process-group-of-your-flow[Step 3 : Create a new Draft ( This will be the main process group of your flow ) 9]
+** link:#step-3-create-a-new-draft-this-will-be-the-main-process-group-of-your-flow[Step 3 : Create a new Draft ( This will be the main process group of your flow )]
 
-** link:#step-4-select-the-appropriate-environment-as-part-of-the-workspace-and-give-your-flow-a-name-and-click-on-create[Step 4 : Select the appropriate environment and give your flow a name and click on CREATE 10]
+** link:#step-4-select-the-appropriate-environment-as-part-of-the-workspace-and-give-your-flow-a-name-and-click-on-create[Step 4 : Select the appropriate environment and give your flow a name and click on CREATE ]
 
 * link:#adding-new-parameters[2.2. Adding new parameters ]
 
@@ -63,17 +63,17 @@ link:#deploying-the-flow[5. Deploying the Flow]
 
 ** link:#step-3-select-the-cdp-environment-where-this-flow-will-be-deployed.[Step 3 : Select the CDP environment where this flow will be deployed.]
 
-** link:#step-4-deployment-name[Step 4 : Deployment Name 28]
+** link:#step-4-deployment-name[Step 4 : Deployment Name ]
 
-** link:#step-5-set-the-nifi-configuration[Step 5 : Set the NiFi Configuration 29]
+** link:#step-5-set-the-nifi-configuration[Step 5 : Set the NiFi Configuration ]
 
-** link:#step-6-set-the-parameters[Step 6 : Set the Parameters 29]
+** link:#step-6-set-the-parameters[Step 6 : Set the Parameters ]
 
-** link:#step-7-set-the-cluster-size[Step 7 : Set the cluster size 29]
+** link:#step-7-set-the-cluster-size[Step 7 : Set the cluster size ]
 
-** link:#step-8-add-key-performance-indicators[Step 8 : Add Key Performance indicators 30]
+** link:#step-8-add-key-performance-indicators[Step 8 : Add Key Performance indicators ]
 
-** link:#step-9-click-deploy[Step 9 : Click Deploy 30]
+** link:#step-9-click-deploy[Step 9 : Click Deploy]
 
 link:#lab-2-migrating-existing-data-flows-to-cdf-pc[Lab 2 : Migrating Existing Data Flows to CDF-PC]
 
@@ -104,13 +104,13 @@ link:#lab-4-sql-stream-builder[Lab 4 : SQL Stream Builder]
 
 ** link:#step-2-switch-to-the-created-project[Step 2 : Switch to the created project]
 
-** link:#step-3-create-kafka-data-store[Step 3 : Create Kafka Data store 52]
+** link:#step-3-create-kafka-data-store[Step 3 : Create Kafka Data store ]
 
-** link:#step-4-create-kafka-table[Step 4 : Create Kafka Table 52]
+** link:#step-4-create-kafka-table[Step 4 : Create Kafka Table ]
 
-** link:#step-5-configure-the-kafka-table[Step 5 : Configure the Kafka Table 52]
+** link:#step-5-configure-the-kafka-table[Step 5 : Configure the Kafka Table ]
 
-** link:#step-6-create-a-flink-job[Step 6 : Create a Flink Job 52]
+** link:#step-6-create-a-flink-job[Step 6 : Create a Flink Job ]
 
 
 == *Pre-requisites*
