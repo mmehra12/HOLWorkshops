@@ -1,132 +1,117 @@
-link:#pre-requisites[*Pre-requisites 2*]
+link:#pre-requisites[Pre-requisites]
 
-link:++#lab-0---introduction-and-setup++[*Lab 0 - Introduction and setup 2*]
+link:++#lab-0---introduction-and-setup++[Lab 0 - Introduction and setup]
 
-____
-link:#verify-access-to-the-workshop-environment[1. Configure permissions in Apache Ranger 2]
+* link:#verify-access-to-the-workshop-environment[1. Configure permissions in Apache Ranger ]
+    ** link:#kafka-permissions[1.1 Kafka Permissions ]
+    ** link:#schema-registry-permissions[1.2 Schema Registry Permissions ]
+    ** link:#_heading=h.2jxsxqh[1.3 SQL Stream Builder Permissions]
+        *** link:#_heading=h.z337ya[1.3.1 Kafka - Streaming Analytics Datahub]
+        *** link:#_heading=h.3j2qqm3[1.3.2 YARN - Streaming Analytics Datahub ]
+        *** link:#_heading=h.1y810tw[1.3.3 Kafka - Streams Messaging Datahub ]
+* link:#verify-the-data-providers-in-sql-stream-builder[2. Configure Data Providers in SQL Stream Builder]
 
-link:#kafka-permissions[1.1 Kafka Permissions 2]
+link:#lab-1-create-a-flow-using-the-flow-designer[Lab 1 : Create a Flow using the Flow Designer]
 
-link:#schema-registry-permissions[1.2 Schema Registry Permissions 2]
+* link:#overview[1. Overview]
 
-link:#_heading=h.2jxsxqh[1.3 SQL Stream Builder Permissions 2]
+* link:#building-the-data-flow[2. Building the Data Flow ]
 
-link:#_heading=h.z337ya[1.3.1 Kafka - Streaming Analytics Datahub 3]
+* link:#create-the-canvas-to-design-your-flow[2.1. Create the canvas to design your flow ]
 
-link:#_heading=h.3j2qqm3[1.3.2 YARN - Streaming Analytics Datahub 4]
+** link:#step-1-access-the-dataflow-dataservice-from-the-management-console[Step 1 : Access the DataFlow dataservice from the Management Console 9]
 
-link:#_heading=h.1y810tw[1.3.3 Kafka - Streams Messaging Datahub 4]
+** link:#step-2-got-to-the-flow-design[Step 2 : Got to the Flow Design 9]
 
-link:#verify-the-data-providers-in-sql-stream-builder[2. Configure Data Providers in SQL Stream Builder 4]
-____
+** link:#step-3-create-a-new-draft-this-will-be-the-main-process-group-of-your-flow[Step 3 : Create a new Draft ( This will be the main process group of your flow ) 9]
 
-link:#lab-1-create-a-flow-using-the-flow-designer[*Lab 1 : Create a Flow using the Flow Designer 6*]
+** link:#step-4-select-the-appropriate-environment-as-part-of-the-workspace-and-give-your-flow-a-name-and-click-on-create[Step 4 : Select the appropriate environment and give your flow a name and click on CREATE 10]
 
-____
-link:#overview[1. Overview 6]
+* link:#adding-new-parameters[2.2. Adding new parameters ]
 
-link:#building-the-data-flow[2. Building the Data Flow 9]
+** link:#step-1-click-on-the-flow-options-on-the-top-right-corner-of-your-canvas-and-then-select-parameters[Step 1 : Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS]
 
-link:#create-the-canvas-to-design-your-flow[2.1. Create the canvas to design your flow 9]
+** link:#step-2-configure-parameters[Step 2 : Configure Parameters]
 
-link:#step-1-access-the-dataflow-dataservice-from-the-management-console[Step 1 : Access the DataFlow dataservice from the Management Console 9]
+* link:#create-the-flow[2.3. Create the Flow]
 
-link:#step-2-got-to-the-flow-design[Step 2 : Got to the Flow Design 9]
+** link:#step-1-add-generateflowfile-processor[STEP 1 : Add GenerateFlowFile processor]
 
-link:#step-3-create-a-new-draft-this-will-be-the-main-process-group-of-your-flow[Step 3 : Create a new Draft ( This will be the main process group of your flow ) 9]
+** link:#step-2-configure-generateflowfile-processor[STEP 2 : Configure GenerateFlowFile processor]
 
-link:#step-4-select-the-appropriate-environment-as-part-of-the-workspace-and-give-your-flow-a-name-and-click-on-create[Step 4 : Select the appropriate environment and give your flow a name and click on CREATE 10]
+** link:#step-3-add-putcdpobjectstore-processor[STEP 3 : Add PutCDPObjectStore processor]
 
-link:#adding-new-parameters[2.2. Adding new parameters 11]
+** link:#step-4-configure-putcdpobjectstore-processor[STEP 4 : Configure PutCDPObjectStore processor]
 
-link:#step-1-click-on-the-flow-options-on-the-top-right-corner-of-your-canvas-and-then-select-parameters[Step 1 : Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS 11]
+** link:#section-13[STEP 5 : Create connection between processors]
 
-link:#step-2-configure-parameters[Step 2 : Configure Parameters 11]
+* link:#naming-the-queues[2.4. Naming the queues]
 
-link:#create-the-flow[2.3. Create the Flow 13]
+link:#testing-the-data-flow[3. Testing the Data Flow ]
 
-link:#step-1-add-generateflowfile-processor[STEP 1 : Add GenerateFlowFile processor 14]
+** link:#step-1-start-test-session[STEP 1 : Start test session]
 
-link:#step-2-configure-generateflowfile-processor[STEP 2 : Configure GenerateFlowFile processor 14]
+** link:#step-2-run-the-flow[STEP 2 : Run the flow ]
 
-link:#step-3-add-putcdpobjectstore-processor[STEP 3 : Add PutCDPObjectStore processor 18]
+link:#move-the-flow-to-the-flow-catalog[4. Move the Flow to the Flow Catalog ]
 
-link:#step-4-configure-putcdpobjectstore-processor[STEP 4 : Configure PutCDPObjectStore processor 18]
+link:#deploying-the-flow[5. Deploying the Flow]
 
-link:#section-13[STEP 5 : Create connection between processors 19]
+** link:#step-1-search-for-the-flow-in-the-flow-catalog[Step 1 : Search for the flow in the Flow Catalog]
 
-link:#naming-the-queues[2.4. Naming the queues 20]
+** link:#step-2-deploy[Step 2 : Deploy]
 
-link:#testing-the-data-flow[3. Testing the Data Flow 22]
+** link:#step-3-select-the-cdp-environment-where-this-flow-will-be-deployed.[Step 3 : Select the CDP environment where this flow will be deployed.]
 
-link:#step-1-start-test-session[STEP 1 : Start test session 22]
+** link:#step-4-deployment-name[Step 4 : Deployment Name 28]
 
-link:#step-2-run-the-flow[STEP 2 : Run the flow 24]
+** link:#step-5-set-the-nifi-configuration[Step 5 : Set the NiFi Configuration 29]
 
-link:#move-the-flow-to-the-flow-catalog[4. Move the Flow to the Flow Catalog 28]
+** link:#step-6-set-the-parameters[Step 6 : Set the Parameters 29]
 
-link:#deploying-the-flow[5. Deploying the Flow 28]
+** link:#step-7-set-the-cluster-size[Step 7 : Set the cluster size 29]
 
-link:#step-1-search-for-the-flow-in-the-flow-catalog[Step 1 : Search for the flow in the Flow Catalog 28]
+** link:#step-8-add-key-performance-indicators[Step 8 : Add Key Performance indicators 30]
 
-link:#step-2-deploy[Step 2 : Deploy 28]
+** link:#step-9-click-deploy[Step 9 : Click Deploy 30]
 
-link:#step-3-select-the-cdp-environment-where-this-flow-will-be-deployed.[Step 3 : Select the CDP environment where this flow will be deployed. 28]
+link:#lab-2-migrating-existing-data-flows-to-cdf-pc[Lab 2 : Migrating Existing Data Flows to CDF-PC]
 
-link:#step-4-deployment-name[Step 4 : Deployment Name 28]
+* link:#overview-1[1. Overview]
 
-link:#step-5-set-the-nifi-configuration[Step 5 : Set the NiFi Configuration 29]
+* link:#running-the-workshop[2. Running the Workshop]
 
-link:#step-6-set-the-parameters[Step 6 : Set the Parameters 29]
+** link:#create-a-kafka-topic[2.1. Create a Kafka Topic]
 
-link:#step-7-set-the-cluster-size[Step 7 : Set the cluster size 29]
+** link:#create-a-schema-in-schema-registry[2.2. Create a Schema in Schema Registry]
 
-link:#step-8-add-key-performance-indicators[Step 8 : Add Key Performance indicators 30]
 
-link:#step-9-click-deploy[Step 9 : Click Deploy 30]
-____
+link:#lab-3-operationalizing-externally-developed-data-flows-with-cdf-pc[Lab 3 : Operationalizing Externally Developed Data Flows with CDF-PC]
 
-link:#lab-2-migrating-existing-data-flows-to-cdf-pc[*Lab 2 : Migrating Existing Data Flows to CDF-PC 30*]
+* link:#import-the-flow-into-the-cdf-pc-catalog[1. Import the Flow into the CDF-PC Catalog]
 
-____
-link:#overview-1[1. Overview 30]
+* link:#deploy-the-flow-in-cdf-pc[2. Deploy the Flow in CDF-PC]
 
-link:#running-the-workshop[2. Running the Workshop 36]
 
-link:#create-a-kafka-topic[2.1. Create a Kafka Topic 36]
+link:#lab-4-sql-stream-builder[Lab 4 : SQL Stream Builder]
 
-link:#create-a-schema-in-schema-registry[2.2. Create a Schema in Schema Registry 40]
-____
 
-link:#lab-3-operationalizing-externally-developed-data-flows-with-cdf-pc[*Lab 3 : Operationalizing Externally Developed Data Flows with CDF-PC 46*]
+* link:#overview-2[1. Overview]
 
-____
-link:#import-the-flow-into-the-cdf-pc-catalog[1. Import the Flow into the CDF-PC Catalog 46]
+* link:#running-the-workshop-1[2. Running the workshop]
 
-link:#deploy-the-flow-in-cdf-pc[2. Deploy the Flow in CDF-PC 47]
-____
+** link:#step-1-create-ssb-project[Step 1 : Create SSB Project]
 
-link:#lab-4-sql-stream-builder[*Lab 4 : SQL Stream Builder 50*]
+** link:#step-2-switch-to-the-created-project[Step 2 : Switch to the created project]
 
-____
-link:#overview-2[1. Overview 50]
+** link:#step-3-create-kafka-data-store[Step 3 : Create Kafka Data store 52]
 
-link:#running-the-workshop-1[2. Running the workshop 51]
+** link:#step-4-create-kafka-table[Step 4 : Create Kafka Table 52]
 
-link:#step-1-create-ssb-project[Step 1 : Create SSB Project 51]
+** link:#step-5-configure-the-kafka-table[Step 5 : Configure the Kafka Table 52]
 
-link:#step-2-switch-to-the-created-project[Step 2 : Switch to the created project 51]
+** link:#step-6-create-a-flink-job[Step 6 : Create a Flink Job 52]
 
-link:#step-3-create-kafka-data-store[Step 3 : Create Kafka Data store 52]
-
-link:#step-4-create-kafka-table[Step 4 : Create Kafka Table 52]
-
-link:#step-5-configure-the-kafka-table[Step 5 : Configure the Kafka Table 52]
-
-link:#step-6-create-a-flink-job[Step 6 : Create a Flink Job 52]
-____
-
-== 
 
 == *Pre-requisites*
 
