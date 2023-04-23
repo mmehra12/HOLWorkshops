@@ -158,13 +158,10 @@ Lab 0 basically talks about verifying different aspects wrt to access and connec
 === 1. Verify access to the workshop environment
 
 ____
-The *INSTRUCTOR* will share the Workshop link and the credentials before the start of the workshop
+* The *INSTRUCTOR* will share the Workshop link and the credentials before the start of the workshop
 ____
 ____
-Open the shared link and login with the credentials assigned to you.
-
-
-<Will be shared by the instructor at the start>
+* Open the shared link and login with the credentials assigned to you. <Will be shared by the instructor at the start>
 ____
 
 image:extracted-media/media/image88.png[extracted-media/media/image88,width=399,height=289, align="center"]
