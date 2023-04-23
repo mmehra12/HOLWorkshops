@@ -95,7 +95,6 @@ link:#lab-3-operationalizing-externally-developed-data-flows-with-cdf-pc[Lab 3 :
 
 link:#lab-4-sql-stream-builder[Lab 4 : SQL Stream Builder]
 
-
 * link:#overview-2[1. Overview]
 
 * link:#running-the-workshop-1[2. Running the workshop]
@@ -153,7 +152,7 @@ ____
 Lab 0 basically talks about verifying different aspects wrt to access and connections before we could begin with the actual steps.
 
 
-== Lab 0 - Introduction and setup
+== *Lab 0 - Introduction and setup*
 
 === 1. Verify access to the workshop environment
 
@@ -167,10 +166,7 @@ ____
 image:extracted-media/media/image88.png[extracted-media/media/image88,width=399,height=289, align="center"]
 ____
 
-* {blank}
-+
-____
-You should land on the CDP Console as shown below.
+* You should land on the CDP Console as shown below.
 ____
 
 image:extracted-media/media/image101.png[extracted-media/media/image101,width=520,height=241]
@@ -179,33 +175,26 @@ image:extracted-media/media/image101.png[extracted-media/media/image101,width=52
 
 === *2. Verify permissions in Apache Ranger*
 
-==== 
+[NOTE]
+THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT CHANGE ANYTHING
 
-____
-NOTE: THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT CHANGE ANYTHING
-____
 
 ==== *2.1 Accessing Apache Ranger*
 
-____
-Step 1 : Click on Management Console
-____
+* Step 1 : Click on Management Console
+
 
 image:extracted-media/media/image34.png[extracted-media/media/image34,width=526,height=247]
 
-____
-Step 2 : Click on Environments on the left tab
+* Step 2 : Click on Environments on the left tab
 
 image:extracted-media/media/image53.png[extracted-media/media/image53,width=564,height=221]
 
-Step 3 : Select the environment that is shared by the instructor and click on the *Ranger* quick link to access the Ranger UI
+* Step 3 : Select the environment that is shared by the instructor and click on the *Ranger* quick link to access the Ranger UI
 
 image:extracted-media/media/image67.png[extracted-media/media/image67,width=624,height=186]
 
 image:extracted-media/media/image103.png[extracted-media/media/image103,width=569,height=295]
-____
-
-==== 
 
 ==== *2.2 Kafka Permissions*
 
