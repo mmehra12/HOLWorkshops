@@ -219,7 +219,7 @@ THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH H
 </p>
 ++++
 
-image:[extracted-media/media/image103,width=569,height=295]
+
 
 ==== *2.2 Kafka Permissions*
 
@@ -227,16 +227,22 @@ image:[extracted-media/media/image103,width=569,height=295]
 . {blank}
 +
 ____
-In Ranger, select the Kafka repository that’s associated with the stream messaging datahub.image:extracted-media/media/image102.png[extracted-media/media/image102,width=509,height=221]
+In Ranger, select the Kafka repository that’s associated with the stream messaging datahub.
+++++
+<p align="center">
+  <img width="850" height="600" src="extracted-media/media/image102.png">
+</p>
+++++
+
 ____
 . {blank}
 +
-____
 Verify if the user group(*workshop-users*) who will be performing the workshop is present in both *all-consumergroup* and *all-topic.*
-____
-
-____
-image:extracted-media/media/image83.png[extracted-media/media/image83,width=580,height=177]
+++++
+<p align="center">
+  <img width="850" height="600" src="extracted-media/media/image83.png">
+</p>
+++++
 ____
 
 * {blank}
