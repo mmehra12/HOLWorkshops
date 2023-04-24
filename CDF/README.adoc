@@ -322,15 +322,13 @@ ____
 +
 ____
 Enter your workload username and password(Shared by instructor)
-____
 
-____
 Example:
 
-Username : wuserXY (Replace XY with you userID)
+* Username : wuserXY (Replace XY with you userID)
 
-Password : Wuser@2021
-____
+* Password : Wuser@2021
+
 
 Click on Unlock KeyTab
 
@@ -339,7 +337,7 @@ image:extracted-media/media/image31.png[extracted-media/media/image31,width=458,
 You will get a success message
 
 image:extracted-media/media/image21.png[extracted-media/media/image21,width=441,height=138]
-
+____
 [arabic, start=5]
 . {blank}
 +
@@ -347,15 +345,13 @@ ____
 The *_Kafka Data Sources_* should have an entry which points to the default brokers(This information can be obtained from the Brokers tab in Streams Messaging Manager.) which point to an internal Kafka cluster deployed as part of the streaming analytics datahub.
 ____
 
-____
-_[This has already been added to save time]_
+
+[NOTE]
+This has already been added to save time
 ____
 
 image:extracted-media/media/image75.png[extracted-media/media/image75,width=733,height=333]
-
-==  +
-
-== 
+____
 
 == *Lab 1 : Create a Flow using the Flow Designer*
 
