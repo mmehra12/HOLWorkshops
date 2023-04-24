@@ -271,9 +271,7 @@ ____
 +
 ____
 In Ranger, select the Schema Registry repository that’s associated with the stream messaging datahub.
-____
 
-____
 image:extracted-media/media/image32.png[extracted-media/media/image32,width=472,height=226]
 ____
 
@@ -282,9 +280,7 @@ ____
 +
 ____
 Verify if the user group(*workshop-users*) who will be performing the workshop is present in the Policy : *all - schema-group, schema-metadata, schema-branch, schema-version.*
-____
 
-____
 image:extracted-media/media/image26.png[extracted-media/media/image26,width=624,height=217]
 
 image:extracted-media/media/image93.png[extracted-media/media/image93,width=453,height=353]
@@ -299,27 +295,27 @@ ____
 +
 ____
 Open the Streaming SQL Console from the Streaming Analytics datahub
-____
 
 image:extracted-media/media/image69.png[extracted-media/media/image69,width=519,height=236]
-
+____
 [arabic, start=2]
 . {blank}
 +
 ____
 Click on SWITCH under the shown ssb project
-____
+
 
 image:extracted-media/media/image80.png[extracted-media/media/image80,width=624,height=298]
+____
 
 [arabic, start=3]
 . {blank}
 +
 ____
 Unlock your KEYTAB to be able to execute queries. Click on “Unlock your keytab”
-____
 
 image:extracted-media/media/image84.png[extracted-media/media/image84,width=503,height=321]
+____
 
 [arabic, start=4]
 . {blank}
