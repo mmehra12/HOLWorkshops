@@ -316,7 +316,11 @@ ____
 ____
 Open the Streaming SQL Console from the Streaming Analytics datahub
 
-image:extracted-media/media/image69.png[extracted-media/media/image69,width=519,height=236]
+++++
+<p align="center">
+  <img width="519" height="236" src="extracted-media/media/image69.png">
+</p>
+++++
 ____
 [arabic, start=2]
 . {blank}
@@ -324,8 +328,11 @@ ____
 ____
 Click on SWITCH under the shown ssb project
 
-
-image:extracted-media/media/image80.png[extracted-media/media/image80,width=624,height=298]
+++++
+<p align="center">
+  <img width="624" height="298" src="extracted-media/media/image80.png">
+</p>
+++++
 ____
 
 [arabic, start=3]
@@ -334,7 +341,11 @@ ____
 ____
 Unlock your KEYTAB to be able to execute queries. Click on “Unlock your keytab”
 
-image:extracted-media/media/image84.png[extracted-media/media/image84,width=503,height=321]
+++++
+<p align="center">
+  <img width="503" height="321" src="extracted-media/media/image84.png">
+</p>
+++++
 ____
 
 [arabic, start=4]
@@ -352,11 +363,19 @@ Example:
 
 Click on Unlock KeyTab
 
-image:extracted-media/media/image31.png[extracted-media/media/image31,width=458,height=297]
+++++
+<p align="center">
+  <img width="458" height="297" src="extracted-media/media/image31.png">
+</p>
+++++
 
 You will get a success message
 
-image:extracted-media/media/image21.png[extracted-media/media/image21,width=441,height=138]
+++++
+<p align="center">
+  <img width="441" height="138" src="extracted-media/media/image21.png">
+</p>
+++++
 ____
 [arabic, start=5]
 . {blank}
@@ -367,8 +386,11 @@ The *_Kafka Data Sources_* should have an entry which points to the default brok
 [NOTE]
 This has already been added to save time
 
-
-image:extracted-media/media/image75.png[extracted-media/media/image75,width=733,height=333]
+++++
+<p align="center">
+  <img width="733" height="333" src="extracted-media/media/image75.png">
+</p>
+++++
 ____
 
 == *Lab 1 : Create a Flow using the Flow Designer*
@@ -400,12 +422,18 @@ The following is a step by step guide in building a data flow for use within CDF
 ==== *2.1. Create the canvas to design your flow*
 
 ===== *Step 1 :* Access the DataFlow dataservice from the Management Console
-
-image:extracted-media/media/image99.png[extracted-media/media/image99,width=508,height=290]
+++++
+<p align="center">
+  <img width="508" height="290" src="extracted-media/media/image99.png">
+</p>
+++++
 
 ===== Step 2 : Navigate to Flow Design
-
-image:extracted-media/media/image79.png[extracted-media/media/image79,width=178,height=338]
+++++
+<p align="center">
+  <img width="178" height="338" src="extracted-media/media/image79.png">
+</p>
+++++
 
 ===== 
 
@@ -413,7 +441,11 @@ image:extracted-media/media/image79.png[extracted-media/media/image79,width=178,
 
 ===== *Step 3 : Create a new Draft* ( This will be the main process group of your flow )
 
-image:extracted-media/media/image68.png[extracted-media/media/image68,width=624,height=82]
+++++
+<p align="center">
+  <img width="624" height="82" src="extracted-media/media/image68.png">
+</p>
+++++
 
 ===== *Step 4 : Select the appropriate environment as part of the workspace* and give your flow a name and click on CREATE
 
@@ -422,26 +454,38 @@ Workspace Name : _The name of the environment will be shared by the INSTRUCTOR_
 Draft Name : \{user_id}_datadump_flow
 
 _Example : wuserXY_datadump_flow_
-
-image:extracted-media/media/image71.png[extracted-media/media/image71,width=514,height=307]
+++++
+<p align="center">
+  <img width="514" height="307" src="extracted-media/media/image71.png">
+</p>
+++++
 
 On successful creation of the Draft, you should now be redirected to the canvas on which you can design your flow
 
-image:extracted-media/media/image89.png[extracted-media/media/image89,width=624,height=408]
+++++
+<p align="center">
+  <img width="624" height="408" src="extracted-media/media/image89.png">
+</p>
+++++
 
 ==== 2.2. Adding new parameters
 
 ===== Step 1 : Click on the *FLOW OPTIONS* on the top right corner of your canvas and then select *PARAMETERS*
-
-image:extracted-media/media/image87.png[extracted-media/media/image87,width=624,height=290]
-
-===== 
+++++
+<p align="center">
+  <img width="624" height="290" src="extracted-media/media/image87.png">
+</p>
+++++
 
 ===== Step 2 : Configure Parameters
 
 The next step is to configure what is called a parameter. These parameters are reused within the flow multiple times and will also be configurable at the time of deployment. Click on *ADD PARAMETER* to add non sensitive values, for any sensitive parameter please select *ADD SENSITIVE PARAMETER.*
 
-image:extracted-media/media/image82.png[extracted-media/media/image82,width=624,height=286]
+++++
+<p align="center">
+  <img width="624" height="286" src="extracted-media/media/image82.png">
+</p>
+++++
 
 We need to add the following parameters.
 
