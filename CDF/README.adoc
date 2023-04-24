@@ -505,7 +505,12 @@ ____
 Value : LabData or TestDir
 ____
 
-image:extracted-media/media/image90.png[extracted-media/media/image90,width=314,height=302]
+++++
+<p align="center">
+  <img width="314" height="302" src="extracted-media/media/image90.png">
+</p>
+++++
+
 
 * {blank}
 +
@@ -528,7 +533,11 @@ ____
 EXAMPLE : wuser01
 ____
 
-image:extracted-media/media/image95.png[extracted-media/media/image95,width=330,height=310]
+++++
+<p align="center">
+  <img width="330" height="310" src="extracted-media/media/image95.png">
+</p>
+++++
 
 * {blank}
 +
@@ -551,10 +560,21 @@ ____
 EXAMPLE : Wuser@2021
 ____
 
-image:extracted-media/media/image85.png[extracted-media/media/image85,width=227,height=260]image:extracted-media/media/image78.png[extracted-media/media/image78,width=298,height=281]
-
-image:extracted-media/media/image20.png[extracted-media/media/image20,width=624,height=85]
-
+++++
+<p align="center">
+  <img width="227" height="260" src="extracted-media/media/image85.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="298" height="281" src="extracted-media/media/image78.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="624" height="85" src="extracted-media/media/image20.png">
+</p>
+++++
 Click *APPLY CHANGES*
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for *CDP Workload User* and *CDP Workload User Password*.
@@ -572,7 +592,7 @@ ____
 . {blank}
 +
 ____
-Enter: *#\{*
+Enter: *#{*
 ____
 . {blank}
 +
@@ -581,8 +601,6 @@ Hit ‘control+spacebar’
 ____
 
 This will bring up a list of existing parameters that are not tagged as sensitive:
-
-==== 
 
 ==== *2.3. Create the Flow*
 
@@ -604,21 +622,38 @@ ____
 Our final flow will look something like this
 ____
 
-image:extracted-media/media/image46.png[extracted-media/media/image46,width=302,height=400]
+
+++++
+<p align="center">
+  <img width="302" height="400" src="extracted-media/media/image46.png">
+</p>
+++++
 
 ===== STEP 1 : Add *GenerateFlowFile* processor 
 
 Pull the Processor onto the canvas and select *GenerateFlowFile* Processor and click on *ADD.*
 
-image:extracted-media/media/image17.png[extracted-media/media/image17,width=392,height=262]
-
-image:extracted-media/media/image6.png[extracted-media/media/image6,width=384,height=291]
+++++
+<p align="center">
+  <img width="392" height="262" src="extracted-media/media/image17.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="384" height="291" src="extracted-media/media/image6.png">
+</p>
+++++
 
 ===== STEP 2 : Configure *GenerateFlowFile* processor 
 
 The GenerateFlowFile Processor will now be on your canvas and you can configure it in the following way by right clicking and selecting *Configuration*.
 
-image:extracted-media/media/image15.png[extracted-media/media/image15,width=458,height=413]
+++++
+<p align="center">
+  <img width="458" height="413" src="extracted-media/media/image15.png">
+</p>
+++++
+
 
 Configure the processor in the following way
 
@@ -695,19 +730,39 @@ The PutCDPObjectStore Processor needs to be configured as follows:
 
 *Properties*
 
-*Directory :* #\{HDFS Directory}
+*Directory :* #{HDFS Directory}
 
-*CDP Username :* #\{CDP Workload User}
+*CDP Username :* #{CDP Workload User}
 
-*CDP Password :* #\{CDP Workload User Password}
+*CDP Password :* #{CDP Workload User Password}
 
 *Settings - Auto Terminate Relationships:* Check the Success box
-
-===== image:extracted-media/media/image74.png[extracted-media/media/image74,width=372,height=565]image:extracted-media/media/image59.png[extracted-media/media/image59,width=403,height=586]
+++++
+<p align="center">
+  <img width="372" height="565" src="extracted-media/media/image74.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="403" height="586" src="extracted-media/media/image59.png">
+</p>
+++++
 
 ===== STEP 5 : Create connection between processors
 
 Connect the two processors by dragging the arrow from *DataGenerator* processor to the *Move2S3* processor and select on *SUCCESS* relation and click *ADD*
+++++
+<p align="center">
+  <img width="357" height="409" src="extracted-media/media/image14.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="462" height="266" src="extracted-media/media/image9.png">
+</p>
+++++
+
+
 
 image:extracted-media/media/image14.png[extracted-media/media/image14,width=357,height=409]image:extracted-media/media/image9.png[extracted-media/media/image9,width=462,height=266]
 
