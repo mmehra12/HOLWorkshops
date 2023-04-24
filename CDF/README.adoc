@@ -245,8 +245,6 @@ Verify if the user group(*workshop-users*) who will be performing the workshop i
 ++++
 ____
 
-* {blank}
-+
 ____
 all-consumergroup
 ++++
