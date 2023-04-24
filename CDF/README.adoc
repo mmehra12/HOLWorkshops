@@ -271,8 +271,11 @@ ____
 +
 ____
 In Ranger, select the Schema Registry repository that’s associated with the stream messaging datahub.
-
-image:extracted-media/media/image32.png[extracted-media/media/image32,width=472,height=226]
+++++
+<p align="center">
+  <img width="472" height="226" src="extracted-media/media/image32.png">
+</p>
+++++
 ____
 
 [arabic, start=2]
@@ -281,11 +284,28 @@ ____
 ____
 Verify if the user group(*workshop-users*) who will be performing the workshop is present in the Policy : *all - schema-group, schema-metadata, schema-branch, schema-version.*
 
-image:extracted-media/media/image26.png[extracted-media/media/image26,width=624,height=217]
+++++
+<p align="center">
+  <img width="624" height="226" src="extracted-media/media/image26.png">
+</p>
+++++
 
-image:extracted-media/media/image93.png[extracted-media/media/image93,width=453,height=353]
+++++
+<p align="center">
+  <img width="472" height="353" src="extracted-media/media/image93.png">
+</p>
+++++
 
-image:extracted-media/media/image56.png[extracted-media/media/image56,width=624,height=109]
+++++
+<p align="center">
+  <img width="624" height="109" src="extracted-media/media/image56.png">
+</p>
+++++
+// image:extracted-media/media/image26.png[extracted-media/media/image26,width=624,height=217]
+
+// image:extracted-media/media/image93.png[extracted-media/media/image93,width=453,height=353]
+
+// image:extracted-media/media/image56.png[extracted-media/media/image56,width=624,height=109]
 ____
 
 === *3. Verify the Data Providers in SQL Stream Builder*
@@ -383,7 +403,7 @@ The following is a step by step guide in building a data flow for use within CDF
 
 image:extracted-media/media/image99.png[extracted-media/media/image99,width=508,height=290]
 
-===== Step 2 : Got to the Flow Design
+===== Step 2 : Navigate to Flow Design
 
 image:extracted-media/media/image79.png[extracted-media/media/image79,width=178,height=338]
 
