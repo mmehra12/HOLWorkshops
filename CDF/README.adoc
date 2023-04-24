@@ -353,8 +353,6 @@ ____
 
 == *Lab 1 : Create a Flow using the Flow Designer*
 
-____________________________________________________________________________
-
 === *1. Overview*
 
 Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps:
@@ -376,8 +374,6 @@ All queues need to have meaningful names (inplace of Success, Fail, and Retry). 
 ____
 
 The following is a step by step guide in building a data flow for use within CDF-PC.
-
-=== 
 
 === *2. Building the Data Flow*
 
