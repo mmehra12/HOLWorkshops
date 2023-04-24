@@ -262,6 +262,7 @@ all-topic
 </p>
 ++++
 ____
+____
 
 ==== *2.3 Schema Registry Permissions*
 
