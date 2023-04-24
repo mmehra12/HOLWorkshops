@@ -249,23 +249,21 @@ ____
 +
 ____
 all-consumergroup
+++++
+<p align="center">
+  <img width="624" height="238" src="extracted-media/media/image55.png">
+</p>
+++++
 ____
 
-____
-image:extracted-media/media/image55.png[extracted-media/media/image55,width=624,height=238]
-____
-
-* {blank}
-+
 ____
 all-topic
+++++
+<p align="center">
+  <img width="624" height="296" src="extracted-media/media/image100.png">
+</p>
+++++
 ____
-
-____
-image:extracted-media/media/image100.png[extracted-media/media/image100,width=624,height=296]
-____
-
-==== 
 
 ==== *2.3 Schema Registry Permissions*
 
