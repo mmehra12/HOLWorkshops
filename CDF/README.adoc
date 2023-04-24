@@ -343,12 +343,10 @@ ____
 +
 ____
 The *_Kafka Data Sources_* should have an entry which points to the default brokers(This information can be obtained from the Brokers tab in Streams Messaging Manager.) which point to an internal Kafka cluster deployed as part of the streaming analytics datahub.
-____
-
 
 [NOTE]
 This has already been added to save time
-____
+
 
 image:extracted-media/media/image75.png[extracted-media/media/image75,width=733,height=333]
 ____
