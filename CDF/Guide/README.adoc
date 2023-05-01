@@ -1403,11 +1403,7 @@ ____
 * {blank}
 +
 ____
-*Flow Description:*
-____
-** {blank}
-+
-____
+*Flow Description:* : 
 Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka
 ____
 
