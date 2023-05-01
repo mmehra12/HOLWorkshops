@@ -212,42 +212,44 @@ ____
 
 Lab 0 basically talks about verifying different aspects wrt to access and connections before we could begin with the actual steps.
 
-== 
-
 == Lab 0 - Introduction and setup
 
 === 1. Verify access to the workshop environment
 
 * {blank}
 +
-____
+
 The *INSTRUCTOR* will share the Workshop link and the credentials before the start of the workshop
-____
+
 * {blank}
 +
-____
 Open the shared link and login with the credentials assigned to you.
-____
 
-____
-<Will be shared by the instructor at the start>
+++++
+<p align="center">
+  Will be shared by the instructor at the start
+</p>
+++++
 
-image:media/media/image76.png[media/media/image76,width=399,height=289]
+++++
+<p align="center">
+  <img width="399" height="289" src="media/media/image76.png">
+</p>
+++++
+
 ____
 
 * {blank}
 +
-____
 You should land on the CDP Console as shown below.
 ____
-
-image:media/media/image136.png[media/media/image136,width=520,height=241]
-
-=== 
+++++
+<p align="center">
+  <img width="520" height="241" src="media/media/image136.png">
+</p>
+++++
 
 === *2. Verify permissions in Apache Ranger*
-
-==== 
 
 ____
 NOTE: THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT EXECUTE THE STEPS IN THIS SECTION OR CHANGE ANYTHING.
