@@ -265,15 +265,15 @@ ____
 Step 2 : Click on Environments on the left tab
 
 image:media/media/image30.png[media/media/image30,width=497,height=195]
+____
 
+____
 Step 3 : Select the environment that is shared by the instructor and click on the *Ranger* quick link to access the Ranger UI
 
 image:media/media/image61.png[media/media/image61,width=551,height=187]
 
 image:media/media/image141.png[media/media/image141,width=551,height=286]
 ____
-
-==== 
 
 ==== *2.2 Kafka Permissions*
 
