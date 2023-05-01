@@ -978,17 +978,18 @@ image:media/media/image147.png[media/media/image147,width=369,height=401]
 
 Set the Username, Password and the Directory name and click NEXT
 
-*CDP Workload User:* wuserXY
-
-*CDP Workload User Password:* Wuser@2021
-
-*S3 Directory:* dirFlowCatalogDataDump
-
-*CDP Environment :* DummyParameter
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Property* |*Value*
+|*CDP Workload User* |wuserXY
+|*CDP Workload User Password* |Wuser@2021
+|*S3 Directory* |dirFlowCatalogDataDump
+|*CDP Environment* |TestParameter
+|===
 
 _[The CDP Environment parameter that shows here is used at the time we perform a test run on our test session. It holds the CDP Environment configuration resources files such as ssl-client.xml, hive-site.xml and core-site.xml. You do not have to specify these to deploy your flow from the flow catalog as it automatically picks up those files,hence we give a dummy value to this. To avoid giving a dummy value, this parameter can be deleted before we publish the flow]_
 
-==== image:media/media/image104.png[media/media/image104,width=278,height=331]
+image:media/media/image104.png[media/media/image104,width=278,height=331]
 
 ==== *Step 7:* Set the cluster size
 
