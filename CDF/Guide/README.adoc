@@ -1462,6 +1462,7 @@ ____
 +
 ____
 In the NiFi Configuration screen, click *Next*.
+
 image:media/media/image79.png[media/media/image79,width=431,height=346]
 ____
 
