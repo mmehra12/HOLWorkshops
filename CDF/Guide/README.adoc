@@ -1528,6 +1528,7 @@ ____
 +
 ____
 Skip the KPI page by clicking *Next* and Review your deployment. Then Click *Deploy*.
+
 image:media/media/image146.png[media/media/image146,width=289,height=333]
 ____
 
