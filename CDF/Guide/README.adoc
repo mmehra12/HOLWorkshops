@@ -1450,22 +1450,20 @@ ____
 +
 ____
 Give the deployment a unique name, then click *Next*.
-____
 
-____
 Example : \{user_id}-syslog-to-kafka
-____
 
 image:media/media/image47.png[media/media/image47,width=468,height=88]
+____
+
 
 [arabic, start=6]
 . {blank}
 +
 ____
 In the NiFi Configuration screen, click *Next*.
-____
-
 image:media/media/image79.png[media/media/image79,width=431,height=346]
+____
 
 [arabic, start=7]
 . {blank}
