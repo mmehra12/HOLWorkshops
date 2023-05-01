@@ -614,7 +614,7 @@ Value : <The username assigned to you>
 EXAMPLE : wuser01
 
 ____
-*Note* : do not add the domain ‘@workload.com’
+*Note* : Do not add the domain ‘@workload.com’
 ____
 ____
 
@@ -749,29 +749,63 @@ The PutCDPObjectStore Processor needs to be configured as follows:
 |*Auto Terminate Relationships:* |Check the “Terminate” box under “success”
 |===
 
-image:media/media/image78.png[media/media/image78,width=372,height=565]image:media/media/image114.png[media/media/image114,width=403,height=586]
+++++
+<p align="center">
+  <img width="372" height="565" src="media/media/image78.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="403" height="586" src="media/media/image114.png">
+</p>
+++++
 
 *Click APPLY*
-
-image:media/media/image59.png[media/media/image59,width=258,height=235]
+++++
+<p align="center">
+  <img width="258" height="235" src="media/media/image59.png">
+</p>
+++++
 
 ===== *Step 5:* Create connection between processors
 
 Connect the two processors by dragging the arrow from *DataGenerator* processor to the *Move2S3* processor and select on *SUCCESS* relation and click *ADD*
 
-image:media/media/image31.png[media/media/image31,width=357,height=409]
-
-image:media/media/image112.png[media/media/image112,width=319,height=183]
-
+++++
+<p align="center">
+  <img width="357" height="409" src="media/media/image31.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="319" height="183" src="media/media/image112.png">
+</p>
+++++
 Your flow will now look something like this:
+++++
+<p align="center">
+  <img width="197" height="354" src="media/media/image9.png">
+</p>
+++++
 
-image:media/media/image9.png[media/media/image9,width=197,height=354]
 
-The Move2S3 processor does not know what to do in case of a failure, let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself, as below:image:media/media/image106.png[media/media/image106,width=352,height=343]
+The Move2S3 processor does not know what to do in case of a failure, let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself, as below:
 
-image:media/media/image28.png[media/media/image28,width=287,height=184]
-
-image:media/media/image149.png[media/media/image149,width=362,height=337]
+++++
+<p align="center">
+  <img width="352" height="343" src="media/media/image106.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="287" height="184" src="media/media/image28.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="362" height="337" src="media/media/image149.png">
+</p>
+++++
 
 ==== *2.4. Naming the queues*
 
@@ -781,11 +815,20 @@ To name a queue, double-click the queue and give it a unique name. A best practi
 
 For example, the success queue between *DataGenerator* and *Move2S3* is named *success_Move2S3.*
 
-image:media/media/image96.png[media/media/image96,width=552,height=396]
+++++
+<p align="center">
+  <img width="552" height="396" src="media/media/image96.png">
+</p>
+++++
+
 
 The failure queue for *Move2S3* is named *failure_Move2S3*.
 
-image:media/media/image137.png[media/media/image137,width=538,height=365]
+++++
+<p align="center">
+  <img width="538" height="365" src="media/media/image137.png">
+</p>
+++++
 
 === *3. Testing the Data Flow*
 
@@ -795,17 +838,33 @@ To test your flow we need to first start the test session
 
 Click on *FLOW OPTIONS* and then select *START* on TEST SESSION
 
-image:media/media/image2.png[media/media/image2,width=624,height=358]image:media/media/image98.png[media/media/image98,width=328,height=394]
+++++
+<p align="center">
+  <img width="624" height="358" src="media/media/image2.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="328" height="394" src="media/media/image98.png">
+</p>
+++++
 
 In the next window, click *START SESSION*
 
 The activation should take about a couple of minutes. While this happens you will see this at the top right corner of your screen
 
-image:media/media/image7.png[media/media/image7,width=503,height=102]
+++++
+<p align="center">
+  <img width="503" height="102" src="media/media/image7.png">
+</p>
+++++
 
 Once the Test Session is ready you will see the following message on the top right corner of your screen.
-
-image:media/media/image33.png[media/media/image33,width=517,height=112]
+++++
+<p align="center">
+  <img width="517" height="112" src="media/media/image33.png">
+</p>
+++++
 
 ==== *Step 2:* Run the flow
 
