@@ -347,13 +347,14 @@ ____
 +
 ____
 * Enter the shared password.
-____
-*Note* : PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
-____
 
 image:media/media/image41.png[media/media/image41,width=545,height=239]
 * Click the button Set Workload Password.
 ____
+____
+*Note* : PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
+____
+
 
 === *4. Obtain the Kafka Broker List*
 
