@@ -1703,6 +1703,7 @@ However, if your message payload already contains a timestamp associated with th
  +
 In this case, the syslog message has a field called "*timestamp*" that contains the timestamp you should use. You want to expose this field as the table's "*event_time*" column. To do this, click on the Event Time tab and enter the following properties:
 ____
+
 * {blank}
 +
 ____
@@ -1719,6 +1720,7 @@ Event Time Column: *event_time*
 * {blank}
 +
 Watermark Seconds: *3*
+
 image:media/media/image57.png[media/media/image57,width=542,height=213]
 ____
 
