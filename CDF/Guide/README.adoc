@@ -1260,41 +1260,17 @@ ____
 ____
 Create a new schema with the following information:
 ____
-
-* {blank}
-+
-____
-*Name*: <username>-syslog
-____
-* {blank}
-+
-____
-*Description*: syslog schema for dataflow workshop
-____
-* {blank}
-+
-____
-*Type*: Avro schema provider
-____
-* {blank}
-+
-____
-*Schema Group*: Kafka
-____
-* {blank}
-+
-____
-*Compatibility*: Backward
-____
-* {blank}
-+
-____
-*Evolve*: True
-____
-* {blank}
-+
-____
-*Schema Text*: Copy and paste the schema text below into the “Schema Text” field
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Property* |*Value*
+|*Name* |<username>-syslog
+|*Description* |syslog schema for dataflow workshop
+|*Type* |Avro schema provider
+|*Schema Group* |Kafka
+|*Compatibility* |Delete
+|*Evolve* |True
+|*Schema Text* |Copy and paste the schema text below into the “Schema Text” field
+|===
 [source,json]
 ----
 {
@@ -1376,166 +1352,6 @@ ____
 }
 
 ----
-____
-
-[width="100%",cols="100%",options="header",]
-|===
-a|
-\{
-
-"name": "syslog",
-
-"type": "record",
-
-"namespace": "com.cloudera",
-
-"fields": [
-
-\{
-
-"name": "priority",
-
-"type": "int"
-
-},
-
-\{
-
-"name": "severity",
-
-"type": "int"
-
-},
-
-\{
-
-"name": "facility",
-
-"type": "int"
-
-},
-
-\{
-
-"name": "version",
-
-"type": "int"
-
-},
-
-\{
-
-"name": "timestamp",
-
-"type": "long"
-
-},
-
-\{
-
-"name": "hostname",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "body",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "appName",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "procid",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "messageid",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "structuredData",
-
-"type": \{
-
-"name": "structuredData",
-
-"type": "record",
-
-"fields": [
-
-\{
-
-"name": "SDID",
-
-"type": \{
-
-"name": "SDID",
-
-"type": "record",
-
-"fields": [
-
-\{
-
-"name": "eventId",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "eventSource",
-
-"type": "string"
-
-},
-
-\{
-
-"name": "iut",
-
-"type": "string"
-
-}
-
-]
-
-}
-
-}
-
-]
-
-}
-
-}
-
-]
-
-}
-
-|===
 
 ____
 ____
