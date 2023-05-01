@@ -1707,24 +1707,18 @@ ____
 +
 ____
 Use Kafka Timestamps: *Disable*
-____
-* {blank}
-+
-____
-Input Timestamp Column: *timestamp*
-____
-* {blank}
-+
-____
-Event Time Column: *event_time*
-____
-* {blank}
-+
-____
-Watermark Seconds: *3*
-____
 
-____
+* {blank}
++
+Input Timestamp Column: *timestamp*
+
+* {blank}
++
+Event Time Column: *event_time*
+
+* {blank}
++
+Watermark Seconds: *3*
 image:media/media/image57.png[media/media/image57,width=542,height=213]
 ____
 
