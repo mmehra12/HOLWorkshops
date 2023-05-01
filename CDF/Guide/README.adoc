@@ -1210,11 +1210,14 @@ Create a Topic with the following parameters then click *Save*:
 
 image:media/media/image64.png[media/media/image64,width=401,height=375]
 ____
-*Name*: <username>-syslog
-*Partitions*: 1
-*Availability*: Moderate
-*Cleanup Policy*: Delete
-
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Property* |*Value*
+|*Name* |<username>-syslog
+|*Partitions* |1
+|*Availability* |Moderate
+|*leanup Policy* |Delete
+|===
 ____
 *Note*: The Flow will not work if you set the Cleanup Policy to anything other than *Delete*. This is because we are not specifying keys when writing to Kafka.
 ____
@@ -1227,10 +1230,16 @@ ____
 ____
 Login to Schema Registry by clicking the appropriate hyperlink in the Streams Messaging Datahub(kafka-smm-cluster )
 ____
-
-image:media/media/image92.png[media/media/image92,width=541,height=220]
-
-image:media/media/image72.png[media/media/image72,width=564,height=85]
+++++
+<p align="center">
+  <img width="541" height="220" src="media/media/image92.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="563" height="85" src="media/media/image72.png">
+</p>
+++++
 
 [arabic, start=2]
 . {blank}
@@ -1238,8 +1247,11 @@ image:media/media/image72.png[media/media/image72,width=564,height=85]
 ____
 Click on the + button on the top right to create a new schema.
 ____
-
-image:media/media/image74.png[media/media/image74,width=451,height=187]
+++++
+<p align="center">
+  <img width="451" height="187" src="media/media/image74.png">
+</p>
+++++
 
 [arabic, start=3]
 . {blank}
