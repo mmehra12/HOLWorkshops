@@ -334,27 +334,22 @@ ____
 * Click on Profile.
 image:media/media/image153.png[media/media/image153,width=596,height=349]
 ____
+* {blank}
++
 ____
 * Click option *Set Workload Password*.
 image:media/media/image151.png[media/media/image151,width=514,height=209]
 ____
-
+* {blank}
++
+____
 * Enter the shared password.
 
 [NOTE]: PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
 
 image:media/media/image41.png[media/media/image41,width=545,height=239]
+* Click the button Set Workload Password.
 ____
-
-* {blank}
-+
-____
-Click the button Set Workload Password.
-____
-
-===  +
-
-=== 
 
 === *4. Obtain the Kafka Broker List*
 
