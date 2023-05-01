@@ -1528,33 +1528,31 @@ ____
 +
 ____
 Skip the KPI page by clicking *Next* and Review your deployment. Then Click *Deploy*.
-____
-
 image:media/media/image146.png[media/media/image146,width=289,height=333]
+____
 
 [arabic, start=10]
 . {blank}
 +
 ____
 Proceed to the CDF-PC Dashboard and wait for your flow deployment to complete, which might take a few minutes. A Green Check Mark will appear once complete, which might take a few minutes.
-____
 
 image:media/media/image48.png[media/media/image48,width=624,height=40]
+____
 
 [arabic, start=11]
 . {blank}
 +
 ____
 Click into your deployment and then Click *Manage Deployment* on the top right to view your flow in NiFi.
-____
 
-____
 image:media/media/image107.png[media/media/image107,width=515,height=287]
-____
+
 
 Now click on *ACTIONS* and select *_View in NiFi_*
 
 image:media/media/image119.png[media/media/image119,width=555,height=289]
+____
 
 The flow that you just deployed will look something like this on NiFi
 
@@ -1563,12 +1561,6 @@ image:media/media/image144.png[media/media/image144,width=415,height=319]
 Double click on the Process Group to see the flow
 
 image:media/media/image150.png[media/media/image150,width=360,height=515]
-
-== 
-
-==  +
-
-== 
 
 == *Lab 4 : SQL Stream Builder*
 
@@ -1596,7 +1588,7 @@ Create a SSB Project by clicking *“New Project”* using the following details
 
 [.mark]#Description : SSB Project to analyze streaming data#
 
-{empty}[.mark]##image:media/media/image80.png[media/media/image80,width=372,height=343]
+image:media/media/image80.png[media/media/image80,width=372,height=343]
 
 Switch to the created project. Click on *Switch*
 
