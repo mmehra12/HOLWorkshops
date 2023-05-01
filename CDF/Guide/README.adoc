@@ -237,8 +237,6 @@ Open the shared link and login with the credentials assigned to you.
 </p>
 ++++
 
-
-
 * {blank}
 +
 You should land on the CDP Console as shown below.
@@ -259,10 +257,10 @@ ____
 
 ____
 Step 1 : Click on Management Console
-____
+
 
 image:media/media/image117.png[media/media/image117,width=456,height=213]
-
+____
 ____
 Step 2 : Click on Environments on the left tab
 
