@@ -1366,12 +1366,6 @@ image:media/media/image142.png[media/media/image142,width=461,height=287]
 image:media/media/image127.png[media/media/image127,width=435,height=124]
 ____
 
-== 
-
-==  +
-
-== 
-
 == *Lab 3 : Operationalizing Externally Developed Data Flows with CDF-PC*
 
 === *1. Import the Flow into the CDF-PC Catalog*
@@ -1381,9 +1375,6 @@ ____
 +
 ____
 Open the CDF-PC data service and click on Catalog in the left tab.
-____
-
-____
 image:media/media/image62.png[media/media/image62,width=161,height=176]
 ____
 
@@ -1392,9 +1383,6 @@ ____
 +
 ____
 Select Import Flow Definition on the Top Right
-____
-
-____
 image:media/media/image56.png[media/media/image56,width=191,height=37]
 ____
 
