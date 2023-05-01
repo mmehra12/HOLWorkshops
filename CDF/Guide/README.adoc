@@ -396,14 +396,11 @@ image:media/media/image91.png[media/media/image91,width=630,height=280]
 == image:media/media/image43.png[media/media/image43,width=497,height=229]
 
 Example :
-
+____
 kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093
-
 kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093
-
 kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093
-
-=== 
+____
 
 === *5. Download Resources from GitHub*
 
@@ -423,8 +420,6 @@ Uncompress the Files and you should have the following files and folders within 
 
 We will use this at a later point in our Labs
 
-=== 
-
 === *6. Unlock your KeyTab*
 
 To run queries on the SQL Stream Builder you need to have your KeyTab unlocked. This is mainly for authentication purposes. As the credential you are using is sometimes reused as part of other people doing the same lab it is possible that your Keytab is already unlocked. We have shared the steps for both the scenarios:
@@ -443,21 +438,17 @@ Click on the DataHub associated with SQL Stream Builder (ssb-analytics-cluster)
 image:media/media/image13.png[media/media/image13,width=544,height=276]
 ____
 
-===== 
-
-===== 
 
 ===== Step 2 : Open the SSB UI by clicking on *Streaming SQL Console*
 
+____
 image:media/media/image42.png[media/media/image42,width=559,height=237]
+____
 
 ===== Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab
-
+____
 image:media/media/image16.png[media/media/image16,width=404,height=362]
-
-==== 
-
-===== 
+____
 
 ===== Step 4 : Enter your Workload Username (wuserxx) and Password. 
 
@@ -468,10 +459,6 @@ image:media/media/image108.png[media/media/image108,width=328,height=218]
 image:media/media/image52.png[media/media/image52,width=388,height=254]
 
 image:media/media/image81.png[media/media/image81,width=292,height=123]
-
-====  +
-
-==== 
 
 ==== Reset your KeyTab if it is already unlocked
 
@@ -487,43 +474,33 @@ Click on the DataHub associated with SQL Stream Builder (ssb-analytics-cluster)
 image:media/media/image13.png[media/media/image13,width=580,height=294]
 ____
 
-===== 
 
-===== 
 
 ===== Step 2 : Open the SSB UI by clicking on *Streaming SQL Console*
-
+____
 image:media/media/image42.png[media/media/image42,width=559,height=237]
 
-===== image:media/media/image16.png[media/media/image16,width=319,height=285]
-
-===== 
-
-===== 
-
-===== 
+image:media/media/image16.png[media/media/image16,width=319,height=285]
+____
+ 
 
 ===== Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab
-
+____
 image:media/media/image45.png[media/media/image45,width=321,height=212]
 
 If you get the following dialog box it means that your Keytab is already unlocked. *But it would be necessary to reset here by locking it and unlocking it again using your newly set workload password*
 
-Step 3 : Enter your Principal Name which is the same as your workload username
+===== Step 4 : Enter your Principal Name which is the same as your workload username
 
+Example : wuserXY* 
 ____
-*Example : wuserXY* image:media/media/image145.png[media/media/image145,width=271,height=174]
+image:media/media/image145.png[media/media/image145,width=271,height=174]
 ____
+* Click on Lock KeyTab
 
-Click on Lock KeyTab
-
-You can now continue from the STEP 3 in the “link:#unlock-your-keytab-if-it-is-not-unlocked-already[*_[.underline]#Unlock your KeyTab if not unlocked already#_*]” section above
-
-== 
+* You can now continue from the STEP 3 in the “link:#unlock-your-keytab-if-it-is-not-unlocked-already[*_[.underline]#Unlock your KeyTab if not unlocked already#_*]” section above
 
 == *Lab 1 : Create a Flow using the Flow Designer*
-
-____________________________________________________________________________
 
 === *1. Overview*
 
