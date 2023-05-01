@@ -1441,14 +1441,10 @@ ____
 +
 ____
 Select the CDP environment where this flow will be deployed, then click *Continue*.
-____
 
-____
 *Note* : THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
-____
-
 image:media/media/image40.png[media/media/image40,width=489,height=359]
-
+____
 [arabic, start=5]
 . {blank}
 +
