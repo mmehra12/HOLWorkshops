@@ -1207,15 +1207,14 @@ ____
 +
 ____
 Create a Topic with the following parameters then click *Save*:
-____
 
 *Name*: <username>-syslog
 *Partitions*: 1
 *Availability*: Moderate
 *Cleanup Policy*: Delete
-____
 
 image:media/media/image64.png[media/media/image64,width=401,height=375]
+____
 
 ____
 *Note*: The Flow will not work if you set the Cleanup Policy to anything other than *Delete*. This is because we are not specifying keys when writing to Kafka.
