@@ -1485,6 +1485,7 @@ Add the Flow Parameters as below, then click *Next*.
 |*Schema Registry Hostname* |The hostname of the master server in the Kafka Datahub(kafka-smm-cluster)[Refer screenshot below] Example : *kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site*
 |===
 image:media/media/image135.png[media/media/image135,width=448,height=289]
+
 Example : kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site
 ____
 
