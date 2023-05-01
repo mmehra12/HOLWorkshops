@@ -287,33 +287,18 @@ ____
 +
 ____
 Verify if the user group(*workshop-users*) who will be performing the workshop is present in both *all-consumergroup* and *all-topic.*
-____
 
-____
 image:media/media/image132.png[media/media/image132,width=580,height=177]
-____
 
-* {blank}
-+
-____
 All-consumergroup
-____
 
 image:media/media/image109.png[media/media/image109,width=556,height=212]
 
-* {blank}
-+
-____
 all-topic
-____
 
-____
 image:media/media/image128.png[media/media/image128,width=412,height=195]
 ____
 
-==== 
-
-==== 
 
 ==== *2.3 Schema Registry Permissions*
 
@@ -322,9 +307,6 @@ ____
 +
 ____
 In Ranger, select the Schema Registry repository that’s associated with the stream messaging datahub.
-____
-
-____
 image:media/media/image65.png[media/media/image65,width=479,height=105]
 ____
 
@@ -333,54 +315,33 @@ ____
 +
 ____
 Verify if the user group(*workshop-users*) who will be performing the workshop is present in the Policy : *all - schema-group, schema-metadata, schema-branch, schema-version.*
-____
-
-____
 image:media/media/image111.png[media/media/image111,width=549,height=191]
-
 image:media/media/image83.png[media/media/image83,width=375,height=292]
-
 image:media/media/image4.png[media/media/image4,width=550,height=96]
 ____
 
 === *3. Update workload password*
 
-==== 
 
-____
-NOTE: THESE STEPS NEED TO BE PERFORMED BEFORE MOVING FORWARD
-____
+[NOTE] THESE STEPS NEED TO BE PERFORMED BEFORE MOVING FORWARD
 
 You will need to define your CDP Workload Password that will be used to access non-SSO interfaces. You may read more about it here. Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.
 
 * {blank}
 +
 ____
-Click on your user name (Ex: wuser00@workshop.com) at the lower left corner.
-____
-
-Click on Profile.
-
+* Click on your user name (Ex: wuser00@workshop.com) at the lower left corner.
+* Click on Profile.
 image:media/media/image153.png[media/media/image153,width=596,height=349]
-
-* {blank}
-+
 ____
-Click option *Set Workload Password*.
 ____
-
+* Click option *Set Workload Password*.
 image:media/media/image151.png[media/media/image151,width=514,height=209]
-
-* {blank}
-+
-____
-Enter the shared password.
 ____
 
-==== 
+* Enter the shared password.
 
-____
-NOTE: PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
+[NOTE]: PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
 
 image:media/media/image41.png[media/media/image41,width=545,height=239]
 ____
