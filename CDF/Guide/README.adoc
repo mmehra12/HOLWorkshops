@@ -961,7 +961,7 @@ image:media/media/image44.png[media/media/image44,width=416,height=252]
 Give the deployment a unique name( \{user_id}_flow_prod), then click Next
 * Example : wuser01_flow_prod
 
-image:media/media/image133.png[media/media/image133,width=257,height=307]
+image:media/media/image133.png[media/media/image133,width=257,height=307
 *Click NEXT*
 ____
 
@@ -1017,6 +1017,7 @@ ____
 
 ==== *Step 9:* Click *Deploy*
 
+____
 image:media/media/image60.png[media/media/image60,width=359,height=335]
 
 The “Deployment Initiated” message will be displayed. Wait until the flow deployment is completed, which might take a few minutes.
@@ -1026,6 +1027,7 @@ image:media/media/image66.png[media/media/image66,width=580,height=276]
 When deployed, the flow will show up on the Data flow dashboard, as below:
 
 image:media/media/image8.png[media/media/image8,width=624,height=242]
+____
 
 === *6. Viewing details of the deployed flow*
 
@@ -1034,30 +1036,31 @@ Click on the flow in the Dashboard and select Manage Deployment
 image:media/media/image116.png[media/media/image116,width=496,height=324]
 
 ==== Step 1 : Manage KPI and Alerts
-
+____
 Click on the KPI tab to get the list of KPIs that have been set. You also have an option to modify or add more KPIs to your flow here.
 
 image:media/media/image101.png[media/media/image101,width=630,height=369]
-
+____
 ==== Step 2 : Manage Sizing and Scaling
-
+____
 Click on the Sizing and Scaling tab to get detailed information
 
 image:media/media/image84.png[media/media/image84,width=470,height=287]
-
-
+____
 
 ==== Step 3 : Manage Parameters
-
+____
 The parameters that we earlier created can be managed from the Parameters tab. Click on Parameters.
 
 image:media/media/image118.png[media/media/image118,width=491,height=246]
+____
 
 ==== Step 4 : NiFi Configurations
-
+____
 If you have set any configuration wrt to Nifi they will show up on the ‘NiFi Configuration’ tab
 
-==== image:media/media/image86.png[media/media/image86,width=630,height=185]
+image:media/media/image86.png[media/media/image86,width=630,height=185]
+____
 
 ==== Step 5 : View the deployed flow in NiFi
 
