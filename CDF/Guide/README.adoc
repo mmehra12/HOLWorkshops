@@ -945,39 +945,34 @@ image:media/media/image38.png[media/media/image38,width=364,height=235]
 ____
 
 ==== *Step 3:* Select the CDP environment 
-
+____
 Select the CDP environment where this flow will be deployed and click on *CONTINUE*
 
+image:media/media/image35.png[media/media/image35,width=334,height=316]
+____
 ____
 *Note* THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
 ____
 
-image:media/media/image35.png[media/media/image35,width=334,height=316]
-
 ==== *Step 4:* Deployment Name
-
-image:media/media/image44.png[media/media/image44,width=416,height=252]
-
 ____
+image:media/media/image44.png[media/media/image44,width=416,height=252]
 Give the deployment a unique name( \{user_id}_flow_prod), then click Next.
-
 Example : wuser01_flow_prod
 ____
-
 *Click NEXT*
-
-==== image:media/media/image133.png[media/media/image133,width=257,height=307]
+image:media/media/image133.png[media/media/image133,width=257,height=307]
 
 ==== *Step 5:* Set the NiFi Configuration
-
+____
 We can let everything be the default here and click NEXT
-
+____
 ==== *Step 6:* Set the Parameters
-
+____
 image:media/media/image147.png[media/media/image147,width=369,height=401]
 
 Set the Username, Password and the Directory name and click NEXT
-
+____
 [width="100%",cols="50%,50%",options="header",]
 |===
 |*Property* |*Value*
@@ -989,14 +984,15 @@ Set the Username, Password and the Directory name and click NEXT
 
 _[The CDP Environment parameter that shows here is used at the time we perform a test run on our test session. It holds the CDP Environment configuration resources files such as ssl-client.xml, hive-site.xml and core-site.xml. You do not have to specify these to deploy your flow from the flow catalog as it automatically picks up those files,hence we give a dummy value to this. To avoid giving a dummy value, this parameter can be deleted before we publish the flow]_
 
-image:media/media/image104.png[media/media/image104,width=278,height=331]
-
 ==== *Step 7:* Set the cluster size
-
+____
 Select the Extra Small size and click NEXT. In this step you can configure how your flow will autoscale, but keep it disabled for this lab.
 
+image:media/media/image104.png[media/media/image104,width=278,height=331]
+____
 ==== *Step 8:* Add Key Performance indicators
 
+____
 Set up KPIs to track specific performance metrics of a deployed flow.
 
 Click on “Add New KPI”
@@ -1014,6 +1010,7 @@ image:media/media/image15.png[media/media/image15,width=357,height=393]
 Click Add and then Click Next
 
 image:media/media/image32.png[media/media/image32,width=351,height=409]
+____
 
 ==== *Step 9:* Click *Deploy*
 
