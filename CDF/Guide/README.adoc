@@ -1735,19 +1735,11 @@ ____
 +
 ____
 Click the *Create and Review* button to create the table.
-____
 
-____
 image:media/media/image70.png[media/media/image70,width=449,height=270]
 
 Review the table's DDL and click *Close*.
 ____
-
-==== 
-
-====  +
-
-==== 
 
 ==== *Step 6:* Create a Flink Job
 
