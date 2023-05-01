@@ -1108,7 +1108,7 @@ image:media/media/image152.png[media/media/image152,width=365,height=353]
 
 === *1. Overview*
 
-The purpose of this workshop is to demonstrate how existing NiFi flows can be migrated to the Data Flow Experience. This workshop will leverage an existing NiFi flow template that has been designed with the best practices for CDF-PC flow deployment.
+The purpose of this lab is to demonstrate how existing NiFi flows can be migrated to the Data Flow Experience. This workshop will leverage an existing NiFi flow template that has been designed with the best practices for CDF-PC flow deployment.
 
 The existing NiFi Flow will perform the following actions:
 
@@ -1121,7 +1121,7 @@ ____
 . {blank}
 +
 ____
-convert the incoming data to a JSON using record writers
+Convert the incoming data to a JSON using record writers
 ____
 . {blank}
 +
@@ -1151,8 +1151,6 @@ ____
 kafka-smm-cluster
 ____
 
-=== 
-
 === *2. Pre-requisites*
 
 ==== 2.1. Create a Kafka Topic
@@ -1164,9 +1162,17 @@ ____
 Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub ( kafka-smm-cluster )
 ____
 
-image:media/media/image92.png[media/media/image92,width=568,height=231]
+++++
+<p align="center">
+  <img width="568" height="231" src="media/media/image92.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="563" height="86" src="media/media/image63.png">
+</p>
+++++
 
-image:media/media/image63.png[media/media/image63,width=563,height=86]
 
 [arabic, start=2]
 . {blank}
@@ -1175,7 +1181,11 @@ ____
 Click on Topics in the left tab
 ____
 
-image:media/media/image148.png[media/media/image148,width=376,height=296]
+++++
+<p align="center">
+  <img width="376" height="296" src="media/media/image148.png">
+</p>
+++++
 
 [arabic, start=3]
 . {blank}
@@ -1184,8 +1194,11 @@ ____
 Click on Add New
 ____
 
-____
-image:media/media/image122.png[media/media/image122,width=533,height=270]
+++++
+<p align="center">
+  <img width="563" height="270" src="media/media/image122.png">
+</p>
+++++
 ____
 
 [arabic, start=4]
