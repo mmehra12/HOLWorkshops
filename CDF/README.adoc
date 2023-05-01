@@ -9,7 +9,8 @@ link:++#lab-0---introduction-and-setup++[Lab 0 - Introduction and setup]
         *** link:#_heading=h.z337ya[1.3.1 Kafka - Streaming Analytics Datahub]
         *** link:#_heading=h.3j2qqm3[1.3.2 YARN - Streaming Analytics Datahub ]
         *** link:#_heading=h.1y810tw[1.3.3 Kafka - Streams Messaging Datahub ]
-* link:#verify-the-data-providers-in-sql-stream-builder[2. Configure Data Providers in SQL Stream Builder]
+* link:#verify-the-data-providers-in-sql-stream-builder[2. Verify Data Providers in SQL Stream Builder]
+* link:#[3. Update Workload Password]
 
 link:#lab-1-create-a-flow-using-the-flow-designer[Lab 1 : Create a Flow using the Flow Designer]
 
@@ -576,30 +577,12 @@ ____
 </p>
 ++++
 Click *APPLY CHANGES*
-
-Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for *CDP Workload User* and *CDP Workload User Password*.
-
-NOTE:
-
-To search for existing parameters:
-
-[arabic]
-. {blank}
-+
-____
-Open a processor's configuration and proceed to the properties tab.
-____
-. {blank}
-+
-____
-Enter: *#{*
-____
-. {blank}
-+
-____
-Hit ‘control+spacebar’
-____
-
+[NOTE]
+Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for *CDP Workload User* and *CDP Workload User Password*. +
+To search for existing parameters: +
+1. *Open a processor's configuration and proceed to the properties tab.* +
+2. *Enter: #{* +
+3. *Hit ‘control+spacebar’* +
 This will bring up a list of existing parameters that are not tagged as sensitive:
 
 ==== *2.3. Create the Flow*

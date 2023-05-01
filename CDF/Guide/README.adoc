@@ -1,188 +1,183 @@
-link:#pre-requisites[*Pre-requisites 5*]
+link:#pre-requisites[*Pre-requisites*]
 
-link:++#lab-0---introduction-and-setup++[*Lab 0 - Introduction and setup 6*]
+link:++#lab-0---introduction-and-setup++[*Lab 0 - Introduction and setup*]
 
-____
-link:#verify-access-to-the-workshop-environment[1. Verify access to the workshop environment 6]
+* link:#verify-access-to-the-workshop-environment[1. Verify access to the workshop environment]
 
-link:#verify-permissions-in-apache-ranger[2. Verify permissions in Apache Ranger 7]
+* link:#verify-permissions-in-apache-ranger[2. Verify permissions in Apache Ranger]
 
-link:#accessing-apache-ranger[2.1 Accessing Apache Ranger 7]
+** link:#accessing-apache-ranger[2.1 Accessing Apache Ranger]
 
-link:#kafka-permissions[2.2 Kafka Permissions 8]
+** link:#kafka-permissions[2.2 Kafka Permissions]
 
-link:#schema-registry-permissions[2.3 Schema Registry Permissions 10]
+** link:#schema-registry-permissions[2.3 Schema Registry Permissions]
 
-link:#update-workload-password[3. Update workload password 11]
+* link:#update-workload-password[3. Update workload password]
 
-link:#obtain-the-kafka-broker-list[4. Obtain the Kafka Broker List 13]
+* link:#obtain-the-kafka-broker-list[4. Obtain the Kafka Broker List]
 
-link:#step-1-access-the-data-hub[Step 1 : Access the Data Hub 13]
+** link:#step-1-access-the-data-hub[Step 1 : Access the Data Hub]
 
-link:#step-2-go-to-the-streams-messaging-interface[Step 2 : Go to the Streams Messaging Interface 14]
+** link:#step-2-go-to-the-streams-messaging-interface[Step 2 : Go to the Streams Messaging Interface]
 
-link:#step-3-select-brokers-from-the-left-tab[Step 3 : Select Brokers from the left tab 14]
+** link:#step-3-select-brokers-from-the-left-tab[Step 3 : Select Brokers from the left tab]
 
-link:#step-4-save-the-broker-list[Step 4 : Save the broker list 15]
+** link:#step-4-save-the-broker-list[Step 4 : Save the broker list]
 
-link:#download-resources-from-github[5. Download Resources from GitHub 16]
+* link:#download-resources-from-github[5. Download Resources from GitHub]
 
-link:#step-1-access-the-url-shared-by-the-instructor-for-github[Step 1 : Access the URL shared by the instructor for GitHub 16]
+** link:#step-1-access-the-url-shared-by-the-instructor-for-github[Step 1 : Access the URL shared by the instructor for GitHub]
 
-link:#step-2-download-the-repo-as-a-zip-file[Step 2 : Download the repo as a zip file 16]
+** link:#step-2-download-the-repo-as-a-zip-file[Step 2 : Download the repo as a zip file]
 
-link:#step-3-uncompress-the-files[Step 3 : Uncompress the Files 16]
+** link:#step-3-uncompress-the-files[Step 3 : Uncompress the Files]
 
-link:#unlock-your-keytab[6. Unlock your KeyTab 17]
+* link:#unlock-your-keytab[6. Unlock your KeyTab]
 
-link:#unlock-your-keytab-if-it-is-not-unlocked-already[1. Unlock your Keytab if it is not unlocked already 17]
+** link:#unlock-your-keytab-if-it-is-not-unlocked-already[1. Unlock your Keytab if it is not unlocked already]
 
-link:#step-1-go-to-the-ssb-data-hub[Step 1 : Go to the SSB Data Hub 17]
+*** link:#step-1-go-to-the-ssb-data-hub[Step 1 : Go to the SSB Data Hub]
 
-link:#step-2-open-the-ssb-ui-by-clicking-on-streaming-sql-console[Step 2 : Open the SSB UI by clicking on Streaming SQL Console 18]
+*** link:#step-2-open-the-ssb-ui-by-clicking-on-streaming-sql-console[Step 2 : Open the SSB UI by clicking on Streaming SQL Console]
 
-link:#step-3-click-on-the-user-name-at-the-bottom-left-of-the-screen-and-select-manage-keytab[Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab 18]
+*** link:#step-3-click-on-the-user-name-at-the-bottom-left-of-the-screen-and-select-manage-keytab[Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab]
 
-link:#step-4-enter-your-workload-username-wuserxx-and-password.[Step 4 : Enter your Workload Username (wuserxx) and Password. 19]
+*** link:#step-4-enter-your-workload-username-wuserxx-and-password.[Step 4 : Enter your Workload Username (wuserxx) and Password.]
 
-link:#step-5-click-on-unlock-keytab[Step 5 : Click on unlock KeyTab 19]
+*** link:#step-5-click-on-unlock-keytab[Step 5 : Click on unlock KeyTab]
 
-link:#reset-your-keytab-if-it-is-already-unlocked[2. Reset your KeyTab if it is already unlocked 20]
+** link:#reset-your-keytab-if-it-is-already-unlocked[2. Reset your KeyTab if it is already unlocked]
 
-link:#step-1-go-to-the-ssb-data-hub-1[Step 1 : Go to the SSB Data Hub 20]
+*** link:#step-1-go-to-the-ssb-data-hub-1[Step 1 : Go to the SSB Data Hub]
 
-link:#step-2-open-the-ssb-ui-by-clicking-on-streaming-sql-console-1[Step 2 : Open the SSB UI by clicking on Streaming SQL Console 21]
+*** link:#step-2-open-the-ssb-ui-by-clicking-on-streaming-sql-console-1[Step 2 : Open the SSB UI by clicking on Streaming SQL Console]
 
-link:#step-3-click-on-the-user-name-at-the-bottom-left-of-the-screen-and-select-manage-keytab-1[Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab 21]
-____
+*** link:#step-3-click-on-the-user-name-at-the-bottom-left-of-the-screen-and-select-manage-keytab-1[Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab]
 
-link:#lab-1-create-a-flow-using-the-flow-designer[*Lab 1 : Create a Flow using the Flow Designer 23*]
 
-____
-link:#overview[1. Overview 23]
+link:#lab-1-create-a-flow-using-the-flow-designer[*Lab 1 : Create a Flow using the Flow Designer*]
 
-link:#building-the-data-flow[2. Building the Data Flow 23]
 
-link:#create-the-canvas-to-design-your-flow[2.1. Create the canvas to design your flow 23]
+* link:#overview[1. Overview]
 
-link:#step-1-access-the-dataflow-data-service[Step 1: Access the DataFlow Data Service 23]
+* link:#building-the-data-flow[2. Building the Data Flow]
 
-link:#step-2-go-to-the-flow-design[Step 2: Go to the Flow Design 24]
+** link:#create-the-canvas-to-design-your-flow[2.1. Create the canvas to design your flow]
 
-link:#step-3-create-a-new-draft[Step 3: Create a new Draft 24]
+*** link:#step-1-access-the-dataflow-data-service[Step 1: Access the DataFlow Data Service]
 
-link:#step-4-select-the-appropriate-environment[Step 4: Select the appropriate environment 24]
+*** link:#step-2-go-to-the-flow-design[Step 2: Go to the Flow Design ]
 
-link:#adding-new-parameters[2.2. Adding new parameters 26]
+*** link:#step-3-create-a-new-draft[Step 3: Create a new Draft ]
 
-link:#step-1-click-on-the-flow-options-on-the-top-right-corner-of-your-canvas-and-then-select-parameters[Step 1: Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS 26]
+*** link:#step-4-select-the-appropriate-environment[Step 4: Select the appropriate environment ]
 
-link:#step-2-configure-parameters[Step 2: Configure Parameters 26]
+** link:#adding-new-parameters[2.2. Adding new parameters ]
 
-link:#create-the-flow[2.3. Create the Flow 29]
+*** link:#step-1-click-on-the-flow-options-on-the-top-right-corner-of-your-canvas-and-then-select-parameters[Step 1: Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS ]
 
-link:#step-1-add-generateflowfile-processor[Step 1: Add GenerateFlowFile processor 30]
+*** link:#step-2-configure-parameters[Step 2: Configure Parameters ]
 
-link:#step-2-configure-generateflowfile-processor[Step 2: Configure GenerateFlowFile processor 31]
+** link:#create-the-flow[2.3. Create the Flow ]
 
-link:#step-3-add-putcdpobjectstore-processor[Step 3: Add PutCDPObjectStore processor 34]
+*** link:#step-1-add-generateflowfile-processor[Step 1: Add GenerateFlowFile processor ]
 
-link:#step-4-configure-putcdpobjectstore-processor[Step 4: Configure PutCDPObjectStore processor 35]
+*** link:#step-2-configure-generateflowfile-processor[Step 2: Configure GenerateFlowFile processor ]
 
-link:#step-5-create-connection-between-processors[Step 5: Create connection between processors 37]
+*** link:#step-3-add-putcdpobjectstore-processor[Step 3: Add PutCDPObjectStore processor ]
 
-link:#naming-the-queues[2.4. Naming the queues 39]
+*** link:#step-4-configure-putcdpobjectstore-processor[Step 4: Configure PutCDPObjectStore processor ]
 
-link:#testing-the-data-flow[3. Testing the Data Flow 41]
+*** link:#step-5-create-connection-between-processors[Step 5: Create connection between processors ]
 
-link:#step-1-start-test-session[Step 1: Start test session 41]
+** link:#naming-the-queues[2.4. Naming the queues ]
 
-link:#step-2-run-the-flow[Step 2: Run the flow 42]
+* link:#testing-the-data-flow[3. Testing the Data Flow ]
 
-link:#move-the-flow-to-the-flow-catalog[4. Move the Flow to the Flow Catalog 44]
+** link:#step-1-start-test-session[Step 1: Start test session ]
 
-link:#step-1-stop-the-current-test-session[Step 1: STOP the current test session 44]
+** link:#step-2-run-the-flow[Step 2: Run the flow ]
 
-link:#step-2-publish-the-flow[Step 2: PUBLISH the flow 45]
+* link:#move-the-flow-to-the-flow-catalog[4. Move the Flow to the Flow Catalog ]
 
-link:#step-3-give-your-flow-a-name-and-click-on-publish[Step 3: Give your flow a name and click on PUBLISH 46]
+** link:#step-1-stop-the-current-test-session[Step 1: STOP the current test session ]
 
-link:#deploying-the-flow[5. Deploying the Flow 47]
+** link:#step-2-publish-the-flow[Step 2: PUBLISH the flow ]
 
-link:#step-1-search-for-the-flow-in-the-flow-catalog[Step 1: Search for the flow in the Flow Catalog 47]
+** link:#step-3-give-your-flow-a-name-and-click-on-publish[Step 3: Give your flow a name and click on PUBLISH ]
 
-link:#step-2-deploy-the-flow[Step 2: Deploy the flow 48]
+* link:#deploying-the-flow[5. Deploying the Flow 47]
 
-link:#step-3-select-the-cdp-environment[Step 3: Select the CDP environment 48]
+** link:#step-1-search-for-the-flow-in-the-flow-catalog[Step 1: Search for the flow in the Flow Catalog ]
 
-link:#step-4-deployment-name[Step 4: Deployment Name 49]
+** link:#step-2-deploy-the-flow[Step 2: Deploy the flow ]
 
-link:#step-5-set-the-nifi-configuration[Step 5: Set the NiFi Configuration 49]
+** link:#step-3-select-the-cdp-environment[Step 3: Select the CDP environment ]
 
-link:#step-6-set-the-parameters[Step 6: Set the Parameters 50]
+** link:#step-4-deployment-name[Step 4: Deployment Name ]
 
-link:#step-7-set-the-cluster-size[Step 7: Set the cluster size 50]
+** link:#step-5-set-the-nifi-configuration[Step 5: Set the NiFi Configuration ]
 
-link:#step-8-add-key-performance-indicators[Step 8: Add Key Performance indicators 51]
+** link:#step-6-set-the-parameters[Step 6: Set the Parameters ]
 
-link:#step-9-click-deploy[Step 9: Click Deploy 53]
+** link:#step-7-set-the-cluster-size[Step 7: Set the cluster size ]
 
-link:#viewing-details-of-the-deployed-flow[6. Viewing details of the deployed flow 54]
+** link:#step-8-add-key-performance-indicators[Step 8: Add Key Performance indicators ]
 
-link:#step-1-manage-kpi-and-alerts[Step 1 : Manage KPI and Alerts 54]
+** link:#step-9-click-deploy[Step 9: Click Deploy ]
 
-link:#step-2-manage-sizing-and-scaling[Step 2 : Manage Sizing and Scaling 55]
+* link:#viewing-details-of-the-deployed-flow[6. Viewing details of the deployed flow ]
 
-link:#step-3-manage-parameters[Step 3 : Manage Parameters 56]
+** link:#step-1-manage-kpi-and-alerts[Step 1 : Manage KPI and Alerts ]
 
-link:#step-4-nifi-configurations[Step 4 : NiFi Configurations 56]
+** link:#step-2-manage-sizing-and-scaling[Step 2 : Manage Sizing and Scaling ]
 
-link:#step-5-view-the-deployed-flow-in-nifi[Step 5 : View the deployed flow in NiFi 57]
+** link:#step-3-manage-parameters[Step 3 : Manage Parameters ]
 
-link:#step-6-terminate-the-flow[Step 6 : Terminate the flow 58]
-____
+** link:#step-4-nifi-configurations[Step 4 : NiFi Configurations ]
 
-link:#lab-2-migrating-existing-data-flows-to-cdf-pc[*Lab 2 : Migrating Existing Data Flows to CDF-PC 60*]
+** link:#step-5-view-the-deployed-flow-in-nifi[Step 5 : View the deployed flow in NiFi ]
 
-____
-link:#overview-1[1. Overview 60]
+** link:#step-6-terminate-the-flow[Step 6 : Terminate the flow ]
 
-link:#pre-requisites-1[2. Pre-requisites 61]
+link:#lab-2-migrating-existing-data-flows-to-cdf-pc[Lab 2 : Migrating Existing Data Flows to CDF-PC]
 
-link:#create-a-kafka-topic[2.1. Create a Kafka Topic 61]
+* link:#overview-1[1. Overview ]
 
-link:#create-a-schema-in-schema-registry[2.2. Create a Schema in Schema Registry 63]
-____
+* link:#pre-requisites-1[2. Pre-requisites ]
 
-link:#lab-3-operationalizing-externally-developed-data-flows-with-cdf-pc[*Lab 3 : Operationalizing Externally Developed Data Flows with CDF-PC 67*]
+** link:#create-a-kafka-topic[2.1. Create a Kafka Topic ]
 
-____
-link:#import-the-flow-into-the-cdf-pc-catalog[1. Import the Flow into the CDF-PC Catalog 67]
+** link:#create-a-schema-in-schema-registry[2.2. Create a Schema in Schema Registry ]
 
-link:#deploy-the-flow-in-cdf-pc[2. Deploy the Flow in CDF-PC 68]
-____
 
-link:#lab-4-sql-stream-builder[*Lab 4 : SQL Stream Builder 76*]
+link:#lab-3-operationalizing-externally-developed-data-flows-with-cdf-pc[Lab 3 : Operationalizing Externally Developed Data Flows with CDF-PC]
 
-____
-link:#overview-2[1. Overview 76]
 
-link:#creating-a-project[2. Creating a Project 76]
+* link:#import-the-flow-into-the-cdf-pc-catalog[1. Import the Flow into the CDF-PC Catalog ]
 
-link:#step-1-go-to-the-sql-stream-builder-ui[Step 1: Go to the SQL Stream Builder UI 76]
+* link:#deploy-the-flow-in-cdf-pc[2. Deploy the Flow in CDF-PC ]
 
-link:#step-2-creation-of-a-project[Step 2: Creation of a Project 77]
 
-link:#step-3-create-kafka-data-store[Step 3 : Create Kafka Data Store 78]
+link:#lab-4-sql-stream-builder[Lab 4 : SQL Stream Builder]
 
-link:#step-4-create-kafka-table[Step 4: Create Kafka Table 79]
 
-link:#step-5-configure-the-kafka-table[Step 5: Configure the Kafka Table 80]
+* link:#overview-2[1. Overview ]
 
-link:#step-6-create-a-flink-job[Step 6: Create a Flink Job 83]
-____
+* link:#creating-a-project[2. Creating a Project ]
 
-== 
+** link:#step-1-go-to-the-sql-stream-builder-ui[Step 1: Go to the SQL Stream Builder UI ]
+
+** link:#step-2-creation-of-a-project[Step 2: Creation of a Project ]
+
+** link:#step-3-create-kafka-data-store[Step 3 : Create Kafka Data Store ]
+
+** link:#step-4-create-kafka-table[Step 4: Create Kafka Table ]
+
+** link:#step-5-configure-the-kafka-table[Step 5: Configure the Kafka Table ]
+
+** link:#step-6-create-a-flink-job[Step 6: Create a Flink Job]
+
 
 == *Pre-requisites*
 
