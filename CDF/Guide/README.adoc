@@ -1652,6 +1652,8 @@ Table Name: *\{user-id}_syslog_data*
 
 Kafka Cluster: *<select the Kafka data source you created previously>*
 
+
+
 * {blank}
 +
 
@@ -1661,9 +1663,7 @@ Data Format: *JSON*
 +
 
 Topic Name: *<select the topic created in Schema Registry>*
-____
 
-____
 image:media/media/image27.png[media/media/image27,width=307,height=256]
 ____
 
@@ -1678,9 +1678,7 @@ For JSON tables, though, SSB can look at the data flowing through the topic and 
 *Note:* SSB tries its best to infer the schema correctly, but this is not always possible and sometimes data types are inferred incorrectly. You should always review the inferred schemas to check if it's correctly inferred and make the necessary adjustments. +
  +
 Since you are reading data from a JSON topic, go ahead and click on *Detect Schema* to get the schema inferred. You should see the schema be updated in the *Schema Definition* tab.
-____
 
-____
 image:media/media/image123.png[media/media/image123,width=421,height=280]
 ____
 
@@ -1689,9 +1687,7 @@ ____
 +
 ____
 You will also notice that a "Schema is invalid" message appears upon the schema detection. If you hover the mouse over the message it shows the reason:
-____
 
-____
 image:media/media/image54.png[media/media/image54,width=624,height=86]
 
 You will fix this in the next step.
