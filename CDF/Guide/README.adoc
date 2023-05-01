@@ -1078,8 +1078,6 @@ This will open the flow in the NiFi UI.
 image:media/media/image95.png[media/media/image95,width=546,height=320]
 ____
 
-==== 
-
 ==== Step 6 : Terminate the flow
 
 As we have completed the Lab, it is best to terminate this flow. Follow the below given procedure to terminate your flow.
