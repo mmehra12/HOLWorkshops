@@ -251,7 +251,7 @@ You should land on the CDP Console as shown below.
 === *2. Verify permissions in Apache Ranger*
 
 ____
-NOTE: THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT EXECUTE THE STEPS IN THIS SECTION OR CHANGE ANYTHING.
+*Note*: THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT EXECUTE THE STEPS IN THIS SECTION OR CHANGE ANYTHING.
 ____
 
 ==== *2.1 Accessing Apache Ranger*
@@ -324,7 +324,9 @@ ____
 === *3. Update workload password*
 
 
-[NOTE] THESE STEPS NEED TO BE PERFORMED BEFORE MOVING FORWARD
+____
+*Note* THESE STEPS NEED TO BE PERFORMED BEFORE MOVING FORWARD
+____
 
 You will need to define your CDP Workload Password that will be used to access non-SSO interfaces. You may read more about it here. Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.
 
@@ -345,8 +347,9 @@ ____
 +
 ____
 * Enter the shared password.
-
-[NOTE]: PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
+____
+*Note* : PLEASE ENTER THE SAME PASSWORD THAT WAS SHARED BY THE INSTRUCTOR. FAILING TO DO SO WILL LEAD TO ERRORS IN OUR LAB STEPS LATER ON
+____
 
 image:media/media/image41.png[media/media/image41,width=545,height=239]
 * Click the button Set Workload Password.
@@ -610,7 +613,9 @@ Value : <The username assigned to you>
 
 EXAMPLE : wuser01
 
-[NOTE]: do not add the domain ‘@workload.com’
+____
+*Note* : do not add the domain ‘@workload.com’
+____
 ____
 
 * {blank}
@@ -868,7 +873,9 @@ ____
 
 Select the CDP environment where this flow will be deployed and click on *CONTINUE*
 
-[NOTE] THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
+____
+*Note* THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
+____
 
 image:media/media/image35.png[media/media/image35,width=334,height=316]
 
@@ -1070,7 +1077,9 @@ ____
 Send the transformed syslog messages to Kafka
 ____
 
-Note that a parameter context has already been defined in the flow and the queues have been uniquely named.
+____
+*Note* Parameter context has already been defined in the flow and the queues have been uniquely named.
+____
 
 For this we will be leveraging the DataHubs which have already been created, namely:
 
@@ -1381,7 +1390,10 @@ a|
 |===
 
 ____
-Note: The name of the Kafka Topic you previously created and the Schema Name must be the same.
+____
+*Note*
+The name of the Kafka Topic you previously created and the Schema Name must be the same.
+____
 
 Click on *SAVE*.
 
@@ -1502,7 +1514,9 @@ ____
 Select the CDP environment where this flow will be deployed, then click *Continue*.
 ____
 
-NOTE: THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
+____
+*Note* : THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
+____
 
 image:media/media/image40.png[media/media/image40,width=489,height=359]
 
@@ -1895,7 +1909,9 @@ ____
 |SELECT * FROM *\{user-id}_syslog_data* WHERE severity <=3
 |===
 
-NOTE : Replace \{user-id} with your assigned username
+____
+*Note* : Replace \{user-id} with your assigned username
+____
 
 ____
 Run the Streaming SQL Job by clicking *Execute*. Also, ensure your \{user_id}-syslog-to-kafka flow is running in CDF-PC.
