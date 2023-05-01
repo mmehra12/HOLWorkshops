@@ -1393,34 +1393,19 @@ ____
 +
 ____
 Add the following information:
-____
 
-* {blank}
-+
-____
-*Flow Name:* <username>-syslog-to-kafka
-____
-* {blank}
-+
-____
-*Flow Description:* : 
-Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka
-____
-
-* {blank}
-+
-____
-*NiFi Flow Configuration:* syslog-to-kafka.json (From the resources downloaded earlier)
-____
-* {blank}
-+
-____
-*Version Comments:* Initial Version
-____
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Property* |*Value*
+|*Flow Name* |<username>-syslog-to-kafka
+|*Flow Description* |Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka
+|*NiFi Flow Configuration* |syslog-to-kafka.json (From the resources downloaded earlier)
+|*Version Comments* |Initial Version
+|===
 
 image:media/media/image73.png[media/media/image73,width=242,height=248]
-
 Click *IMPORT*
+____
 
 === *2. Deploy the Flow in CDF-PC*
 
@@ -1429,27 +1414,22 @@ Click *IMPORT*
 +
 ____
 Search for the flow in the Flow Catalog
-____
-
 image:media/media/image58.png[media/media/image58,width=550,height=103]
+____
 
 [arabic, start=2]
 . {blank}
 +
 ____
 Click on the Flow, you should see the following:
-____
-
 image:media/media/image55.png[media/media/image55,width=346,height=225]
+____
 
 [arabic, start=3]
 . {blank}
 +
 ____
 Click on *Version 1*, you should see a *Deploy* Option appear shortly. Then click on *Deploy*.
-____
-
-____
 image:media/media/image38.png[media/media/image38,width=364,height=235]
 ____
 
