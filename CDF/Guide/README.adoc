@@ -1489,7 +1489,7 @@ image:media/media/image135.png[media/media/image135,width=448,height=289]
 Example : kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site
 ____
 
-image:media/media/image69.png[media/media/image69,width=349,height=361
+image:media/media/image69.png[media/media/image69,width=349,height=361]
 
 image:media/media/image19.png[media/media/image19,width=362,height=260]
 
