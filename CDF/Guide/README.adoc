@@ -909,7 +909,11 @@ ____
 ____
 Once the session stops, click on *FLOW OPTION* on the top right corner of your screen and click on *PUBLISH*
 
-image:media/media/image140.png[media/media/image140,width=624,height=358]
+++++
+<p align="center">
+  <img width="624" height="363" src="media/media/image140.png">
+</p>
+++++
 ____
 ==== Step 3: Give your flow a name and click on *PUBLISH*
 ____
@@ -927,7 +931,9 @@ ____
 ==== *Step 1:* Search for the flow in the Flow Catalog
 ____
 image:media/media/image29.png[media/media/image29,width=390,height=277]
-Click on the Flow, you should see the following:
+
+* Click on the Flow, you should see the following:
+
 image:media/media/image24.png[media/media/image24,width=466,height=226]
 ____
 
