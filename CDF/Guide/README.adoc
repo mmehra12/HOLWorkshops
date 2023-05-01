@@ -209,9 +209,9 @@ ____
 ____
 Environment should be enabled as part of the CDF Data Service.
 ____
-
+____
 *Note* Lab 0 basically talks about verifying different aspects wrt to access and connections before we could begin with the actual steps.
-
+____
 
 == Lab 0 - Introduction and setup
 
