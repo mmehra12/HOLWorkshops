@@ -958,11 +958,13 @@ ____
 ____
 image:media/media/image44.png[media/media/image44,width=416,height=252]
 
-Give the deployment a unique name( \{user_id}_flow_prod), then click Next.
+Give the deployment a unique name( \{user_id}_flow_prod), then click Next
+
 Example : wuser01_flow_prod
-____
-*Click NEXT*
 image:media/media/image133.png[media/media/image133,width=257,height=307]
+*Click NEXT*
+____
+
 
 ==== *Step 5:* Set the NiFi Configuration
 ____
