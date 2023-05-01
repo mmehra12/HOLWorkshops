@@ -530,29 +530,27 @@ The following is a step by step guide in building a data flow for use within CDF
 ==== *2.1. Create the canvas to design your flow*
 
 ===== *Step 1:* Access the DataFlow Data Service
-
+____
 Access the DataFlow dataservice from the Management Console
 
 image:media/media/image139.png[media/media/image139,width=406,height=231]
-
-===== 
-
-===== 
+____
 
 ===== *Step 2:* Go to the Flow Design
-
+____
 image:media/media/image121.png[media/media/image121,width=143,height=270]
+____
 
-===== 
 
 ===== *Step 3: Create a new Draft* 
-
+____
 (This will be the main process group of your flow)
 
 image:media/media/image124.png[media/media/image124,width=624,height=82]
+____
 
 ===== *Step 4: Select the appropriate environment* 
-
+____
 *Select the appropriate environment as part of the workspace* and give your flow a name and click on *CREATE*
 
 Workspace Name : *_The name of the environment will be shared by the INSTRUCTOR_*
@@ -566,10 +564,7 @@ _Example : wuserXY_datadump_flow_
 On successful creation of the Draft, you should now be redirected to the canvas on which you can design your flow
 
 image:media/media/image125.png[media/media/image125,width=467,height=305]
-
-==== 
-
-==== 
+____
 
 ==== *2.2. Adding new parameters*
 
@@ -591,24 +586,13 @@ We need to add the following parameters.
 +
 ____
 S3 Directory
-____
-** {blank}
-+
-____
-Selection under Add Parameter : *_Add Parameter_*
-____
-** {blank}
-+
-____
-Name : S3 Directory
-____
-** {blank}
-+
-____
-Value : LabData or TestDir
-____
 
-____
+Selection under Add Parameter : *_Add Parameter_*
+
+Name : S3 Directory
+
+Value : LabData or TestDir
+
 image:media/media/image110.png[media/media/image110,width=330,height=310]
 ____
 
@@ -616,40 +600,23 @@ ____
 +
 ____
 CDP Workload User
-____
-** {blank}
-+
-____
+
 Selection under Add Parameter : *_Add Parameter_*
-____
-** {blank}
-+
-____
+
 Name : CDP Workload User
-____
-** {blank}
-+
-____
+
 Value : <The username assigned to you>
-____
-*** {blank}
-+
-____
+
 EXAMPLE : wuser01
-____
-*** {blank}
-+
-____
-IMPORTANT: do not add the domain ‘@workload.com’
-____
+
+[NOTE]: do not add the domain ‘@workload.com’
+
 * {blank}
 +
 ____
-CDP Workload User Password - [ Sensitive Field ]image:media/media/image103.png[media/media/image103,width=227,height=260]
-____
-** {blank}
-+
-____
+CDP Workload User Password - [ Sensitive Field ]
+image:media/media/image103.png[media/media/image103,width=227,height=260]
+
 Selection under Add Parameter : *_Add Sensitive Parameter_*
 ____
 ** {blank}
