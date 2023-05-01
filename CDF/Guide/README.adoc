@@ -1423,6 +1423,7 @@ ____
 +
 ____
 Click on the Flow, you should see the following:
+
 image:media/media/image55.png[media/media/image55,width=346,height=225]
 ____
 
@@ -1431,6 +1432,7 @@ ____
 +
 ____
 Click on *Version 1*, you should see a *Deploy* Option appear shortly. Then click on *Deploy*.
+
 image:media/media/image38.png[media/media/image38,width=364,height=235]
 ____
 
