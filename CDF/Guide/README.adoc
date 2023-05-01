@@ -954,7 +954,9 @@ ____
 
 image:media/media/image35.png[media/media/image35,width=334,height=316]
 
-==== *Step 4:* Deployment Nameimage:media/media/image44.png[media/media/image44,width=416,height=252]
+==== *Step 4:* Deployment Name
+
+image:media/media/image44.png[media/media/image44,width=416,height=252]
 
 ____
 Give the deployment a unique name( \{user_id}_flow_prod), then click Next.
