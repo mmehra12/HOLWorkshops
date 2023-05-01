@@ -974,9 +974,9 @@ ____
 
 We can let everything be the default here and click NEXT
 
-==== 
+==== *Step 6:* Set the Parameters
 
-==== *Step 6:* Set the Parametersimage:media/media/image147.png[media/media/image147,width=369,height=401]
+image:media/media/image147.png[media/media/image147,width=369,height=401]
 
 Set the Username, Password and the Directory name and click NEXT
 
@@ -992,19 +992,9 @@ _[The CDP Environment parameter that shows here is used at the time we perform a
 
 ==== image:media/media/image104.png[media/media/image104,width=278,height=331]
 
-==== 
-
-==== 
-
 ==== *Step 7:* Set the cluster size
 
 Select the Extra Small size and click NEXT. In this step you can configure how your flow will autoscale, but keep it disabled for this lab.
-
-==== 
-
-==== 
-
-==== 
 
 ==== *Step 8:* Add Key Performance indicators
 
@@ -1025,10 +1015,6 @@ image:media/media/image15.png[media/media/image15,width=357,height=393]
 Click Add and then Click Next
 
 image:media/media/image32.png[media/media/image32,width=351,height=409]
-
-==== 
-
-==== 
 
 ==== *Step 9:* Click *Deploy*
 
@@ -1060,7 +1046,7 @@ Click on the Sizing and Scaling tab to get detailed information
 
 image:media/media/image84.png[media/media/image84,width=470,height=287]
 
-==== 
+
 
 ==== Step 3 : Manage Parameters
 
@@ -1073,10 +1059,6 @@ image:media/media/image118.png[media/media/image118,width=491,height=246]
 If you have set any configuration wrt to Nifi they will show up on the ‘NiFi Configuration’ tab
 
 ==== image:media/media/image86.png[media/media/image86,width=630,height=185]
-
-====  +
-
-==== 
 
 ==== Step 5 : View the deployed flow in NiFi
 
@@ -1094,8 +1076,6 @@ This will open the flow in the NiFi UI.
 image:media/media/image95.png[media/media/image95,width=546,height=320]
 ____
 
-====  +
-
 ==== 
 
 ==== Step 6 : Terminate the flow
@@ -1108,7 +1088,7 @@ Select Dashboard from the Cloudera Data Flow UI
 
 Select your flow and go to Manage Deployment
 
-== image:media/media/image115.png[media/media/image115,width=566,height=244] +
+image:media/media/image115.png[media/media/image115,width=566,height=244] +
 
 On the Deployment Manager Page, Select *Actions* and click on *Terminate*
 
@@ -1122,7 +1102,7 @@ You will now see that the termination process has started.
 
 image:media/media/image152.png[media/media/image152,width=365,height=353]
 
-== 
+
 
 == *Lab 2 : Migrating Existing Data Flows to CDF-PC*
 
