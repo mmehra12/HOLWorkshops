@@ -910,7 +910,7 @@ ____
 Once the session stops, click on *FLOW OPTION* on the top right corner of your screen and click on *PUBLISH*
 
 ++++
-<p align="center">
+<p align="left">
   <img width="624" height="363" src="media/media/image140.png">
 </p>
 ++++
