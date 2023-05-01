@@ -1160,7 +1160,7 @@ ____
 +
 ____
 Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub ( kafka-smm-cluster )
-____
+
 
 ++++
 <p align="center">
@@ -1172,27 +1172,28 @@ ____
   <img width="563" height="86" src="media/media/image63.png">
 </p>
 ++++
-
+____
 
 [arabic, start=2]
 . {blank}
 +
 ____
 Click on Topics in the left tab
-____
+
 
 ++++
 <p align="center">
   <img width="376" height="296" src="media/media/image148.png">
 </p>
 ++++
+____
 
 [arabic, start=3]
 . {blank}
 +
 ____
 Click on Add New
-____
+
 
 ++++
 <p align="center">
