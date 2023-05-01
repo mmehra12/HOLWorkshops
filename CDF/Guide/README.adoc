@@ -1635,8 +1635,6 @@ Create Kafka Table, by selecting *“Virtual Tables”* in the left pane, clicki
 
 image:media/media/image77.png[media/media/image77,width=354,height=368]
 
-==== 
-
 ==== *Step 5:* Configure the Kafka Table
 
 [arabic]
@@ -1644,25 +1642,24 @@ image:media/media/image77.png[media/media/image77,width=354,height=368]
 +
 ____
 Enter the following details in the Kafka Table dialog box:
-____
+
 * {blank}
 +
-____
 Table Name: *\{user-id}_syslog_data*
-____
+
 * {blank}
 +
-____
+
 Kafka Cluster: *<select the Kafka data source you created previously>*
-____
+
 * {blank}
 +
-____
+
 Data Format: *JSON*
-____
+
 * {blank}
 +
-____
+
 Topic Name: *<select the topic created in Schema Registry>*
 ____
 
