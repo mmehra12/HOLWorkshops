@@ -1471,68 +1471,26 @@ ____
 +
 ____
 Add the Flow Parameters as below, then click *Next*.
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Property* |*Value*
+|*CDP Workload User* |The workload username for the current user. Example : wuser00
+|*CDP Workload Password* | The workload password for the current user [This password was set by you in Lab 0, section 3]
+|*Filter Rule* |SELECT * FROM FLOWFILE
+|*Kafka Broker Endpoint* |A comma separated list of Kafka Brokers.
+|*Kafka Destination Topic* |<username>-syslog (Ex: wuser00-syslog)
+|*Kafka Producer ID* |nifi_dfx_p1
+|*Schema Name* |<username>-syslog (Ex: wuser00-syslog)
+|*Schema Registry Hostname* |The hostname of the master server in the Kafka Datahub(kafka-smm-cluster)[Refer screenshot below] Example : *kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site*
+|===
+image:media/media/image135.png[media/media/image135,width=448,height=289]
 ____
 
-* {blank}
-+
-____
-*CDP Workload User* - The workload username for the current user
-____
-** {blank}
-+
-____
-Example : wuser00
-____
-* {blank}
-+
-____
-*CDP Workload Password* - The workload password for the current user [This password was set by you in Lab 0, section 3]
-____
-* {blank}
-+
-____
-*Filtre Rule -* SELECT * FROM FLOWFILE
-____
-* {blank}
-+
-____
-*Kafka Broker Endpoint* - A comma separated list of Kafka Brokers.
-____
 
-{empty}[Obtained in Lab 0, section 4]
+Example : kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site
 
-Example:
-
-____
-kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093
-____
-
-* {blank}
-+
-____
-*Kafka Destination Topic -* <username>-syslog (Ex: wuser00-syslog)
-____
-* {blank}
-+
-____
-_*Kafka Producer ID* - nifi_dfx_p1_
-____
-* {blank}
-+
-____
-*Schema Name* - <username>-syslog (Ex: wuser00-syslog)
-____
-* {blank}
-+
-____
-*Schema Registry Hostname* - The hostname of the master server in the Kafka Datahub(kafka-smm-cluster)[Refer screenshot below]image:media/media/image135.png[media/media/image135,width=448,height=289]
-____
-
-____
-_Example : kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site_
-____
-
-.image:media/media/image69.png[media/media/image69,width=349,height=361]image:media/media/image19.png[media/media/image19,width=362,height=260]
+image:media/media/image69.png[media/media/image69,width=349,height=361]image:media/media/image19.png[media/media/image19,width=362,height=260]
 
 [arabic, start=8]
 . {blank}
