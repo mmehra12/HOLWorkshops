@@ -237,12 +237,12 @@ Open the shared link and login with the credentials assigned to you.
 </p>
 ++++
 
-____
+
 
 * {blank}
 +
 You should land on the CDP Console as shown below.
-____
+
 ++++
 <p align="center">
   <img width="520" height="241" src="media/media/image136.png">
