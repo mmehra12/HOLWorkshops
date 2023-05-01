@@ -622,8 +622,8 @@ ____
 * Name : CDP Workload User Password
 
 * Value : <Workload Password set by yourself in Lab 0>
+** EXAMPLE : Wuser@2021
 
-EXAMPLE : Wuser@2021
 image:media/media/image103.png[media/media/image103,width=227,height=260]
 image:media/media/image49.png[media/media/image49,width=298,height=281]
 
@@ -639,67 +639,56 @@ image:media/media/image67.png[media/media/image67,width=470,height=203]
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for *CDP Workload User* and *CDP Workload User Password*.
 
-NOTE ONLY:
-
+.Note
+----
 To search for existing parameters:
-
-[arabic]
-. {blank}
-+
-____
 Open a processor's configuration and proceed to the properties tab.
-____
-. {blank}
-+
-____
-Enter: *#\{*
-____
-. {blank}
-+
-____
-Hit ‘control+spacebar’
-____
+Enter: #{
 
+Hit ‘control+spacebar’
 This will bring up a list of existing parameters that are not tagged as sensitive.
-    
+----
+
+
 
 ==== *2.3. Create the Flow*
 
 Let’s go back to the canvas to start designing our flow. This flow will contain 2 Processors:
 
-* {blank}
-+
-____
-*GenerateFlowFile* - Generates random data
-____
-* {blank}
-+
-____
-*PutCDPObjectStore* - Loads data into HDFS(S3)
-____
-* {blank}
-+
-____
+* *GenerateFlowFile* - Generates random data
+* *PutCDPObjectStore* - Loads data into HDFS(S3)
 Our final flow will look like this:
-____
-
-image:media/media/image34.png[media/media/image34,width=267,height=353]
+++++
+<p align="center">
+  <img width="353" height="267" src="media/media/image34.png">
+</p>
+++++
 
 ===== *Step 1:* Add *GenerateFlowFile* processor 
 
 Pull the Processor onto the canvas and select *GenerateFlowFile* Processor and click on *ADD.*
 
-image:media/media/image154.png[media/media/image154,width=496,height=330]
-
-image:media/media/image3.png[media/media/image3,width=504,height=381]
-
-===== 
+++++
+<p align="center">
+  <img width="500" height="330" src="media/media/image154.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="504" height="381" src="media/media/image3.png">
+</p>
+++++
 
 ===== *Step 2:* Configure *GenerateFlowFile* processor 
 
 The GenerateFlowFile Processor will now be on your canvas and you can configure it in the following way by right clicking and selecting *Configuration*.
 
-image:media/media/image25.png[media/media/image25,width=308,height=278]
+++++
+<p align="center">
+  <img width="310" height="278" src="media/media/image25.png">
+</p>
+++++
+
 
 Configure the processor in the following way
 
@@ -720,19 +709,21 @@ image:media/media/image11.png[media/media/image11,width=314,height=494]image:med
 
 Click on *APPLY.*
 
-===== 
-
-===== 
-
 ===== *Step 3:* Add *PutCDPObjectStore* processor 
 
 Pull a new Processor onto the canvas and select *PutCDPObjectStore* Processor and click on *ADD.*
 
-image:media/media/image1.png[media/media/image1,width=475,height=317]
+++++
+<p align="center">
+  <img width="475" height="317" src="media/media/image1.png">
+</p>
+++++
 
-image:media/media/image26.png[media/media/image26,width=477,height=342]
-
-===== 
+++++
+<p align="center">
+  <img width="477" height="342" src="media/media/image26.png">
+</p>
+++++
 
 ===== *Step 4:* Configure *PutCDPObjectStore* processor 
 
@@ -752,13 +743,11 @@ The PutCDPObjectStore Processor needs to be configured as follows:
 |*Auto Terminate Relationships:* |Check the “Terminate” box under “success”
 |===
 
-===== image:media/media/image78.png[media/media/image78,width=372,height=565]image:media/media/image114.png[media/media/image114,width=403,height=586]
+image:media/media/image78.png[media/media/image78,width=372,height=565]image:media/media/image114.png[media/media/image114,width=403,height=586]
 
 *Click APPLY*
 
 image:media/media/image59.png[media/media/image59,width=258,height=235]
-
-===== 
 
 ===== *Step 5:* Create connection between processors
 
@@ -776,25 +765,7 @@ The Move2S3 processor does not know what to do in case of a failure, let’s add
 
 image:media/media/image28.png[media/media/image28,width=287,height=184]
 
-==== 
-
-==== 
-
-==== image:media/media/image149.png[media/media/image149,width=362,height=337]
-
-==== 
-
-==== 
-
-==== 
-
-==== 
-
-==== 
-
-====  +
-
-==== 
+image:media/media/image149.png[media/media/image149,width=362,height=337]
 
 ==== *2.4. Naming the queues*
 
@@ -809,12 +780,6 @@ image:media/media/image96.png[media/media/image96,width=552,height=396]
 The failure queue for *Move2S3* is named *failure_Move2S3*.
 
 image:media/media/image137.png[media/media/image137,width=538,height=365]
-
-=== 
-
-===  +
-
-=== 
 
 === *3. Testing the Data Flow*
 
@@ -835,8 +800,6 @@ image:media/media/image7.png[media/media/image7,width=503,height=102]
 Once the Test Session is ready you will see the following message on the top right corner of your screen.
 
 image:media/media/image33.png[media/media/image33,width=517,height=112]
-
-==== 
 
 ==== *Step 2:* Run the flow
 
@@ -874,12 +837,6 @@ Once the session stops, click on *FLOW OPTION* on the top right corner of your s
 
 image:media/media/image140.png[media/media/image140,width=624,height=358]
 
-====  +
-
-==== 
-
-==== 
-
 ==== Step 3: Give your flow a name and click on *PUBLISH*
 
 Flow Name : \{user_id}_datadump_flow
@@ -893,23 +850,13 @@ image:media/media/image5.png[media/media/image5,width=401,height=360]
 === *5. Deploying the Flow*
 
 ==== *Step 1:* Search for the flow in the Flow Catalog
-
+____
 image:media/media/image29.png[media/media/image29,width=390,height=277]
-
-____
 Click on the Flow, you should see the following:
-____
-
 image:media/media/image24.png[media/media/image24,width=466,height=226]
-
-====  +
-
-==== 
-
-==== 
+____
 
 ==== *Step 2:* Deploy the flow
-
 ____
 Click on *Version 1*, you should see a *Deploy* Option appear shortly. Then click on *Deploy*.
 
@@ -920,7 +867,7 @@ ____
 
 Select the CDP environment where this flow will be deployed and click on *CONTINUE*
 
-NOTE: THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
+[NOTE] THE NAME OF THE ENVIRONMENT WILL BE SHARED BY THE INSTRUCTOR
 
 image:media/media/image35.png[media/media/image35,width=334,height=316]
 
