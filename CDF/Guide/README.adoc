@@ -968,8 +968,6 @@ ____
 
 ==== image:media/media/image133.png[media/media/image133,width=257,height=307]
 
-==== 
-
 ==== *Step 5:* Set the NiFi Configuration
 
 We can let everything be the default here and click NEXT
