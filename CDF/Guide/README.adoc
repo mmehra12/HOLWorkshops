@@ -871,40 +871,48 @@ Once the Test Session is ready you will see the following message on the top rig
 
 Right click on the empty part of the canvas and select START.
 
-image:media/media/image37.png[media/media/image37,width=383,height=363]
+++++
+<p align="center">
+  <img width="383" height="363" src="media/media/image37.png">
+</p>
+++++
 
 Both the processors should now be in the START state.
-
-image:media/media/image39.png[media/media/image39,width=381,height=363]
+++++
+<p align="center">
+  <img width="381" height="363" src="media/media/image39.png">
+</p>
+++++
 
 You will now see files coming into the folder which was specified as the Directory on the S3 bucket which is the Base data store for this environment.
 
 image:media/media/image23.png[media/media/image23,width=357,height=231]
-
 image:media/media/image36.png[media/media/image36,width=577,height=285]
 
-{empty}[You will not be able to access this S3 bucket by your self but the instructor will show you where everyones data is moving to]
+____
+*Note* : You will not be able to access this S3 bucket by your self but the instructor will show you where everyones data is moving to
+____
 
 === *4. Move the Flow to the Flow Catalog*
 
 After the flow has been created and tested we can now PUBLISH the flow to the Flow Catalog
 
 ==== *Step 1:* STOP the current test session 
-
+____
 STOP the current test session by clicking on the green tab on top right and click *END*
 
 image:media/media/image88.png[media/media/image88,width=448,height=275]
 
 image:media/media/image143.png[media/media/image143,width=366,height=143]
-
+____
 ==== *Step 2:* PUBLISH the flow
-
+____
 Once the session stops, click on *FLOW OPTION* on the top right corner of your screen and click on *PUBLISH*
 
 image:media/media/image140.png[media/media/image140,width=624,height=358]
-
+____
 ==== Step 3: Give your flow a name and click on *PUBLISH*
-
+____
 Flow Name : \{user_id}_datadump_flow
 
 image:media/media/image46.png[media/media/image46,width=334,height=261]
@@ -912,6 +920,7 @@ image:media/media/image46.png[media/media/image46,width=334,height=261]
 The flow will now be visible on the *FLOW CATALOG* and is ready to be deployed
 
 image:media/media/image5.png[media/media/image5,width=401,height=360]
+____
 
 === *5. Deploying the Flow*
 
