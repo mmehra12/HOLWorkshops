@@ -611,11 +611,11 @@ EXAMPLE : wuser01
 
 [NOTE]: do not add the domain ‘@workload.com’
 ____
+
 * {blank}
 +
 ____
-*CDP Workload User Password - [ Sensitive Field ]*
-image:media/media/image103.png[media/media/image103,width=227,height=260]
+*CDP Workload User Password - Sensitive Field*
 
 * Selection under Add Parameter : *_Add Sensitive Parameter_*
 
@@ -623,7 +623,10 @@ image:media/media/image103.png[media/media/image103,width=227,height=260]
 
 * Value : <Workload Password set by yourself in Lab 0>
 
-EXAMPLE : Wuser@2021image:media/media/image49.png[media/media/image49,width=298,height=281]
+EXAMPLE : Wuser@2021
+image:media/media/image103.png[media/media/image103,width=227,height=260]
+image:media/media/image49.png[media/media/image49,width=298,height=281]
+
 ____
 
 * Click *APPLY CHANGES*
@@ -658,8 +661,7 @@ Hit ‘control+spacebar’
 ____
 
 This will bring up a list of existing parameters that are not tagged as sensitive.
-
-==== 
+    
 
 ==== *2.3. Create the Flow*
 
