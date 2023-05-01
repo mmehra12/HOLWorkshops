@@ -585,13 +585,13 @@ We need to add the following parameters.
 * {blank}
 +
 ____
-S3 Directory
+*S3 Directory*
 
-Selection under Add Parameter : *_Add Parameter_*
+* Selection under Add Parameter : *_Add Parameter_*
 
-Name : S3 Directory
+* Name : S3 Directory
 
-Value : LabData or TestDir
+* Value : LabData or TestDir
 
 image:media/media/image110.png[media/media/image110,width=330,height=310]
 ____
@@ -599,7 +599,7 @@ ____
 * {blank}
 +
 ____
-CDP Workload User
+*CDP Workload User*
 
 Selection under Add Parameter : *_Add Parameter_*
 
@@ -610,32 +610,23 @@ Value : <The username assigned to you>
 EXAMPLE : wuser01
 
 [NOTE]: do not add the domain ‘@workload.com’
-
+____
 * {blank}
 +
 ____
-CDP Workload User Password - [ Sensitive Field ]
+*CDP Workload User Password - [ Sensitive Field ]*
 image:media/media/image103.png[media/media/image103,width=227,height=260]
 
-Selection under Add Parameter : *_Add Sensitive Parameter_*
-____
-** {blank}
-+
-____
-Name : CDP Workload User Password
-____
-** {blank}
-+
-____
-Value : <Workload Password set by yourself in Lab 0>
-____
-*** {blank}
-+
-____
+* Selection under Add Parameter : *_Add Sensitive Parameter_*
+
+* Name : CDP Workload User Password
+
+* Value : <Workload Password set by yourself in Lab 0>
+
 EXAMPLE : Wuser@2021image:media/media/image49.png[media/media/image49,width=298,height=281]
 ____
 
-Click *APPLY CHANGES*
+* Click *APPLY CHANGES*
 
 image:media/media/image126.png[media/media/image126,width=444,height=259]
 
