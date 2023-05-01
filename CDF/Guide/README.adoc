@@ -1208,24 +1208,9 @@ ____
 Create a Topic with the following parameters then click *Save*:
 ____
 
-* {blank}
-+
-____
 *Name*: <username>-syslog
-____
-* {blank}
-+
-____
 *Partitions*: 1
-____
-* {blank}
-+
-____
 *Availability*: Moderate
-____
-* {blank}
-+
-____
 *Cleanup Policy*: Delete
 ____
 
