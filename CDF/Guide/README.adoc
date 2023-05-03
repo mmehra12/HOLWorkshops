@@ -646,8 +646,9 @@ image:media/media/image49.png[media/media/image49,width=298,height=281]
 ____
 
 * Click *APPLY CHANGES*
-
+____
 image:media/media/image126.png[media/media/image126,width=444,height=259]
+____
 
 Now go back to the Flow Designer. Click _‘Back to Flow Designer’_
 
