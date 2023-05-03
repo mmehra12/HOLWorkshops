@@ -966,12 +966,16 @@ ____
 
 ==== *Step 4:* Deployment Name
 ____
-image:media/media/image44.png[media/media/image44,width=416,height=252]
-
 Give the deployment a unique name( \{user_id}_flow_prod), then click Next
 * Example : wuser01_flow_prod
 
+
+image:media/media/image44.png[media/media/image44,width=416,height=252]
+
+
 image:media/media/image133.png[media/media/image133,width=257,height=307]
+
+
 *Click NEXT*
 ____
 
