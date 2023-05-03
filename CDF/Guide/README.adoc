@@ -106,7 +106,7 @@ link:#lab-1-create-a-flow-using-the-flow-designer[*Lab 1 : Create a Flow using t
 
 ** link:#step-3-give-your-flow-a-name-and-click-on-publish[Step 3: Give your flow a name and click on PUBLISH ]
 
-* link:#deploying-the-flow[5. Deploying the Flow 47]
+* link:#deploying-the-flow[5. Deploying the Flow ]
 
 ** link:#step-1-search-for-the-flow-in-the-flow-catalog[Step 1: Search for the flow in the Flow Catalog ]
 
@@ -971,7 +971,7 @@ image:media/media/image44.png[media/media/image44,width=416,height=252]
 Give the deployment a unique name( \{user_id}_flow_prod), then click Next
 * Example : wuser01_flow_prod
 
-image:media/media/image133.png[media/media/image133,width=257,height=307
+image:media/media/image133.png[media/media/image133,width=257,height=307]
 *Click NEXT*
 ____
 
