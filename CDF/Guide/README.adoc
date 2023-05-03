@@ -589,7 +589,7 @@ The next step is to configure what is called a parameter. These parameters are r
 
 image:media/media/image129.png[media/media/image129,width=450,height=207]
 
-image:media/media/image138.png[media/media/image138,width=314,height=302]
+
 
 We need to add the following parameters.
 
@@ -603,8 +603,8 @@ ____
 * Name : S3 Directory
 
 * Value : LabData or TestDir
+image:media/media/image138.png[media/media/image138,width=314,height=302]
 
-image:media/media/image110.png[media/media/image110,width=330,height=310]
 ____
 
 * {blank}
@@ -620,6 +620,7 @@ Value : <The username assigned to you>
 
 EXAMPLE : wuser01
 
+image:media/media/image110.png[media/media/image110,width=330,height=310]
 ____
 *Note* : Do not add the domain ‘@workload.com’
 ____
