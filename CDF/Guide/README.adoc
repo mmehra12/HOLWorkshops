@@ -502,10 +502,11 @@ ____
 * Click on Lock KeyTab
 
 * You can now continue from the STEP 3 in the 
+“link:#unlock-your-keytab-if-it-is-not-unlocked-already[*_[.underline]#Unlock your KeyTab if not unlocked already#_*]” section above
 
 image:media/media/image145.png[media/media/image145,width=271,height=174]
 ____
-“link:#unlock-your-keytab-if-it-is-not-unlocked-already[*_[.underline]#Unlock your KeyTab if not unlocked already#_*]” section above
+
 
 == *Lab 1 : Create a Flow using the Flow Designer*
 
