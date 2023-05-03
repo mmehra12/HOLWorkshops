@@ -565,11 +565,12 @@ ____
 
 Workspace Name : *_The name of the environment will be shared by the INSTRUCTOR_*
 
-image:media/media/image20.png[media/media/image20,width=361,height=212]
-
 Draft Name : \{user_id}_datadump_flow
 
 _Example : wuserXY_datadump_flow_
+
+
+image:media/media/image20.png[media/media/image20,width=361,height=212]
 
 On successful creation of the Draft, you should now be redirected to the canvas on which you can design your flow
 
