@@ -490,6 +490,7 @@ ____
 ===== Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab
 ____
 image:media/media/image16.png[media/media/image16,width=319,height=285]
+
 If you get the following dialog box it means that your Keytab is already unlocked. *But it would be necessary to reset here by locking it and unlocking it again using your newly set workload password*
 image:media/media/image45.png[media/media/image45,width=321,height=212]
 
