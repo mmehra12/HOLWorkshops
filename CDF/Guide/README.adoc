@@ -490,20 +490,22 @@ ____
 ===== Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab
 ____
 image:media/media/image16.png[media/media/image16,width=319,height=285]
+If you get the following dialog box it means that your Keytab is already unlocked. *But it would be necessary to reset here by locking it and unlocking it again using your newly set workload password*
 image:media/media/image45.png[media/media/image45,width=321,height=212]
 
-If you get the following dialog box it means that your Keytab is already unlocked. *But it would be necessary to reset here by locking it and unlocking it again using your newly set workload password*
 ____
 
 ===== Step 4 : Enter your Principal Name which is the same as your workload username
 
 Example : wuserXY* 
 ____
-image:media/media/image145.png[media/media/image145,width=271,height=174]
-____
 * Click on Lock KeyTab
 
-* You can now continue from the STEP 3 in the “link:#unlock-your-keytab-if-it-is-not-unlocked-already[*_[.underline]#Unlock your KeyTab if not unlocked already#_*]” section above
+* You can now continue from the STEP 3 in the 
+
+image:media/media/image145.png[media/media/image145,width=271,height=174]
+____
+“link:#unlock-your-keytab-if-it-is-not-unlocked-already[*_[.underline]#Unlock your KeyTab if not unlocked already#_*]” section above
 
 == *Lab 1 : Create a Flow using the Flow Designer*
 
