@@ -1,5 +1,3 @@
-==  +
-
 link:#introduction[*Introduction*]
 
 link:#prerequisites[*Prerequisites*]
