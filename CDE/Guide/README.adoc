@@ -888,9 +888,8 @@ ____
 +
 ____
 Run the below command to validate the configuration. Upon running it, you will be asked to provide the API password. Please enter the password as mentioned in the excel sheet.
-____
 
-____
+
 Command to list the jobs -> ./cde job list
 ____
 
@@ -898,18 +897,16 @@ ____
 +
 ____
 Once you enter the password, you should see all the jobs present in the virtual cluster.
-____
 
-____
 image:media/media/image38.png[media/media/image38,width=539,height=483]
 ____
 
 * {blank}
 +
 ____
-If you get any error related to the certificate, please add the flag to skip tls verification. +
- +
-./cde job list --tls-insecure
+If you get any error related to the certificate, please add the flag to skip tls verification.
+
+Command to list the jobs ->  ./cde job list --tls-insecure
 ____
 * {blank}
 +
@@ -937,9 +934,7 @@ ____
 Run the below command to start the cde cli. It will be executed in the background. +
  +
 start .\cde.exe
-____
 
-____
 image:media/media/image17.png[media/media/image17,width=514,height=233]
 ____
 
@@ -947,9 +942,10 @@ ____
 +
 ____
 Create a new text file and name it as _config.yaml_. Please note that while saving, choose the format as *All Files and NOT as Text Documents*.
-____
+
 
 image:media/media/image20.png[media/media/image20,width=571,height=103]
+____
 
 * {blank}
 +
@@ -961,11 +957,10 @@ ____
 user: <CDP_user>
 
 vcluster-endpoint: <CDE_virtual_cluster_endpoint>
-
-Here, *user* is the username you have been mapped in the excel sheet. For the *vcluster-endpoint* get in touch with the instructor. +
- +
-[Can be obtained from your virtual cluster]
 ____
+
+Here, *user* is the username you have been mapped in the excel sheet. For the *vcluster-endpoint* get in touch with the instructor. 
+[Can be obtained from your virtual cluster]
 
 * {blank}
 +
@@ -979,9 +974,7 @@ ____
 ____
 Run the below command for validation. You should see the path-to-config.yaml as the output. +
 ls env:CDE_CONFIG
-____
 
-____
 image:media/media/image45.png[media/media/image45,width=465,height=98]
 ____
 
@@ -989,10 +982,8 @@ ____
 +
 ____
 Run the below command to validate the configuration. Upon running it, you will be asked to provide the API password. Please enter the workload password as mentioned in the excel sheet.
-____
 
-____
-.\cde job list
+Command -> .\cde job list
 
 image:media/media/image22.png[media/media/image22,width=624,height=74]
 ____
@@ -1001,9 +992,7 @@ ____
 +
 ____
 If you get the below error related to certificate, please follow the next step to skip tls verification.
-____
 
-____
 image:media/media/image21.png[media/media/image21,width=624,height=33]
 ____
 
@@ -1011,10 +1000,8 @@ ____
 +
 ____
 Run the below command with the tls flag and enter the API password.
-____
 
-____
-.\cde job list --tls-insecure
+Command ->  .\cde job list --tls-insecure
 ____
 
 image:media/media/image28.png[media/media/image28,width=608,height=30]
@@ -1029,8 +1016,6 @@ ____
 ____
 This marks the end of installation and configuration of CDE CLI. Now, head over to the next lab to trigger the jobs from CLI.
 ____
-
-==  +
 
 == Lab 6 - Run jobs using CDE CLI 
 
@@ -1052,10 +1037,8 @@ ____
 ____
 Run the below command to submit this job to CDE. +
  +
-./cde spark submit /path/to/Lab6A_Data_Extraction_Avg_Loan.scala
-____
+Command ->  ./cde spark submit /path/to/Lab6A_Data_Extraction_Avg_Loan.scala
 
-____
 image:media/media/image23.png[media/media/image23,width=565,height=119]
 ____
 
@@ -1064,9 +1047,7 @@ ____
 ____
 Go to CDE UI and click on Job Runs. You will see a job submitted with the name +
 cli-submit-<username>-<temp-resource-id>
-____
 
-____
 image:media/media/image25.png[media/media/image25,width=588,height=63]
 ____
 
@@ -1096,45 +1077,48 @@ ____
 +
 ____
 To get the jobs, please filter the jobs with your username.
-____
+
 
 image:media/media/image19.png[media/media/image19,width=314,height=225]
+____
 
 * {blank}
 +
 ____
 In *Run History* tab, click on the successful Run ID i.e., the one with the green tick mark.
-____
+
 
 image:media/media/image29.png[media/media/image29,width=624,height=573]
 
 (Note the ID will be different for you from the one you see in the screenshot)
-
+____
 * {blank}
 +
 ____
 Click on *Atlas* under Lineage.
-____
+
 
 image:media/media/image10.png[media/media/image10,width=624,height=208]
+____
 
 * {blank}
 +
 ____
 Click on the execution that you see in the list.
-____
+
 
 image:media/media/image32.png[media/media/image32,width=624,height=72]
-
+____
 * {blank}
 +
 ____
 Click on *Lineage* to observe the Data Lineage for this job.
-____
+
 
 image:media/media/image34.png[media/media/image34,width=624,height=126]
 
 image:media/media/image49.png[media/media/image49,width=624,height=358]
+____
 
 * {blank}
 +
@@ -1158,25 +1142,28 @@ ____
 +
 ____
 Click on the *Charts* tab.
-____
+
 
 image:media/media/image47.png[media/media/image47,width=624,height=110]
+____
 
 * {blank}
 +
 ____
 Set the filter to *Last 2 Hour* and observe the varying load on cpu and memory.
-____
+
 
 image:media/media/image37.png[media/media/image37,width=223,height=156]
+____
 
 * {blank}
 +
 ____
 Click on *Grafana Charts* to view another set of metrics of the virtual cluster.
-____
+
 
 image:media/media/image41.png[media/media/image41,width=624,height=70]
+____
 
 * {blank}
 +
