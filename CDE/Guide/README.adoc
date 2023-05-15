@@ -858,14 +858,13 @@ Edit the config.yaml file to include the following details.
 Command to edit the file -> vi config.yaml
 
 Content of the file
-
-[source,python]
 ____
+
 *user*: <CDP_user>
 
 *vcluster-endpoint*: <CDE_virtual_cluster_endpoint>
-____
 
+____
 Here, *user* is the username you have been mapped in the excel sheet.
 
 *vcluster-endpoint* can be obtained from the Virtual Cluster that is assigned to you. Go to the Virtual Cluster “Cluster Details”
@@ -951,9 +950,7 @@ ____
 +
 ____
 Add the following lines in this file.
-____
 
-____
 user: <CDP_user>
 
 vcluster-endpoint: <CDE_virtual_cluster_endpoint>
