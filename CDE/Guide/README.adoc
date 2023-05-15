@@ -999,9 +999,10 @@ ____
 Run the below command with the tls flag and enter the API password.
 
 Command ->  .\cde job list --tls-insecure
-____
+
 
 image:media/media/image28.png[media/media/image28,width=608,height=30]
+____
 
 * {blank}
 +
@@ -1161,11 +1162,13 @@ Click on *Grafana Charts* to view another set of metrics of the virtual cluster.
 
 image:media/media/image41.png[media/media/image41,width=624,height=70]
 ____
-
-* {blank}
-+
-____
-This marks the end of the overall CDE Hands-on Workshop session.
-____
-
-*[.underline]#THANK YOU VERY MUCH FOR YOUR PARTICIPATION#*
+++++
+<p align="center">
+This marks the end of the overall CDE Hands-on Workshop session
+</p>
+++++
+++++
+<p align="center">
+  THANK YOU VERY MUCH FOR YOUR PARTICIPATION
+</p>
+++++
