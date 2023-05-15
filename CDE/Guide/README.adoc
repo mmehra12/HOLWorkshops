@@ -171,19 +171,13 @@ ____
 +
 ____
 Go through each script and update the necessary values as mentioned in the script.
-____
-** {blank}
-+
-____
-For all the scripts, update the username field with the username that you have been assigned to. You will find this at the starting of the script itself.
-____
 
-____
+** For all the scripts, update the username field with the username that you have been assigned to. You will find this at the starting of the script itself.
+
 image:media/media/image42.png[media/media/image42,width=570,height=362]
 ____
 
-==  +
-Lab 1 - Walkthrough of CDE Data Service
+== Lab 1 - Walkthrough of CDE Data Service
 
 ____
 [.mark]#Cloudera Data Engineering (CDE) is a serverless service for Cloudera Data Platform that allows you to submit jobs to auto-scaling virtual clusters.#
