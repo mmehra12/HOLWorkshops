@@ -301,10 +301,11 @@ ____
 
 ==== Step 1 : Select the appropriate CDE Service
 
+____
 Go to the Administration page and select your CDE Service (In our case *partner-hol-cde-service*)
 
 image:media/media/image64.png[media/media/image64,width=317,height=363]
-
+____
 ==== Step 2 : Virtual cluster selection
 
 [loweralpha]
@@ -312,9 +313,10 @@ image:media/media/image64.png[media/media/image64,width=317,height=363]
 +
 ____
 Select the CDE Service and click on the virtual cluster that was assigned to you.
-____
+
 
 image:media/media/image35.png[media/media/image35,width=533,height=274]
+____
 
 == Lab 2 - Create and trigger ad-hoc Spark jobs 
 
@@ -348,8 +350,7 @@ ____
 PySpark job to enrich your data using an existing data warehouse
 ____
 
-===  +
-Resource Creation
+=== Resource Creation
 
 * {blank}
 +
