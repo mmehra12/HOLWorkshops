@@ -344,11 +344,6 @@ ____
 ____
 Report 2: Breakdown of company type that retained jobs
 ____
-. {blank}
-+
-____
-PySpark job to enrich your data using an existing data warehouse
-____
 
 === Resource Creation
 
@@ -356,25 +351,27 @@ ____
 +
 ____
 On the virtual cluster *Cluster Name* : _<username>-virtual-cluster_ [ Virtual cluster created in Lab 1] tab**,** click on view jobs. This will open a new page with details of the Job Runs, Jobs, and Resources.
-____
+
 
 image:media/media/image60.png[media/media/image60,width=624,height=141]
+____
 
 * {blank}
 +
 ____
 In the left pane, click on the *Resources* tab.
-____
 
 image:media/media/image63.png[media/media/image63,width=192,height=218]
+____
 
 * {blank}
 +
 ____
 You will get the *Resources* page to the right. Click on *Create Resource*.
-____
+
 
 image:media/media/image65.png[media/media/image65,width=352,height=93]
+____
 
 * {blank}
 +
@@ -385,17 +382,16 @@ ____
 +
 ____
 Once it is created, you will get an option to upload the files as shown below.
-____
+
 
 image:media/media/image69.png[media/media/image69,width=428,height=96]
+____
 
 * {blank}
 +
 ____
 Click on *Upload Files* and select all the scripts downloaded from the link:#prerequisites[[.underline]#prerequisites#] step. (*Please upload only .py files*). Click on Upload
-____
 
-____
 image:media/media/image77.png[media/media/image77,width=366,height=296]
 ____
 
@@ -403,19 +399,21 @@ ____
 +
 ____
 You will get a pop-up with all the files uploaded to your resource.
-____
+
 
 image:media/media/image67.png[media/media/image67,width=373,height=246]
+____
 
 * {blank}
 +
 ____
 Validate if all the five _.py_ files are present in your resource. We are now ready to create jobs using these resources.
-____
 
 image:media/media/image7.png[media/media/image7,width=624,height=238]
+____
 
-=== Job Creation +
+
+=== Job Creation
 
 * {blank}
 +
@@ -425,16 +423,17 @@ ____
 * {blank}
 +
 ____
-In the left pane, click on *Jobs. +
+In the left pane, click on *Jobs. 
 *
 ____
 * {blank}
 +
 ____
 You will get the *Jobs* page to the right. Click on *Create Job*.
-____
+
 
 image:media/media/image51.png[media/media/image51,width=256,height=84]
+____
 
 * {blank}
 +
@@ -445,30 +444,26 @@ ____
 +
 ____
 Please give the job names as mentioned below.
-____
 
-_<username>_<script_name_without_py_extension>_
 
-_ +
-_ Eg:- For apac01, job1 name would be *apac01_Lab3A_access_logs_ETL*
+<username>_<script_name_without_py_extension>
+Eg:- For apac01, job1 name would be *apac01_Lab3A_access_logs_ETL*
 
 image:media/media/image55.png[media/media/image55,width=470,height=141]
+____
 
 * {blank}
 +
 ____
-*As this is a shared environment, please name the jobs with your username so that it helps in differentiating yours from others’ jobs. +
-*
+As this is a shared environment, please name the jobs with your username so that it helps in differentiating yours from others’ jobs.
 ____
 * {blank}
 +
 ____
-In *Application File*, click on *Select from Resource* and select the file *_Lab3A_access_logs_ETL.py_* from your resource(<username>-resources). +
+In *Application File*, click on *Select from Resource* and select the file *Lab3A_access_logs_ETL.py* from your resource(<username>-resources). +
  +
 image:media/media/image57.png[media/media/image57,width=303,height=118]
-____
 
-____
 image:media/media/image44.png[media/media/image44,width=372,height=408]
 ____
 
@@ -476,9 +471,7 @@ ____
 +
 ____
 Ignore the remaining configuration options. Do not enable the schedule now. This is how it should finally look like.
-____
 
-____
 image:media/media/image54.png[media/media/image54,width=415,height=378]
 ____
 
@@ -486,15 +479,15 @@ ____
 +
 ____
 Click on the drop down option and click on *Create*. (do not click Create and Run)
-____
 
 image:media/media/image62.png[media/media/image62,width=315,height=100]
+____
 
 * {blank}
 +
 ____
 Similarly, create three other jobs with the same naming conventions. Please refer to the table below to confirm you are creating exactly the same.
-____
+
 
 For *apac01:*
 
@@ -506,7 +499,7 @@ For *apac01:*
 |Job3 |apac01_Lab3B2_Data_Extraction_Over_150k |Lab3B2_Data_Extraction_Over_150k.py
 |Job4 |apac01_Lab3B3_Create_Reports |Lab3B3_Create_Reports.py
 |===
-
+____
 * {blank}
 +
 ____
@@ -516,9 +509,7 @@ ____
 +
 ____
 Once done, click on the *Jobs* tab and enter your username in the search bar and press *ENTER.* You should see four jobs as shown below with your username.
-____
 
-____
 image:media/media/image46.png[media/media/image46,width=624,height=193]
 ____
 
@@ -527,8 +518,6 @@ ____
 ____
 Observe the type of the job is set to Spark and for schedule, it is Ad-hoc.
 ____
-
-===  +
 
 === Triggering the jobs
 
