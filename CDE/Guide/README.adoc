@@ -703,8 +703,6 @@ ____
 ____
 Go to *Jobs* tab and observe the airflow job created with the schedule mentioned in the dag file.
 Job
-____
-
 image:media/media/image39.png[media/media/image39,width=624,height=96]
 ____
 
@@ -717,9 +715,7 @@ ____
 +
 ____
 Go to the Virtual Cluster you are using and click on *Cluster Details*.
-____
 
-____
 image:media/media/image8.png[media/media/image8,width=624,height=146]
 ____
 
@@ -731,9 +727,9 @@ ____
 
 image:media/media/image6.png[media/media/image6,width=572,height=329]
 
-== image:media/media/image15.png[media/media/image15,width=631,height=121]
+image:media/media/image15.png[media/media/image15,width=631,height=121]
 
-== image:media/media/image11.png[media/media/image11,width=672,height=202]
+image:media/media/image11.png[media/media/image11,width=672,height=202]
 
 * {blank}
 +
@@ -759,9 +755,7 @@ image:media/media/image36.png[media/media/image36,width=534,height=124]
 +
 ____
 You can go to the AirFLow UI again and see that the Job is now in Paused State
-____
 
-____
 image:media/media/image68.png[media/media/image68,width=423,height=92]
 ____
 
@@ -780,11 +774,7 @@ ____
 ** {blank}
 +
 ____
-*Step 1* : Go to the *Cluster Details* of the virtual cluster where you are creating
-____
-
-____
-your job
+*Step 1* : Go to the *Cluster Details* of the virtual cluster where you are creating your job
 
 image:media/media/image5.png[media/media/image5,width=605,height=120]
 ____
@@ -793,9 +783,7 @@ ____
 +
 ____
 *Step 2* : Click on CLI TOOL to download the executable based on your operating system.
-____
 
-____
 image:media/media/image74.png[media/media/image74,width=516,height=218]
 ____
 
@@ -804,18 +792,16 @@ ____
 * {blank}
 +
 ____
-[.mark]#Make sure that the cde file is executable by running the below command. +
+Make sure that the cde file is executable by running the below command.
  +
-chmod +x /path/to/cde +
+chmod +x /path/to/cde 
 #
 ____
 * {blank}
 +
 ____
 Go to the folder where the executable is present. Right click and select “Open with” -> Terminal . You will get the below message
-____
 
-____
 image:media/media/image66.png[media/media/image66,width=278,height=268]
 ____
 
@@ -828,20 +814,18 @@ ____
 +
 ____
 Once done, you will get the following window and message
-____
 
-____
 image:media/media/image71.png[media/media/image71,width=436,height=255]
 ____
 
 * {blank}
 +
 ____
-To validate the installation, run the below command from the terminal. +
-./[.mark]#cde --help#
-____
+To validate the installation, run the below command from the terminal.
+====
+*COMMAND* -> ./cde --help
+====
 
-____
 image:media/media/image76.png[media/media/image76,width=494,height=304]
 ____
 
