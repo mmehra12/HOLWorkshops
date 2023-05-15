@@ -549,7 +549,7 @@ ____
 
 [NOTE]
 ====
-JOB 1, JOB 2 and JOB 3 can be triggered one after the other.*
+JOB 1, JOB 2 and JOB 3 can be triggered one after the other.
 
 *JOB 4* should be executed after the successful completion of *JOB 2 and JOB 3*
 ====
@@ -558,39 +558,38 @@ JOB 1, JOB 2 and JOB 3 can be triggered one after the other.*
 +
 ____
 To trigger the job, go to the *Jobs* tab, click on the 3-dotted icon, and click on *Run Now.*
-____
+
 
 image:media/media/image48.png[media/media/image48,width=489,height=186]
-
+____
 * {blank}
 +
 ____
 To check the job logs, click on *Job Runs* and select the *ID* against the job that you have triggered.
-____
 
 image:media/media/image53.png[media/media/image53,width=624,height=126]
 
 image:media/media/image52.png[media/media/image52,width=624,height=126]
 
 image:media/media/image4.png[media/media/image4,width=624,height=229]
+____
 
 * {blank}
 +
 ____
 For simplifying the job selection, you can choose the *User* filter and add your username and hit enter. You will see the list of jobs triggered by you.
-____
+
 
 image:media/media/image2.png[media/media/image2,width=439,height=247]
-
+____
 * {blank}
 +
 ____
 Navigate to different tabs in the job run page and you will see all that you need to observe for the run of a Spark job.
-____
+
 
 image:media/media/image9.png[media/media/image9,width=624,height=57]
-
-==  +
+____
 
 ==  Lab 3 - Add schedule to the ad-hoc Spark jobs 
 
@@ -610,17 +609,19 @@ ____
 +
 ____
 Go to *Jobs* tab, click on the 3-dotted icon next to the job *Lab3A_access_logs_ETL* and select *Add schedule*.
-____
+
 
 image:media/media/image26.png[media/media/image26,width=624,height=190]
+____
 
 * {blank}
 +
 ____
 You will land in the *Job Schedule* page. Click on *Create a Schedule*.
-____
+
 
 image:media/media/image16.png[media/media/image16,width=624,height=128]
+____
 
 * {blank}
 +
@@ -628,18 +629,20 @@ ____
 Choose the *Cron Expression* option and enter the cron expression as given below. +
  +
 **/10 * * * ** → This means that the job is scheduled to run every 10 minutes.
-____
+
 
 image:media/media/image14.png[media/media/image14,width=473,height=219]
 
 image:media/media/image18.png[media/media/image18,width=327,height=59]
+____
 
 * {blank}
 +
 ____
 You can repeat the same process for the other jobs as well.
 ____
-
+** {blank}
++
 ____
 JOB 1 : Run every 10 mins
 
@@ -664,11 +667,12 @@ ____
 +
 ____
 Go to the Jobs tab, click on the 3-dotted icon next to the job and select *Pause schedule*. [ Do this for all jobs ]
-____
+
 
 image:media/media/image70.png[media/media/image70,width=471,height=154]
 
 image:media/media/image33.png[media/media/image33,width=338,height=75]
+____
 
 == Lab 4 - Orchestrate a set of jobs using Airflow
 
