@@ -852,17 +852,17 @@ image:media/media/image27.png[media/media/image27,width=491,height=100]
 ____
 * {blank}
 +
-____
+
 Edit the config.yaml file to include the following details.
 
 Command to edit the file -> vi config.yaml
 
 Content of the file
-====
+____
 *user*: <CDP_user>
 
 *vcluster-endpoint*: <CDE_virtual_cluster_endpoint>
-====
+____
 Here, *user* is the username you have been mapped in the excel sheet.
 
 *vcluster-endpoint* can be obtained from the Virtual Cluster that is assigned to you. Go to the Virtual Cluster “Cluster Details”
