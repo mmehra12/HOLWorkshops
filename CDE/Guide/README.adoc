@@ -859,8 +859,9 @@ Command to edit the file -> vi config.yaml
 
 Content of the file
 ====
-user: <CDP_user>
-vcluster-endpoint: <CDE_virtual_cluster_endpoint>
+*user*: <CDP_user>
+
+*vcluster-endpoint*: <CDE_virtual_cluster_endpoint>
 ====
 Here, *user* is the username you have been mapped in the excel sheet.
 
