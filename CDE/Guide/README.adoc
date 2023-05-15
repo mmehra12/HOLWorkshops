@@ -1,6 +1,6 @@
-link:#introduction[*Introduction*]
+link:#introduction[Introduction]
 
-link:#prerequisites[*Prerequisites*]
+link:#prerequisites[Prerequisites]
 
 ____
 link:#verify-access-to-the-environment[Verify access to the environment]
@@ -10,7 +10,7 @@ link:#download-the-resources[Download the resources]
 link:#update-the-files[Update the files]
 ____
 
-link:++#lab-1---walkthrough-of-cde-data-service++[*Lab 1 - Walkthrough of CDE Data Service *]
+link:++#lab-1---walkthrough-of-cde-data-service++[Lab 1 - Walkthrough of CDE Data Service ]
 
 ____
 link:#accessing-the-virtual-cluster[ACCESSING THE VIRTUAL CLUSTER ]
@@ -20,7 +20,7 @@ link:#step-1-select-the-appropriate-cde-service[Step 1 : Select the appropriate 
 link:#step-2-virtual-cluster-selection[Step 2 : Virtual cluster selection ]
 ____
 
-link:++#lab-2---create-and-trigger-ad-hoc-spark-jobs++[*Lab 2 - Create and trigger ad-hoc Spark jobs *]
+link:++#lab-2---create-and-trigger-ad-hoc-spark-jobs++[Lab 2 - Create and trigger ad-hoc Spark jobs ]
 
 ____
 link:#resource-creation[Resource Creation ]
@@ -30,11 +30,11 @@ link:#job-creation[Job Creation ]
 link:#triggering-the-jobs[Triggering the jobs ]
 ____
 
-link:++#lab-3---add-schedule-to-the-ad-hoc-spark-jobs++[*Lab 3 - Add schedule to the ad-hoc Spark jobs *]
+link:++#lab-3---add-schedule-to-the-ad-hoc-spark-jobs++[Lab 3 - Add schedule to the ad-hoc Spark jobs ]
 
-link:++#lab-4---orchestrate-a-set-of-jobs-using-airflow++[*Lab 4 - Orchestrate a set of jobs using Airflow *]
+link:++#lab-4---orchestrate-a-set-of-jobs-using-airflow++[Lab 4 - Orchestrate a set of jobs using Airflow]
 
-link:++#lab-5---install-and-configure-cde-cli++[*Lab 5 - Install and Configure CDE CLI *]
+link:++#lab-5---install-and-configure-cde-cli++[Lab 5 - Install and Configure CDE CLI]
 
 ____
 link:#for-mac-users[For Mac users: ]
@@ -42,13 +42,13 @@ link:#for-mac-users[For Mac users: ]
 link:#for-windows-users[For Windows users: ]
 ____
 
-link:++#lab-6---run-jobs-using-cde-cli++[*Lab 6 - Run jobs using CDE CLI *]
+link:++#lab-6---run-jobs-using-cde-cli++[Lab 6 - Run jobs using CDE CLI ]
 
 ____
 link:#run-a-spark-scala-job-using-cli[Run a spark-scala job using CLI ]
 ____
 
-link:++#lab-7---data-lineage-and-auto-scaling++[*Lab 7 - Data Lineage and Auto-Scaling *]
+link:++#lab-7---data-lineage-and-auto-scaling++[Lab 7 - Data Lineage and Auto-Scaling ]
 
 ____
 link:#data-lineage-using-atlas[Data Lineage using Atlas ]
