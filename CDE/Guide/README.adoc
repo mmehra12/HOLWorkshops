@@ -254,29 +254,24 @@ ____
 +
 ____
 Go to the CDP console and click on Data Engineering.
-____
+
 
 image:media/media/image12.png[media/media/image12,width=336,height=174]
+____
 
 * {blank}
 +
 ____
 You will see the CDE homepage.
-____
 
-____
-_Note : If the page load takes a while, you can move to the next step, we can come back to this later_
-____
+[Note] : If the page load takes a while, you can move to the next step, we can come back to this later
 
 image:media/media/image3.png[media/media/image3,width=470,height=249]
-
+____
 * {blank}
 +
 ____
 We should have a CDE service running which we will use for this workshop. To check this Select the *ADMINISTRATION* option on the left menu on your screen. You should be able to see all the CDE Service and their status.
-____
-
-____
 image:media/media/image75.png[media/media/image75,width=422,height=440]
 ____
 
@@ -284,11 +279,12 @@ ____
 +
 ____
 On the *CDE service* *[.mark]#pko-workshop-cde-service#,* click on the pencil icon and observe the configuration and other details related to the service.
-____
+
 
 image:media/media/image58.png[media/media/image58,width=402,height=165]
 
 image:media/media/image59.png[media/media/image59,width=624,height=412]
+____
 
 * {blank}
 +
