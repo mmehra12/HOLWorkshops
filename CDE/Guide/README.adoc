@@ -850,7 +850,8 @@ Command to create the file -> touch config.yaml
 
 image:media/media/image27.png[media/media/image27,width=491,height=100]
 ____
-
+* {blank}
++
 ____
 Edit the config.yaml file to include the following details.
 
@@ -886,7 +887,7 @@ Run the below command to validate the configuration. Upon running it, you will b
 ____
 
 ____
-./cde job list
+Command to list the jobs -> ./cde job list
 ____
 
 * {blank}
