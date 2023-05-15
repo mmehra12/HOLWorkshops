@@ -599,17 +599,14 @@ In this lab, we will add a schedule to a job created as part of the previous lab
 +
 ____
 We will add a schedule to the job *Lab3A_access_logs_ETL*
-____
 
-____
-**(**in your case it will be <username>_Lab3A_access_logs_ETL)
+In your case it will be <username>_Lab3A_access_logs_ETL
 ____
 
 * {blank}
 +
 ____
 Go to *Jobs* tab, click on the 3-dotted icon next to the job *Lab3A_access_logs_ETL* and select *Add schedule*.
-
 
 image:media/media/image26.png[media/media/image26,width=624,height=190]
 ____
@@ -628,7 +625,7 @@ ____
 ____
 Choose the *Cron Expression* option and enter the cron expression as given below. +
  +
-**/10 * * * ** → This means that the job is scheduled to run every 10 minutes.
+*/10 * * * * → This means that the job is scheduled to run every 10 minutes.
 
 
 image:media/media/image14.png[media/media/image14,width=473,height=219]
@@ -687,9 +684,7 @@ ____
 +
 ____
 Give the job name as below and upload the _Lab5_airflow_dag.py_ file from the resources.
-____
 
-____
 JOB NAME : <username>_Lab5_airflow_dag
 
 Example : For user *_apac01_* the job name will be, *_apac01_Lab5_airflow_dag_*
@@ -699,29 +694,25 @@ ____
 +
 ____
 Click on *Create.*
-____
 
-____
-* +
-*image:media/media/image73.png[media/media/image73,width=435,height=346]
+image:media/media/image73.png[media/media/image73,width=435,height=346]
 ____
 
 * {blank}
 +
 ____
-Go to *Jobs* tab and observe the airflow job created with the schedule mentioned in the dag file. +
- +
+Go to *Jobs* tab and observe the airflow job created with the schedule mentioned in the dag file.
 Job
 ____
 
-____
 image:media/media/image39.png[media/media/image39,width=624,height=96]
+____
 
 DAG File
 ____
 
 image:media/media/image78.png[media/media/image78,width=504,height=439]
-
+____
 * {blank}
 +
 ____
