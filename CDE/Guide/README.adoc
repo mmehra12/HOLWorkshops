@@ -423,8 +423,7 @@ ____
 * {blank}
 +
 ____
-In the left pane, click on *Jobs. 
-*
+In the left pane, click on *Jobs*
 ____
 * {blank}
 +
@@ -547,11 +546,13 @@ ____
 JOB 4 : apac01_Lab3B3_Create_Reports(Run once JOB 2 and JOB 3 have completed successfully)
 ____
 
-____
-*NOTE : JOB 1, JOB 2 and JOB 3 can be triggered one after the other.*
 
-*JOB 4 should be executed after the successful completion of JOB 2 and JOB 3*
-____
+[NOTE]
+====
+JOB 1, JOB 2 and JOB 3 can be triggered one after the other.*
+
+*JOB 4* should be executed after the successful completion of *JOB 2 and JOB 3*
+====
 
 * {blank}
 +
