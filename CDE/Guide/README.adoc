@@ -1,66 +1,63 @@
 ==  +
 
-link:#introduction[*Introduction 3*]
+link:#introduction[*Introduction*]
 
-link:#prerequisites[*Prerequisites 4*]
-
-____
-link:#verify-access-to-the-environment[Verify access to the environment 4]
-
-link:#download-the-resources[Download the resources 5]
-
-link:#update-the-files[Update the files 7]
-____
-
-link:++#lab-1---walkthrough-of-cde-data-service++[*Lab 1 - Walkthrough of CDE Data Service 7*]
+link:#prerequisites[*Prerequisites*]
 
 ____
-link:#accessing-the-virtual-cluster[ACCESSING THE VIRTUAL CLUSTER 11]
+link:#verify-access-to-the-environment[Verify access to the environment]
 
-link:#step-1-select-the-appropriate-cde-service[Step 1 : Select the appropriate CDE Service 11]
+link:#download-the-resources[Download the resources]
 
-link:#step-2-virtual-cluster-selection[Step 2 : Virtual cluster selection 11]
+link:#update-the-files[Update the files]
 ____
 
-link:++#lab-2---create-and-trigger-ad-hoc-spark-jobs++[*Lab 2 - Create and trigger ad-hoc Spark jobs 13*]
+link:++#lab-1---walkthrough-of-cde-data-service++[*Lab 1 - Walkthrough of CDE Data Service *]
 
 ____
-link:#resource-creation[Resource Creation 13]
+link:#accessing-the-virtual-cluster[ACCESSING THE VIRTUAL CLUSTER ]
 
-link:#job-creation[Job Creation 15]
+link:#step-1-select-the-appropriate-cde-service[Step 1 : Select the appropriate CDE Service ]
 
-link:#triggering-the-jobs[Triggering the jobs 19]
+link:#step-2-virtual-cluster-selection[Step 2 : Virtual cluster selection ]
 ____
 
-link:++#lab-3---add-schedule-to-the-ad-hoc-spark-jobs++[*Lab 3 - Add schedule to the ad-hoc Spark jobs 21*]
-
-link:++#lab-4---orchestrate-a-set-of-jobs-using-airflow++[*Lab 4 - Orchestrate a set of jobs using Airflow 23*]
-
-link:++#lab-5---install-and-configure-cde-cli++[*Lab 5 - Install and Configure CDE CLI 27*]
+link:++#lab-2---create-and-trigger-ad-hoc-spark-jobs++[*Lab 2 - Create and trigger ad-hoc Spark jobs *]
 
 ____
-link:#for-mac-users[For Mac users: 27]
+link:#resource-creation[Resource Creation ]
 
-link:#for-windows-users[For Windows users: 31]
+link:#job-creation[Job Creation ]
+
+link:#triggering-the-jobs[Triggering the jobs ]
 ____
 
-link:++#lab-6---run-jobs-using-cde-cli++[*Lab 6 - Run jobs using CDE CLI 34*]
+link:++#lab-3---add-schedule-to-the-ad-hoc-spark-jobs++[*Lab 3 - Add schedule to the ad-hoc Spark jobs *]
+
+link:++#lab-4---orchestrate-a-set-of-jobs-using-airflow++[*Lab 4 - Orchestrate a set of jobs using Airflow *]
+
+link:++#lab-5---install-and-configure-cde-cli++[*Lab 5 - Install and Configure CDE CLI *]
 
 ____
-link:#run-a-spark-scala-job-using-cli[Run a spark-scala job using CLI 34]
+link:#for-mac-users[For Mac users: ]
+
+link:#for-windows-users[For Windows users: ]
 ____
 
-link:++#lab-7---data-lineage-and-auto-scaling++[*Lab 7 - Data Lineage and Auto-Scaling 35*]
+link:++#lab-6---run-jobs-using-cde-cli++[*Lab 6 - Run jobs using CDE CLI *]
 
 ____
-link:#data-lineage-using-atlas[Data Lineage using Atlas 35]
-
-link:#auto-scaling-in-cde[Auto-scaling in CDE 38]
+link:#run-a-spark-scala-job-using-cli[Run a spark-scala job using CLI ]
 ____
 
-== 
+link:++#lab-7---data-lineage-and-auto-scaling++[*Lab 7 - Data Lineage and Auto-Scaling *]
 
-==  +
+____
+link:#data-lineage-using-atlas[Data Lineage using Atlas ]
+
+link:#auto-scaling-in-cde[Auto-scaling in CDE ]
+____
+
 
 == Introduction
 
@@ -122,9 +119,7 @@ ____
 +
 ____
 Open the shared link and login with the credentials assigned to you.
-____
 
-____
 <Will be shared by the instructor at the start>
 
 image:media/media/image56.png[media/media/image56,width=307,height=222]
@@ -134,11 +129,9 @@ ____
 +
 ____
 You should land on the CDP Console as shown below.
-____
 
 image:media/media/image43.png[media/media/image43,width=532,height=244]
-
-=== 
+____
 
 === Download the resources
 
@@ -148,12 +141,12 @@ There are two ways in which you can access the scripts/resources.
 +
 ____
 Download the zip file from the GitHub repository.
-____
 
-____
+
 https://github.com/mmehra12/HOLWorkshops[[.underline]#https://github.com/mmehra12/HOLWorkshops#]
 
 image:media/media/image31.png[media/media/image31,width=441,height=254]
+____
 
 After decompressing the ZIP file the folder structure should look something like this
 
@@ -162,13 +155,12 @@ Note : We will use the CDE folder for this session, you can ignore the CDF conte
 image:media/media/image50.png[media/media/image50,width=440,height=288]
 ____
 
-* {blank}
-+
-____
-The resources were also sent to you on your registered email an hour before the event. Please download the zip file attached to the email.
-____
 
 ____
+* {blank}
++
+The resources were also sent to you on your registered email an hour before the event. Please download the zip file attached to the email.
+
 After decompressing the ZIP file the folder structure should look something like this.
 
 image:media/media/image30.png[media/media/image30,width=518,height=249]
