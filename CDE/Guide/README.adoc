@@ -146,7 +146,6 @@ Download the zip file from the GitHub repository.
 https://github.com/mmehra12/HOLWorkshops[[.underline]#https://github.com/mmehra12/HOLWorkshops#]
 
 image:media/media/image31.png[media/media/image31,width=441,height=254]
-____
 
 After decompressing the ZIP file the folder structure should look something like this
 
@@ -155,18 +154,16 @@ Note : We will use the CDE folder for this session, you can ignore the CDF conte
 image:media/media/image50.png[media/media/image50,width=440,height=288]
 ____
 
-
-____
 * {blank}
 +
+____
+
 The resources were also sent to you on your registered email an hour before the event. Please download the zip file attached to the email.
 
 After decompressing the ZIP file the folder structure should look something like this.
 
 image:media/media/image30.png[media/media/image30,width=518,height=249]
 ____
-
-===  +
 
 === Update the files
 
