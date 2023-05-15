@@ -723,13 +723,14 @@ ____
 +
 ____
 Click on *Airflow UI* and observe the schedule created for your job.
-____
+
 
 image:media/media/image6.png[media/media/image6,width=572,height=329]
 
 image:media/media/image15.png[media/media/image15,width=631,height=121]
 
 image:media/media/image11.png[media/media/image11,width=672,height=202]
+____
 
 * {blank}
 +
@@ -745,11 +746,12 @@ ____
 +
 ____
 Next to the job, click on the 3 dots and click on *Pause Schedule*.
-____
+
 
 image:media/media/image13.png[media/media/image13,width=624,height=157]
 
 image:media/media/image36.png[media/media/image36,width=534,height=124]
+____
 
 * {blank}
 +
@@ -779,7 +781,7 @@ ____
 image:media/media/image5.png[media/media/image5,width=605,height=120]
 ____
 
-* {blank}
+** {blank}
 +
 ____
 *Step 2* : Click on CLI TOOL to download the executable based on your operating system.
@@ -793,9 +795,8 @@ ____
 +
 ____
 Make sure that the cde file is executable by running the below command.
- +
+
 chmod +x /path/to/cde 
-#
 ____
 * {blank}
 +
@@ -822,6 +823,7 @@ ____
 +
 ____
 To validate the installation, run the below command from the terminal.
+
 ====
 *COMMAND* -> ./cde --help
 ====
@@ -837,23 +839,23 @@ ____
 * {blank}
 +
 ____
-For configuring the CDE CLI, we create a new file and add the cluster details and use it as an environment variable for connecting to the CDE virtual cluster.
+For configuring the CDE CLI, we create a new file and add the cluster details and use it to connect to the CDE virtual cluster.
 ____
 * {blank}
 +
 ____
 Create a file as config.yaml and add the following details.
-____
-
-____
+====
 touch config.yaml
-
+====
 image:media/media/image27.png[media/media/image27,width=491,height=100]
+____
 
+____
+====
 vi config.yaml
-
+====
 user: <CDP_user>
-
 vcluster-endpoint: <CDE_virtual_cluster_endpoint>
 
 Here, *user* is the username you have been mapped in the excel sheet.
