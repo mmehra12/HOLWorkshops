@@ -9,8 +9,8 @@ import sys
 ### Update the username
 username = "<ENTER YOUR USERNAME HERE>" ## example: "apac01"
 
-#### Set DB Name and App Name accordingly
-db_name = username + "_retail"    ## example: retail_wuser1
+#### DB Name and App Name accordingly
+db_name = username + "_retail"
 appName = username + "-CDE-Lab3-Job1-PySpark-Tokenize"
 
 spark = SparkSession \

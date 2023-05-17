@@ -9,8 +9,8 @@ import sys
 ### Update the username and dbname
 username = "<ENTER YOUR USERNAME HERE>" ##Example: "apac01"
 
-#### Setting DB Name and App Name accordingly
-db_name = username + "_TexasPPP"    ## <username>_TexasPPP
+#### DB Name and App Name accordingly
+db_name = username + "_TexasPPP"
 appName = username + "-CDE-Lab3-Job4-Pyspark PPP Report"
 
 spark = SparkSession \
