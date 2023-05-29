@@ -1208,20 +1208,24 @@ In situations like this data would need to be removed, corrected, and reloaded. 
 
 This leverages Snapshot IDs to perform this action by using a simple ALTER TABLE command as follows. We will NOT RUN this command in this lab.
 
--- ALTER TABLE ${user_id}_airlines.flights EXECUTE ROLLBACK(${snapshot_id});
-
+[source,sql]
+----
+-- ALTER TABLE ${user_id}_airlines.flights EXECUTE ROLLBACK(${snapshot_id});
+----
 
 
 === Iceberg Rollback [Table Maintenance] - DO NOT RUN
 
 As time passes it might make sense to expire old Snapshots, instead of the Snapshot ID you use the Timestamp to expire old Snapshots. You can do this manually by running a simple ALTER TABLE command as follows. We will NOT RUN this command in this lab.
 
--- Expire Snapshots up to the specified timestamp
+-- Expire Snapshots up to the specified timestamp
 
 -- BE CAREFUL: Once you run this you will not be able to Time Travel for any Snapshots that you Expire ALTER TABLE ${user_id}_airlines.flights
 
+[source,sql]
+----
 -- ALTER TABLE ${user_id}_airlines_maint.flights EXECUTE expire_snapshots('${create_ts}');
-
+----
 
 
 === Materialized Views [Performance Optimization]
