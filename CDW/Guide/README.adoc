@@ -311,7 +311,7 @@ For this workshop you will use the following credentials and resources
 |===
 |*Workshop Login Username* |<Check with your instructor>
 |*Workshop Login Password* |<Check with your instructor>
-|*CDP Workload User ($\{user_id})* |<Check with your instructor>
+|*CDP Workload User (${user_id})* |<Check with your instructor>
 |*CDP Workload Password* |<Check with your instructor>
 |*Hive Virtual Warehouse Name* |<Check with your instructor>
 |*Impala Virtual Warehouse Name* |<Check with your instructor>
@@ -365,7 +365,7 @@ image:cdw-media/media/image80.png[cdw-media/media/image80,width=624,height=129]
 
 ==== Step 2 : CREATE DATABASE
 
-Create new databases. Enter the following query and then make sure that you enter the user assigned to you as a prefix(replace $\{user_id}) to the database name.
+Create new databases. Enter the following query and then make sure that you enter the user assigned to you as a prefix(replace ${user_id}) to the database name.
 
 [source,sql]
 ----
@@ -386,11 +386,11 @@ CREATE DATABASE apac01_airlines;
 
 image:cdw-media/media/image115.png[cdw-media/media/image115,width=293,height=259]
 
-Verify if the database is created using the following query. Do not forget to replace the $\{user-id} with your actual username
+Verify if the database is created using the following query. Do not forget to replace the ${user-id} with your actual username
 
 [source,sql]
 ----
-SHOW DATABASES LIKE '$\{user_id}%';
+SHOW DATABASES LIKE '${user_id}%';
 ----
 image:cdw-media/media/image125.png[cdw-media/media/image125,width=358,height=436]
 
@@ -400,7 +400,7 @@ Run the following DDL in the editor.
 
 This will create External Tables on CSV Data Files that have been uploaded previously by your instructor in AWS S3. This provides a fast way to allow SQL layers on top of data in cloud storage.
 
-*NOTE : Replace $\{user_id} with the user name assigned to you*
+*NOTE : Replace ${user_id} with the user name assigned to you*
 
 **--FLIGHTS TABLE**
 
@@ -418,9 +418,9 @@ STORED AS TEXTFILE LOCATION 's3a://handsonworkshop/my-data/meta-cdw-workshop/air
 *--PLANES TABLE*
 [source,sql]
 ----
-drop table if exists $\{user_id}_airlines_raw.planes_csv;
+drop table if exists ${user_id}_airlines_raw.planes_csv;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines_raw.planes_csv(tailnum string, owner_type string, manufacturer string, issue_date string, model string, status string, aircraft_type string, engine_type string, year int)
+CREATE EXTERNAL TABLE ${user_id}_airlines_raw.planes_csv(tailnum string, owner_type string, manufacturer string, issue_date string, model string, status string, aircraft_type string, engine_type string, year int)
 
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 
@@ -431,9 +431,9 @@ STORED AS TEXTFILE LOCATION 's3a://handsonworkshop/my-data/meta-cdw-workshop/air
 
 [source,sql]
 ----
-drop table if exists $\{user_id}_airlines_raw.airlines_csv;
+drop table if exists ${user_id}_airlines_raw.airlines_csv;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines_raw.airlines_csv(code string, description string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+CREATE EXTERNAL TABLE ${user_id}_airlines_raw.airlines_csv(code string, description string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 
 STORED AS TEXTFILE LOCATION 's3a://handsonworkshop/my-data/meta-cdw-workshop/airlines-raw/airlines-csv/airlines' tblproperties("skip.header.line.count"="1");
 ----
@@ -441,9 +441,9 @@ STORED AS TEXTFILE LOCATION 's3a://handsonworkshop/my-data/meta-cdw-workshop/air
 *--AIRPORT TABLE*
 [source,sql]
 ----
-drop table if exists $\{user_id}_airlines_raw.airports_csv;
+drop table if exists ${user_id}_airlines_raw.airports_csv;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines_raw.airports_csv(iata string, airport string, city string, state DOUBLE, country string, lat DOUBLE, lon DOUBLE)
+CREATE EXTERNAL TABLE ${user_id}_airlines_raw.airports_csv(iata string, airport string, city string, state DOUBLE, country string, lat DOUBLE, lon DOUBLE)
 
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 
@@ -479,9 +479,11 @@ image:cdw-media/media/image10.png[cdw-media/media/image10,width=376,height=279]
 
 Now, copy paste the following in the HUE editor and click on Run as shown below.
 
-select count(*) from $\{user_id}_airlines_raw.flights_csv;
+[source,sql]
+----
+select count(*) from ${user_id}_airlines_raw.flights_csv;
+----
 
-
 
 image:cdw-media/media/image18.png[cdw-media/media/image18,width=582,height=353]
 
@@ -491,13 +493,15 @@ We will now run a compute heavy query and check how that affects the scaling up/
 
 Query:
 
-DO NOT forget to change the $\{user_id}
+DO NOT forget to change the ${user_id}
 
-SELECT model,
+[source,sql]
+----
+SELECT model,
 
 engine_type
 
-FROM $\{user_id}_airlines_raw.planes_csv
+FROM ${user_id}_airlines_raw.planes_csv
 
 WHERE planes_csv.tailnum IN
 
@@ -539,7 +543,7 @@ avg(actualelapsedtime),
 
 avg(distance)
 
-FROM $\{user_id}_airlines_raw.flights_csv
+FROM ${user_id}_airlines_raw.flights_csv
 
 WHERE tailnum IN ('N194JB',
 
@@ -553,7 +557,7 @@ WHERE tailnum IN ('N194JB',
 
 GROUP BY tailnum) AS delays);
 
-
+----
 
 image:cdw-media/media/image129.png[cdw-media/media/image129,width=624,height=281]
 
@@ -587,9 +591,11 @@ ____
 
 Create planes table in Hive table format and stored its data in parquet file format.
 
-drop table if exists $\{user_id}_airlines.planes;
+[source,sql]
+----
+drop table if exists ${user_id}_airlines.planes;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines.planes (
+CREATE EXTERNAL TABLE ${user_id}_airlines.planes (
 
 tailnum STRING, owner_type STRING, manufacturer STRING, issue_date STRING,
 
@@ -600,11 +606,12 @@ model STRING, status STRING, aircraft_type STRING, engine_type STRING, year INT
 STORED AS PARQUET
 
 TBLPROPERTIES ('external.table.purge'='true');
+----
 
 image:cdw-media/media/image132.png[cdw-media/media/image132,width=584,height=281]
 
 ____
-
+
 ____
 
 * {blank}
@@ -613,12 +620,17 @@ ____
 Load planes table with data from the Raw layer table planes_csv.
 ____
 
-INSERT INTO $\{user_id}_airlines.planes
+[source,sql]
+----
+INSERT INTO ${user_id}_airlines.planes
 
-SELECT * FROM $\{user_id}_airlines_raw.planes_csv;image:cdw-media/media/image90.png[cdw-media/media/image90,width=624,height=269]
+SELECT * FROM ${user_id}_airlines_raw.planes_csv;
+----
+
+image:cdw-media/media/image90.png[cdw-media/media/image90,width=624,height=269]
 
 ____
-
+
 ____
 
 * {blank}
@@ -627,9 +639,12 @@ ____
 Once the data is loaded successfully, run the below query to verify if the table now contains data.
 ____
 
-SELECT * FROM $\{user_id}_airlines.planes LIMIT 100;
 
-==== image:cdw-media/media/image20.png[cdw-media/media/image20,width=624,height=360]
+[source,sql]
+----
+SELECT * FROM ${user_id}_airlines.planes LIMIT 100;
+----
+image:cdw-media/media/image20.png[cdw-media/media/image20,width=624,height=360]
 
 ==== Step 2 : DESCRIBE CREATED TABLE
 
@@ -639,10 +654,12 @@ ____
 Execute the following command.
 ____
 
-DESCRIBE FORMATTED $\{user_id}_airlines.planes;
-
+[source,sql]
+----
+DESCRIBE FORMATTED ${user_id}_airlines.planes;
+----
 ____
-In the output look for the following.
+In the output look for the following.
 ____
 
 * {blank}
@@ -673,25 +690,26 @@ Create airlines table in Hive table format and orc file format. This table shoul
 
 Run the following query to create the table
 
-drop table if exists $\{user_id}_airlines.airlines_orc;
+[source,sql]
+----
+drop table if exists ${user_id}_airlines.airlines_orc;
 
-CREATE TABLE $\{user_id}_airlines.airlines_orc
-
+CREATE TABLE ${user_id}_airlines.airlines_orc
 STORED AS ORC
-
 AS
+SELECT * FROM ${user_id}_airlines_raw.airlines_csv;
+----
 
-SELECT * FROM $\{user_id}_airlines_raw.airlines_csv;
-
-image:cdw-media/media/image13.png[cdw-media/media/image13,width=536,height=176]
+image:cdw-media/media/image13.png[cdw-media/media/image13,width=536,height=176]
 
 Run the following query to check data in the airlines_orc table and it should return only 1 row for code 'UA'.
 
-SELECT * FROM $\{user_id}_airlines.airlines_orc WHERE code IN ("UA","XX","PAW");
+[source,sql]
+----
+SELECT * FROM ${user_id}_airlines.airlines_orc WHERE code IN ("UA","XX","PAW");
+----
 
-==== image:cdw-media/media/image73.png[cdw-media/media/image73,width=400,height=251]
-
-====  +
+image:cdw-media/media/image73.png[cdw-media/media/image73,width=400,height=251]
 
 ==== Step 4 : CHECK ACID CAPABILITIES
 
@@ -705,10 +723,12 @@ ____
 We shall now add a new record to the airlines_orc table to see some Hive ACID capabilities.
 ____
 
-INSERT INTO $\{user_id}_airlines.airlines_orc VALUES("PAW","Paradise Air");
-
+[source,sql]
+----
+INSERT INTO ${user_id}_airlines.airlines_orc VALUES("PAW","Paradise Air");
+----
 ____
-image:cdw-media/media/image23.png[cdw-media/media/image23,width=624,height=229]
+image:cdw-media/media/image23.png[cdw-media/media/image23,width=624,height=229]
 ____
 
 * {blank}
@@ -721,33 +741,39 @@ ____
 Let’s update an existing record to change the description of United Airlines to Adrenaline Airlines to see more of the ACID capablities provided by Hive ACID. Run the following SQL.
 ____
 
-drop table if exists $\{user_id}_airlines.airlines_dim_updates;
+[source,sql]
+----
+drop table if exists ${user_id}_airlines.airlines_dim_updates;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines.airlines_dim_updates(code string, description string) tblproperties("external.table.purge"="true");
+CREATE EXTERNAL TABLE ${user_id}_airlines.airlines_dim_updates(code string, description string) tblproperties("external.table.purge"="true");
 
-INSERT INTO $\{user_id}_airlines.airlines_dim_updates VALUES("UA","Adrenaline Airlines");
+INSERT INTO ${user_id}_airlines.airlines_dim_updates VALUES("UA","Adrenaline Airlines");
 
-INSERT INTO $\{user_id}_airlines.airlines_dim_updates VALUES("XX","Get Out of My Airway!");
+INSERT INTO ${user_id}_airlines.airlines_dim_updates VALUES("XX","Get Out of My Airway!");
 
 -- Merge inserted records into Airlines_orc table
 
-MERGE INTO $\{user_id}_airlines.airlines_orc USING (SELECT * FROM $\{user_id}_airlines.airlines_dim_updates) AS s
+MERGE INTO ${user_id}_airlines.airlines_orc USING (SELECT * FROM ${user_id}_airlines.airlines_dim_updates) AS s
 
 ON s.code = airlines_orc.code
 
 WHEN MATCHED THEN UPDATE SET description = s.description
 
 WHEN NOT MATCHED THEN INSERT VALUES (s.code,s.description);
+----
 
 ____
-
+
 
 Run the following query to return the following result - codes XX and PAW were inserted rows, and code UA which had its description value changed from United Air Lines Inc. to Adrenaline Airlines.
 ____
 
-SELECT * FROM $\{user_id}_airlines.airlines_orc WHERE code IN ("UA","XX","PAW");
+[source,sql]
+----
+SELECT * FROM ${user_id}_airlines.airlines_orc WHERE code IN ("UA","XX","PAW");
+----
 
-image:cdw-media/media/image112.png[cdw-media/media/image112,width=624,height=328]
+image:cdw-media/media/image112.png[cdw-media/media/image112,width=624,height=328]
 
 === MIGRATE HIVE TO ICEBERG TABLE
 
@@ -768,13 +794,15 @@ ____
 
 Run the following SQL and note what happens next.
 
-ALTER TABLE $\{user_id}_airlines.planes
+[source,sql]
+----
+ALTER TABLE ${user_id}_airlines.planes
 
 SET TBLPROPERTIES ('storage_handler'='org.apache.iceberg.mr.hive.HiveIcebergStorageHandler');
 
-DESCRIBE FORMATTED $\{user_id}_airlines.planes;
+DESCRIBE FORMATTED ${user_id}_airlines.planes;
+----
 
-
 
 The following changes occured:
 
@@ -805,17 +833,18 @@ ____
 
 Run the following SQL to create airports table using CTAS. Notice the syntax to create an Iceberg Table within Hive is “*_Stored by Iceberg_*”.
 
-drop table if exists $\{user_id}_airlines.airports;
+[source,sql]
+----
+drop table if exists ${user_id}_airlines.airports;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines.airports
+CREATE EXTERNAL TABLE ${user_id}_airlines.airports
+STORED BY ICEBERG AS
 
-*STORED BY ICEBERG* AS
+SELECT * FROM ${user_id}_airlines_raw.airports_csv;
 
-SELECT * FROM $\{user_id}_airlines_raw.airports_csv;
+DESCRIBE FORMATTED ${user_id}_airlines.airports;
+----
 
-DESCRIBE FORMATTED $\{user_id}_airlines.airports;
-
-
 
 Look for: Table Type, Location (location of where table data is stored), SerDe Library, and in Table Parameters look for properties storage_handler, metadata_location, and table_type.
 
@@ -823,9 +852,11 @@ Look for: Table Type, Location (location of where table data is stored), SerDe L
 
 In this step we will create a partitioned table, in Iceberg Table Format, stored in Parquet File Format. Other than that we could specify other file formats that are supported for Iceberg which are: ORC and Avro.
 
-drop table if exists $\{user_id}_airlines.flights;
+[source,sql]
+----
+drop table if exists ${user_id}_airlines.flights;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines.flights (
+CREATE EXTERNAL TABLE ${user_id}_airlines.flights (
 
 month int, dayofmonth int,
 
@@ -853,9 +884,9 @@ STORED AS PARQUET
 
 tblproperties ('format-version'='2');
 
-SHOW CREATE TABLE $\{user_id}_airlines.flights;
+SHOW CREATE TABLE ${user_id}_airlines.flights;
+----
 
-
 
 image:cdw-media/media/image82.png[cdw-media/media/image82,width=624,height=321]
 
@@ -867,27 +898,25 @@ image:cdw-media/media/image62.png[cdw-media/media/image62,width=624,height=250]
 
 We insert data into this table it will write data together within the same partition (ie. all 2006 data is written to the same location, all 2005 data is written to the same location, etc.). This command will take some time to run.
 
-INSERT INTO $\{user_id}_airlines.flights
-
-SELECT * FROM $\{user_id}_airlines_raw.flights_csv
-
+[source,sql]
+----
+INSERT INTO ${user_id}_airlines.flights
+SELECT * FROM ${user_id}_airlines_raw.flights_csv
 WHERE year <= 2006;
+----
 
-
 
 image:cdw-media/media/image60.png[cdw-media/media/image60,width=624,height=202]
 
 Run the following SQL and notice that each of the years have a range of data within a few million flights (each record in the flights table counts as a flight).
 
-SELECT year, count(*)
-
-FROM $\{user_id}_airlines.flights
-
+[source,sql]
+----
+SELECT year, count(*)
+FROM ${user_id}_airlines.flights
 GROUP BY year
-
 ORDER BY year desc;
-
-
+----
 
 image:cdw-media/media/image55.png[cdw-media/media/image55,width=624,height=408]
 
@@ -911,11 +940,13 @@ image:cdw-media/media/image30.png[cdw-media/media/image30,width=624,height=294]
 
 Now run the following query again.
 
-SELECT model,
+[source,sql]
+----
+SELECT model,
 
 engine_type
 
-FROM $\{user_id}_airlines.planes
+FROM ${user_id}_airlines.planes
 
 WHERE planes.tailnum IN
 
@@ -957,7 +988,7 @@ avg(actualelapsedtime),
 
 avg(distance)
 
-FROM $\{user_id}_airlines.flights
+FROM ${user_id}_airlines.flights
 
 WHERE tailnum IN ('N194JB',
 
@@ -970,8 +1001,7 @@ WHERE tailnum IN ('N194JB',
 'N000AA')
 
 GROUP BY tailnum) AS delays);
-
-
+----
 
 image:cdw-media/media/image27.png[cdw-media/media/image27,width=624,height=464]
 
@@ -991,13 +1021,17 @@ image:cdw-media/media/image53.png[cdw-media/media/image53,width=624,height=172]
 
 One of the key features for Iceberg tables is the ability to evolve the partition that is being used over time.
 
-ALTER TABLE $\{user_id}_airlines.flights
+[source,sql]
+----
+ALTER TABLE ${user_id}_airlines.flights
 
 SET PARTITION spec ( year, month );
+----
+[source,sql]
+----
+SHOW CREATE TABLE ${user_id}_airlines.flights;
+----
 
-SHOW CREATE TABLE $\{user_id}_airlines.flights;
-
-
 
 image:cdw-media/media/image24.png[cdw-media/media/image24,width=624,height=265]
 
@@ -1013,18 +1047,20 @@ ____
 Load new data into the flights table using the NEW partition definition. This query will take a while to run
 ____
 
-INSERT INTO $\{user_id}_airlines.flights
-
-SELECT * FROM $\{user_id}_airlines_raw.flights_csv
-
+[source,sql]
+----
+INSERT INTO ${user_id}_airlines.flights
+SELECT * FROM ${user_id}_airlines_raw.flights_csv
 WHERE year = 2007;
+----
 
-
 
 * {blank}
 +
 ____
-Go to *IMPALA* virtual warehouse and switch the Editor to use IMPALA instead of UNIFIED ANALYTICSimage:cdw-media/media/image86.png[cdw-media/media/image86,width=624,height=206]
+Go to *IMPALA* virtual warehouse and switch the Editor to use IMPALA instead of UNIFIED ANALYTICS
+
+image:cdw-media/media/image86.png[cdw-media/media/image86,width=624,height=206]
 ____
 
 ____
@@ -1037,17 +1073,15 @@ ____
 Copy/paste the following in the HUE Editor, but *DO NOT* execute the query.
 ____
 
-SELECT year, month, count(*)
-
-FROM $\{user_id}_airlines.flights
-
+[source,sql]
+----
+SELECT year, month, count(*)
+FROM ${user_id}_airlines.flights
 WHERE year = 2006 AND month = 12
-
 GROUP BY year, month
-
 ORDER BY year desc, month asc;
+----
 
-
 
 Run Explain Plan against the above analytic queries to see how the new partition helps.
 
@@ -1061,17 +1095,17 @@ ____
 Copy/paste the following in the HUE Editor, but DO NOT execute the query but check the EXPLAIN PLAN.
 ____
 
-SELECT year, month, count(*)
-
-FROM $\{user_id}_airlines.flights
-
+[source,sql]
+----
+SELECT year, month, count(*)
+FROM ${user_id}_airlines.flights
 WHERE year = 2007 AND month = 12
-
 GROUP BY year, month
-
 ORDER BY year desc, month asc;
+----
 
-image:cdw-media/media/image65.png[cdw-media/media/image65,width=467,height=592]
+
+image:cdw-media/media/image65.png[cdw-media/media/image65,width=467,height=592]
 
 In the output notice the amount of data that needs to be scanned for this query, about 11 MB, is significantly less than that of the first, 138 MB. This shows an important capability of Iceberg, Partition Pruning. Meaning that much less data is scanned for this query and only the selected month of data needs to be processed.
 
@@ -1079,21 +1113,27 @@ In the output notice the amount of data that needs to be scanned for this query,
 
 In the previous steps we have loaded data into the flights iceberg table. We will insert more data into it. Each time we add (update or delete) data a snapshot is captured. The snapshot is important for eventual consistency & to allow multiple read/writes concurrently (from various engines or same engine).
 
-INSERT INTO $\{user_id}_airlines.flights
+[source,sql]
+----
+INSERT INTO ${user_id}_airlines.flights
 
-SELECT * FROM $\{user_id}_airlines_raw.flights_csv
+SELECT * FROM ${user_id}_airlines_raw.flights_csv
 
 WHERE year >= 2008;
+----
 
-
 
 image:cdw-media/media/image127.png[cdw-media/media/image127,width=624,height=489]
 
 To see snapshots, execute the following SQL.
 
-DESCRIBE HISTORY $\{user_id}_airlines.flights;
+[source,sql]
+----
+DESCRIBE HISTORY ${user_id}_airlines.flights;
+----
 
-image:cdw-media/media/image108.png[cdw-media/media/image108,width=624,height=354]
+
+image:cdw-media/media/image108.png[cdw-media/media/image108,width=624,height=354]
 
 In the output there should be 3 Snapshots, described below. Note that we have been reading/writing data from/to the Iceberg table from both Hive & Impala. It is an important aspect of Iceberg Tables that they support multi-function analytics - ie. many engines can work with Iceberg tables (Cloudera Data Warehouse [Hive & Impala], Cloudera Data Engineering [Spark], Cloudera Machine Learning [Spark], Cloudera DataFlow [NiFi], and DataHub Clusters).
 
@@ -1111,13 +1151,15 @@ ____
 Copy/paste the following data into the Impala Editor, but DO NOT execute.
 ____
 
--- SELECT DATA USING TIMESTAMP FOR SNAPSHOT
+[source,sql]
+----
+SELECT DATA USING TIMESTAMP FOR SNAPSHOT
 
 SELECT year, count(*)
 
-FROM $\{user_id}_airlines.flights
+FROM ${user_id}_airlines.flights
 
-FOR SYSTEM_TIME AS OF '$\{create_ts}'
+FOR SYSTEM_TIME AS OF '${create_ts}'
 
 GROUP BY year
 
@@ -1127,15 +1169,16 @@ ORDER BY year desc;
 
 SELECT year, count(*)
 
-FROM $\{user_id}_airlines.flights
+FROM ${user_id}_airlines.flights
 
-FOR SYSTEM_VERSION AS OF $\{snapshot_id}
+FOR SYSTEM_VERSION AS OF ${snapshot_id}
 
 GROUP BY year
 
 ORDER BY year desc;
+----
 
-After pasting the query you will see the following two options for *create_ts* and *snapshot_id*
+After pasting the query you will see the following two options for *create_ts* and *snapshot_id*
 
 image:cdw-media/media/image78.png[cdw-media/media/image78,width=624,height=194]
 
@@ -1155,7 +1198,9 @@ ____
 From the notepad just copy the second value of the snapshot id. In our case the value was 6341506406760449831. Paste it in the snapshot_id box. Then execute the highlighted query only (2nd query).
 ____
 
-=== Iceberg Rollback [Table Maintenance] - DO NOT RUNimage:cdw-media/media/image98.png[cdw-media/media/image98,width=624,height=366]
+=== Iceberg Rollback [Table Maintenance] - DO NOT RUN
+
+image:cdw-media/media/image98.png[cdw-media/media/image98,width=624,height=366]
 
 Sometimes data can be loaded incorrectly, due to many common issues - missing fields, only part of the data being loaded, bad data, etc.
 
@@ -1163,9 +1208,9 @@ In situations like this data would need to be removed, corrected, and reloaded. 
 
 This leverages Snapshot IDs to perform this action by using a simple ALTER TABLE command as follows. We will NOT RUN this command in this lab.
 
--- ALTER TABLE $\{user_id}_airlines.flights EXECUTE ROLLBACK($\{snapshot_id});
+-- ALTER TABLE ${user_id}_airlines.flights EXECUTE ROLLBACK(${snapshot_id});
 
-
+
 
 === Iceberg Rollback [Table Maintenance] - DO NOT RUN
 
@@ -1173,11 +1218,11 @@ As time passes it might make sense to expire old Snapshots, instead of the Snaps
 
 -- Expire Snapshots up to the specified timestamp
 
--- BE CAREFUL: Once you run this you will not be able to Time Travel for any Snapshots that you Expire ALTER TABLE $\{user_id}_airlines.flights
+-- BE CAREFUL: Once you run this you will not be able to Time Travel for any Snapshots that you Expire ALTER TABLE ${user_id}_airlines.flights
 
--- ALTER TABLE $\{user_id}_airlines_maint.flights EXECUTE expire_snapshots('$\{create_ts}');
+-- ALTER TABLE ${user_id}_airlines_maint.flights EXECUTE expire_snapshots('${create_ts}');
 
-
+
 
 === Materialized Views [Performance Optimization]
 
@@ -1193,13 +1238,15 @@ ____
 Copy/paste the following, make sure to highlight the entire block, and execute the following.
 ____
 
-SET hive.query.results.cache.enabled=false;
+[source,sql]
+----
+SET hive.query.results.cache.enabled=false;
 
-drop table if exists $\{user_id}_airlines.airlines;
+drop table if exists ${user_id}_airlines.airlines;
 
-CREATE EXTERNAL TABLE $\{user_id}_airlines.airlines (code string, description string) STORED BY ICEBERG STORED AS ORC TBLPROPERTIES ('format-version' = '2');
+CREATE EXTERNAL TABLE ${user_id}_airlines.airlines (code string, description string) STORED BY ICEBERG STORED AS ORC TBLPROPERTIES ('format-version' = '2');
 
-INSERT INTO $\{user_id}_airlines.airlines SELECT * FROM $\{user_id}_airlines_raw.airlines_csv;
+INSERT INTO ${user_id}_airlines.airlines SELECT * FROM ${user_id}_airlines_raw.airlines_csv;
 
 SELECT airlines.code AS code, MIN(airlines.description) AS description,
 
@@ -1207,13 +1254,13 @@ flights.month AS month,
 
 sum(flights.cancelled) AS cancelled
 
-FROM $\{user_id}_airlines.flights flights , $\{user_id}_airlines.airlines airlines
+FROM ${user_id}_airlines.flights flights , ${user_id}_airlines.airlines airlines
 
 WHERE flights.uniquecarrier = airlines.code
 
 group by airlines.code, flights.month;
+----
 
-
 
 Note: Hive has built in performance improvements, such as a *Query Cache* that stores results of queries run so that similar queries don’t have to retrieve data, they can just get the results from the cache. In this step we are turning that off using the SET statement, this will ensure when we look at the query plan, we will not retrieve the data from the cache.
 
@@ -1262,9 +1309,11 @@ ____
 *Create Materialized View (MV) -* Queries will transparently be rewritten, when possible, to use the MV instead of the base tables. Copy/paste the following, highlight the entire block, and execute.
 ____
 
-DROP MATERIALIZED VIEW IF EXISTS $\{user_id}_airlines.traffic_cancel_airlines;
+[source,sql]
+----
+DROP MATERIALIZED VIEW IF EXISTS ${user_id}_airlines.traffic_cancel_airlines;
 
-CREATE MATERIALIZED VIEW $\{user_id}_airlines.traffic_cancel_airlines
+CREATE MATERIALIZED VIEW ${user_id}_airlines.traffic_cancel_airlines
 
 as SELECT airlines.code AS code, MIN(airlines.description) AS description,
 
@@ -1274,15 +1323,17 @@ sum(flights.cancelled) AS cancelled,
 
 count(flights.diverted) AS diverted
 
-FROM $\{user_id}_airlines.flights flights JOIN $\{user_id}_airlines.airlines airlines ON (flights.uniquecarrier = airlines.code)
+FROM ${user_id}_airlines.flights flights JOIN ${user_id}_airlines.airlines airlines ON (flights.uniquecarrier = airlines.code)
 
 group by airlines.code, flights.month;
-
+----
+[source,sql]
+----
 -- show MV
 
-SHOW MATERIALIZED VIEWS in $\{user_id}_airlines;
+SHOW MATERIALIZED VIEWS in ${user_id}_airlines;
+----
 
-
 
 * {blank}
 +
@@ -1290,7 +1341,9 @@ ____
 Run Dashboard Query again to see usage of the MV - Copy/paste the following, make sure to highlight the entire block, and execute the following. This time an order by was added to make this query must do more work.image:cdw-media/media/image34.png[cdw-media/media/image34,width=624,height=245]
 ____
 
-SET hive.query.results.cache.enabled=false;
+[source,sql]
+----
+SET hive.query.results.cache.enabled=false;
 
 SELECT airlines.code AS code, MIN(airlines.description) AS description,
 
@@ -1298,15 +1351,16 @@ flights.month AS month,
 
 sum(flights.cancelled) AS cancelled
 
-FROM $\{user_id}_airlines.flights flights , $\{user_id}_airlines.airlines airlines
+FROM ${user_id}_airlines.flights flights , ${user_id}_airlines.airlines airlines
 
 WHERE flights.uniquecarrier = airlines.code
 
 group by airlines.code, flights.month
 
 order by airlines.code;
+----
 
-image:cdw-media/media/image79.png[cdw-media/media/image79,width=624,height=385]
+image:cdw-media/media/image79.png[cdw-media/media/image79,width=624,height=385]
 
 Let’s look at the Query Plan that was used to execute this query. On the left menu select Jobs. On the Jobs Browser - select the Queries tab to the right of the Job browser header. Hover over & click on the Query just executed (should be the first row). Click on the *Visual Explain* tab. image:cdw-media/media/image99.png[cdw-media/media/image99,width=478,height=231]
 
@@ -1498,13 +1552,15 @@ ____
 Test the policy is working - Open HUE for the CDW Impala Virtual Warehouse assigned to you and execute the following query.
 ____
 
-SELECT uniquecarrier, count(*)
+[source,sql]
+----
+SELECT uniquecarrier, count(*)
 
-FROM $\{user_id}_airlines.flights
+FROM ${user_id}_airlines.flights
 
 GROUP BY uniquecarrier;
+----
 
-
 
 ____
 You should now only see 1 row returned for this query - after the policy was applied you will only be able to access uniquecarrier = UA and no other carriers.
