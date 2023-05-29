@@ -1391,7 +1391,7 @@ Change the radio button to select the appropriate data lake. In this case it is 
 ____
 
 ____
-image:cdw-media/media/image123.png[cdw-media/media/image123,width=624,height=385]
+image:cdw-media/media/imagecopy.png[cdw-media/media/image123,width=624,height=385]
 ____
 
 * {blank}
