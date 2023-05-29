@@ -1,103 +1,99 @@
-____
 link:#preface[[.underline]#Preface#]
 
 link:#pre-requisites[[.underline]#Pre-requisites#]
 
 link:#workshop-overview[[.underline]#Workshop Overview#]
-____
 
-link:++#lab-1---getting-started++[[.underline]#LAB 1 - Getting Started#]
+link:#lab-1---getting-started[[.underline]#LAB 1 - Getting Started#]
 
-____
-link:#verify-resources[[.underline]#VERIFY RESOURCES#]
 
-link:#define-cdp-workload-password[[.underline]#DEFINE CDP WORKLOAD PASSWORD#]
+** link:#verify-resources[[.underline]#VERIFY RESOURCES#]
 
-link:#step-1-login[[.underline]#Step 1 : Login#]
+** link:#define-cdp-workload-password[[.underline]#DEFINE CDP WORKLOAD PASSWORD#]
 
-link:#step-2-go-to-profile[[.underline]#Step 2 : Go to Profile#]
+*** link:#step-1-login[[.underline]#Step 1 : Login#]
 
-link:#step-3-set-workload-password[[.underline]#Step 3 : Set Workload Password#]
-____
+*** link:#step-2-go-to-profile[[.underline]#Step 2 : Go to Profile#]
 
-link:++#lab-2---raw-layer++[[.underline]#LAB 2 - RAW LAYER#]
+*** link:#step-3-set-workload-password[[.underline]#Step 3 : Set Workload Password#]
 
-____
-link:#database-and-table-creation[[.underline]#DATABASE AND TABLE CREATION#]
 
-link:#step-1-go-to-hue-hive-cluster[[.underline]#Step 1 : Go To Hue [Hive Cluster]#]
+link:#lab-2---raw-layer[[.underline]#LAB 2 - RAW LAYER#]
 
-link:#step-2-create-database[[.underline]#Step 2 : CREATE DATABASE#]
+** link:#database-and-table-creation[[.underline]#DATABASE AND TABLE CREATION#]
 
-link:#step-3-create-external-tables[[.underline]#Step 3 : CREATE EXTERNAL TABLES#]
+*** link:#step-1-go-to-hue-hive-cluster[[.underline]#Step 1 : Go To Hue [Hive Cluster]#]
 
-link:#step-4-verify-if-the-tables-are-created[[.underline]#Step 4 : VERIFY IF THE TABLES ARE CREATED#]
+*** link:#step-2-create-database[[.underline]#Step 2 : CREATE DATABASE#]
 
-link:#step-5-query-created-tables-using-impala-virtual-warehouse[[.underline]#Step 5 : QUERY CREATED TABLES USING IMPALA VIRTUAL WAREHOUSE#]
-____
+*** link:#step-3-create-external-tables[[.underline]#Step 3 : CREATE EXTERNAL TABLES#]
 
-link:++#lab-3---data-lakehouse++[[.underline]#LAB 3 - DATA LAKEHOUSE#]
+*** link:#step-4-verify-if-the-tables-are-created[[.underline]#Step 4 : VERIFY IF THE TABLES ARE CREATED#]
 
-____
-link:#curated-layer-creation[[.underline]#CURATED LAYER CREATION#]
+*** link:#step-5-query-created-tables-using-impala-virtual-warehouse[[.underline]#Step 5 : QUERY CREATED TABLES USING IMPALA VIRTUAL WAREHOUSE#]
 
-link:#step-1-create-and-load-planes-table[[.underline]#Step 1 : CREATE and LOAD PLANES TABLE#]
 
-link:#step-2-describe-created-table[[.underline]#Step 2 : DESCRIBE CREATED TABLE#]
+link:#lab-3---data-lakehouse[[.underline]#LAB 3 - DATA LAKEHOUSE#]
 
-link:#step-3-create-and-load-airlines-table[[.underline]#Step 3 : CREATE AND LOAD AIRLINES TABLE#]
 
-link:#step-4-check-acid-capabilities[[.underline]#Step 4 : CHECK ACID CAPABILITIES#]
+** link:#curated-layer-creation[[.underline]#CURATED LAYER CREATION#]
 
-link:#migrate-hive-to-iceberg-table[[.underline]#MIGRATE HIVE TO ICEBERG TABLE#]
+*** link:#step-1-create-and-load-planes-table[[.underline]#Step 1 : CREATE and LOAD PLANES TABLE#]
 
-link:#utilize-table-migration-feature[[.underline]#Utilize Table Migration Feature#]
+*** link:#step-2-describe-created-table[[.underline]#Step 2 : DESCRIBE CREATED TABLE#]
 
-link:#use-create-table-as-selectctas[[.underline]#Use Create table as Select(CTAS)#]
+*** link:#step-3-create-and-load-airlines-table[[.underline]#Step 3 : CREATE AND LOAD AIRLINES TABLE#]
 
-link:#create-iceberg-tables[[.underline]#CREATE ICEBERG TABLES#]
-____
+*** link:#step-4-check-acid-capabilities[[.underline]#Step 4 : CHECK ACID CAPABILITIES#]
 
-link:++#lab-4---performance-optimization-and-table-maintenance++[[.underline]#LAB 4 - PERFORMANCE OPTIMIZATION AND TABLE MAINTENANCE#]
+** link:#migrate-hive-to-iceberg-table[[.underline]#MIGRATE HIVE TO ICEBERG TABLE#]
 
-____
-link:#iceberg-in-place-partition-evolutionperformance-optimization[[.underline]#Iceberg in-place Partition Evolution[Performance Optimization]#]
+*** link:#utilize-table-migration-feature[[.underline]#Utilize Table Migration Feature#]
 
-link:#step-1-open-hue-for-the-cdw-hive-virtual-warehouse[[.underline]#Step 1 : Open HUE for the CDW Hive Virtual Warehouse#]
+*** link:#use-create-table-as-selectctas[[.underline]#Use Create table as Select(CTAS)#]
 
-link:#step-2-execute-query[[.underline]#Step 2 : Execute Query#]
+** link:#create-iceberg-tables[[.underline]#CREATE ICEBERG TABLES#]
 
-link:#step-3-check-for-optimizations[[.underline]#Step 3 : Check for optimizations#]
 
-link:#iceberg-snapshots-table-maintenance[[.underline]#Iceberg Snapshots [Table Maintenance]#]
+link:#lab-4---performance-optimization-and-table-maintenance[[.underline]#LAB 4 - PERFORMANCE OPTIMIZATION AND TABLE MAINTENANCE#]
 
-link:#iceberg-time-travel-table-maintenance[[.underline]#Iceberg Time Travel [Table Maintenance]#]
 
-link:++#iceberg-rollback-table-maintenance---do-not-run++[[.underline]#Iceberg Rollback [Table Maintenance] - DO NOT RUN#]
+** link:#iceberg-in-place-partition-evolutionperformance-optimization[[.underline]#Iceberg in-place Partition Evolution[Performance Optimization]#]
 
-link:++#iceberg-rollback-table-maintenance---do-not-run-1++[[.underline]#Iceberg Rollback [Table Maintenance] - DO NOT RUN#]
+*** link:#step-1-open-hue-for-the-cdw-hive-virtual-warehouse[[.underline]#Step 1 : Open HUE for the CDW Hive Virtual Warehouse#]
 
-link:#materialized-views-performance-optimization[[.underline]#Materialized Views [Performance Optimization]#]
-____
+*** link:#step-2-execute-query[[.underline]#Step 2 : Execute Query#]
 
-link:++#lab-5---security-and-governance++[[.underline]#LAB 5 - SECURITY AND GOVERNANCE#]
+*** link:#step-3-check-for-optimizations[[.underline]#Step 3 : Check for optimizations#]
 
-____
-link:#step-1-add-new-policy[[.underline]#Step 1 : Add New Policy#]
+** link:#iceberg-snapshots-table-maintenance[[.underline]#Iceberg Snapshots [Table Maintenance]#
 
-link:#step-2-test-new-policy[[.underline]#Step 2 : Test New Policy#]
-____
+** link:#iceberg-time-travel-table-maintenance[[.underline]#Iceberg Time Travel [Table Maintenance]#
 
-link:++#lab-6---cloudera-data-visualization++[[.underline]#LAB 6 - CLOUDERA DATA VISUALIZATION#]
+** link:#iceberg-rollback-table-maintenance---do-not-run[[.underline]#Iceberg Rollback [Table Maintenance] - DO NOT RUN#
 
-____
-link:#data-modeling[[.underline]#Data Modeling#]
+** link:#iceberg-rollback-table-maintenance---do-not-run-1[[.underline]#Iceberg Rollback [Table Maintenance] - DO NOT RUN#
 
-link:#dashboard-creation[[.underline]#Dashboard Creation#]
-____
+** link:#materialized-views-performance-optimization[[.underline]#Materialized Views [Performance Optimization]#]
 
- +
-CLOUDERA DATA WAREHOUSE WORKSHOP
+
+link:#lab-5---security-and-governance[[.underline]#LAB 5 - SECURITY AND GOVERNANCE#]
+
+
+** link:#step-1-add-new-policy[[.underline]#Step 1 : Add New Policy#]
+
+** link:#step-2-test-new-policy[[.underline]#Step 2 : Test New Policy#]
+
+link:#lab-6---cloudera-data-visualization[[.underline]#LAB 6 - CLOUDERA DATA VISUALIZATION#]
+
+
+** link:#data-modeling[[.underline]#Data Modeling#]
+
+** link:#dashboard-creation[[.underline]#Dashboard Creation#]
+
+
+
+== CLOUDERA DATA WAREHOUSE WORKSHOP
 
 == Preface
 
