@@ -914,6 +914,7 @@ WHERE
   <img width="624" height="330" src="cdw-media/media/image112.png">
 </p>
 ++++
+____
 
 === MIGRATE HIVE TO ICEBERG TABLE
 
