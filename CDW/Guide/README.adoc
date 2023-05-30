@@ -141,12 +141,6 @@ Dimension Table: airlines (1.5k rows), airports (3.3k rows) and planes (5k rows)
 
 image:cdw-media/media/image76.png[cdw-media/media/image76,width=508,height=462]
 
-ifdef::env-github[]
-:tip-caption: :bulb:
-endif::[]
-
-[TIP]
-It's possible to use emojis as admonition icons on GitHub.
 
 == Pre-requisites
 
@@ -406,7 +400,16 @@ Run the following DDL in the editor.
 
 This will create External Tables on CSV Data Files that have been uploaded previously by your instructor in AWS S3. This provides a fast way to allow SQL layers on top of data in cloud storage.
 
-IMPORTANT: Replace ${user_id} with the user name assigned to you
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+[IMPORTANT]
+Replace ${user_id} with the user name assigned to you
 
 **--FLIGHTS TABLE**
 
@@ -506,7 +509,16 @@ We will now run a compute heavy query and check how that affects the scaling up/
 
 Query:
 
-IMPORTANT: DO NOT forget to change the ${user_id}
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+[IMPORTANT]
+DO NOT forget to change the ${user_id}
 
 [source,sql]
 ----
@@ -570,7 +582,16 @@ image:cdw-media/media/image109.png[cdw-media/media/image109,width=624,height=240
 
 === CURATED LAYER CREATION
 
-IMPORTANT: Make sure that you are using the HUE of the HIVE virtual warehouse that has been assigned to you.
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+[IMPORTANT]
+Make sure that you are using the HUE of the HIVE virtual warehouse that has been assigned to you.
 
 image:cdw-media/media/image56.png[cdw-media/media/image56,width=624,height=153]
 
@@ -1254,9 +1275,27 @@ group by
 ----
 
 
-IMPORTANT: Hive has built in performance improvements, such as a *Query Cache* that stores results of queries run so that similar queries don’t have to retrieve data, they can just get the results from the cache. In this step we are turning that off using the SET statement, this will ensure when we look at the query plan, we will not retrieve the data from the cache.
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
-IMPORTANT: With this query you are combining an Iceberg Table Format (flight table) with a Hive Table Format (airlines ORC table) in the same query.
+[IMPORTANT]
+Hive has built in performance improvements, such as a *Query Cache* that stores results of queries run so that similar queries don’t have to retrieve data, they can just get the results from the cache. In this step we are turning that off using the SET statement, this will ensure when we look at the query plan, we will not retrieve the data from the cache.
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+[IMPORTANT]
+With this query you are combining an Iceberg Table Format (flight table) with a Hive Table Format (airlines ORC table) in the same query.
 
 * {blank}
 +
