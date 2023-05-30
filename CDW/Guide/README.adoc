@@ -1919,20 +1919,16 @@ ____
 ____
 Create a connection - click on the NEW CONNECTION button on the left menu. Enter the details as shown in the screenshot and click on TEST.
 
-*Connection type:* Select CDW Impala.
-
-*Connection name*: <user_id>-airlines-lakehouse (Ex-wuser00-airlines-lakehouse).
-
-*CDW Warehouse:* Make Sure you select the warehouse that is associated with your <user_id>.
-
-*Hostname or IP address:* Gets automatically selected.
-
-*Port:* Gets automatically filled up.
-
-*Username:* Gets automatically filled up.
-
-*Password:* Blank
-
+[width="100%",cols="30%,70%",]
+|===
+|*Connection type* |Select CDW Impala
+|*Connection name* |<user_id>-airlines-lakehouse
+|*CDW Warehouse* |Make Sure you select the warehouse that is associated with your <user_id>
+|*Hostname* |Gets automatically filled up.
+|*Port* |Gets automatically filled up.
+|*Username* |Gets automatically filled up.
+|*Password* |Blank
+|===
 
 image:cdw-media/media/image57.png[cdw-media/media/image57,width=624,height=326]
 
@@ -1963,9 +1959,7 @@ ____
 +
 ____
 Fill the details as following and click CREATE. airline_logistics gets created
-____
 
-____
 *Dataset title* - airline_logistics.
 
 *Dataset Source* - Select From Table (however, you could choose to directly enter a SQL statement instead).
@@ -1973,10 +1967,14 @@ ____
 *Select Database* - <user_id>_airlines (Make Sure you select the database that is associated with your <user_id>).
 
 *Select Table* - flights.
-____
+
 
 image:cdw-media/media/image61.png[cdw-media/media/image61,width=381,height=320]
+____
 
+* {blank}
++
+____
 Edit the Dataset - click on airline_logistics on the right of the screen. This will open the details page, showing you information about the Dataset, such as connection details, and options that are set.
 
 image:cdw-media/media/image74.png[cdw-media/media/image74,width=624,height=241]
@@ -2012,6 +2010,7 @@ image:cdw-media/media/image33.png[cdw-media/media/image33,width=432,height=325]
 image:cdw-media/media/image6.png[cdw-media/media/image6,width=365,height=304]
 
 image:cdw-media/media/image96.png[cdw-media/media/image96,width=358,height=256]
+____
 
 * {blank}
 +
@@ -2027,51 +2026,57 @@ image:cdw-media/media/image63.png[cdw-media/media/image63,width=389,height=236]
 +
 ____
 Make sure you select the column uniquecarrier from flights and column code from airlines table. Click APPLY.
-____
+
 
 image:cdw-media/media/image28.png[cdw-media/media/image28,width=491,height=357]
+____
 
 * {blank}
 +
 ____
 Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: wuser00_airlines) and table name airports.
-____
+
 
 image:cdw-media/media/image92.png[cdw-media/media/image92,width=483,height=236]
 
 image:cdw-media/media/image70.png[cdw-media/media/image70,width=407,height=244]
+____
 
 * {blank}
 +
 ____
 Make sure you select the column origin from flights and column iata from airports table. Click APPLY.
-____
+
 
 image:cdw-media/media/image122.png[cdw-media/media/image122,width=460,height=328]
+____
 
 * {blank}
 +
 ____
 Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: wuser00_airlines) and table name airports.
-____
 
 image:cdw-media/media/image4.png[cdw-media/media/image4,width=624,height=358]
+____
+
 
 * {blank}
 +
 ____
 Make sure you select the column dest from flights and column iata from airports table. Click APPLY. Then click on SAVE.
-____
+
 
 image:cdw-media/media/image21.png[cdw-media/media/image21,width=480,height=283]
+____
 
 * {blank}
 +
 ____
 Select “dest” from the flights table and “iata” from the airports_a table. Click APPLY
-____
+
 
 image:cdw-media/media/image118.png[cdw-media/media/image118,width=496,height=367]
+____
 
 * {blank}
 +
@@ -2103,95 +2108,104 @@ ____
 +
 ____
 Click on SHOW DATA. And then click on SAVE.
-____
+
 
 image:cdw-media/media/image31.png[cdw-media/media/image31,width=624,height=398]
 
 image:cdw-media/media/image12.png[cdw-media/media/image12,width=624,height=261]
-
+____
 * {blank}
 +
 ____
 Click on the Fields column on the left window pane. Then click on EDIT FIELDS. Make sure that you click on the highlighted area to change # (measures icon) next to each column to Dim (dimension icon). The columns are as follows.
-____
 
-* {blank}
+
+** {blank}
 +
-____
+
 *flights table:* Columns (month, dayofmonth, dayofweek, deptime, crsdeptime, arrtime, crsarrtime, flightnum & year)
-____
 
-* {blank}
+
+** {blank}
 +
-____
+
 *planes table:* All columns
-____
 
-* {blank}
+** {blank}
 +
-____
+
 *airports table:* All columns
-____
 
-* {blank}
+
+** {blank}
 +
-____
+
 *airports_1 table:* All columns
-____
+
 
 image:cdw-media/media/image102.png[cdw-media/media/image102,width=624,height=377]
 
 image:cdw-media/media/image14.png[cdw-media/media/image14,width=624,height=296]
 
 image:cdw-media/media/image16.png[cdw-media/media/image16,width=624,height=302]
+____
 
 * {blank}
 +
 ____
 Click on TITLE CASE. And notice that the column names changes to be Camel case.
-____
 
 image:cdw-media/media/image25.png[cdw-media/media/image25,width=624,height=416]
+____
 
 * {blank}
 +
 ____
 Click on the pencil icon next to Depdelay icon.
-____
+
 
 image:cdw-media/media/image106.png[cdw-media/media/image106,width=624,height=194]
+____
 
 * {blank}
 +
 ____
 Change the Default Aggregation to Average.
-____
+
 
 image:cdw-media/media/image107.png[cdw-media/media/image107,width=292,height=327]
+____
 
 * {blank}
 +
 ____
 Click on the Display Format and then change Category to be Integer. Check mark the box next to the Use 1000 separator. Click on APPLY.
-____
+
 
 image:cdw-media/media/image35.png[cdw-media/media/image35,width=471,height=340]
+____
 
+* {blank}
++
+____
 Click on the down arrow shown against the Origin column and the click on Clone. A column Copy of Origin is created. Click on the 'pencil' icon next to it.
 
 image:cdw-media/media/image19.png[cdw-media/media/image19,width=624,height=342]
 
 image:cdw-media/media/image130.png[cdw-media/media/image130,width=624,height=280]
-
+____
+* {blank}
++
+____
 Change the Display Name to Route.
 
 image:cdw-media/media/image49.png[cdw-media/media/image49,width=241,height=263]
 
 Then click on Expression and enter the following in the Expression editor. Click on APPLY.
 
-____
+====
 concat([Origin], '-', [Dest])
-____
+====
 
 image:cdw-media/media/image54.png[cdw-media/media/image54,width=624,height=376]
 
