@@ -2203,15 +2203,16 @@ image:cdw-media/media/image49.png[cdw-media/media/image49,width=241,height=263]
 
 Then click on Expression and enter the following in the Expression editor. Click on APPLY.
 
-====
-concat([Origin], '-', [Dest])
-====
+
+*concat([Origin], '-', [Dest])*
+
 
 image:cdw-media/media/image54.png[cdw-media/media/image54,width=624,height=376]
 
 Click on SAVE. We have completed the step of data modeling and now we will create data visualization.
 
 image:cdw-media/media/image85.png[cdw-media/media/image85,width=401,height=311]
+____
 
 === Dashboard Creation
 
@@ -2219,25 +2220,25 @@ image:cdw-media/media/image85.png[cdw-media/media/image85,width=401,height=311]
 +
 ____
 Now we will create a dashboard page based on the data model that we just created. Click on NEW DASHBOARD.
-____
 
 image:cdw-media/media/image69.png[cdw-media/media/image69,width=624,height=126]
+____
 
 * {blank}
 +
 ____
 You will see the following.
-____
 
 image:cdw-media/media/image121.png[cdw-media/media/image121,width=624,height=249]
+____
 
 * {blank}
 +
 ____
 A quick overview of the screen that you are seeing is as follows. On the right side of the screen there will be a *VISUALS* menu. At the top of this menu, there is a series of Visual Types to choose from. There will be 30+ various visuals to choose from. Below the Visual Types you will see what are called Shelves. The Shelves that are present depend on the Visual Type that is selected. *Shelves* with a * are required, all other Shelves are optional. On the far right of the page there is a *DATA* menu, which identifies the Connection & Dataset used for this visual. Underneath that is the Fields from the Dataset broken down by Dimensions and Measures. With each of these Categories you can see that it is subdivided by each Table in the Dataset.
-____
 
 image:cdw-media/media/image126.png[cdw-media/media/image126,width=624,height=305]
+____
 
 * {blank}
 +
@@ -2249,31 +2250,34 @@ ____
 +
 ____
 Pick the Visual Type - Select the Stacked Bar chart visual on the top right as shown below. Make sure Build is selected for it to appear on the right side.
-____
+
 
 image:cdw-media/media/image77.png[cdw-media/media/image77,width=624,height=210]
-
+____
+* {blank}
++
+____
 Find Route under Dimensions → flights. Drag to X-Axis. Similarly, find DepDelay under Measures → flights. Drag to Y-Axis. By default the aggergation selected is average and hence you would see avg(Depdelay).
 
 image:cdw-media/media/image101.png[cdw-media/media/image101,width=298,height=421]
+____
 
 * {blank}
 +
 ____
 Click on the arrow next to avg(Depdelay). Enter 50 against the text box labeled Top K. Click on REFRESH VISUAL.
-____
+
 
 image:cdw-media/media/imagecopy01.png[cdw-media/media/imagecopy01,width=300,height=400]
 
 image:cdw-media/media/image47.png[cdw-media/media/image47,width=624,height=241]
+____
 
 * {blank}
 +
 ____
 Click enter title and enter the title based on your user id as - <user_id>- Routes with Highest Avg. Departure Delays. Then click on SAVE.
-____
 
-____
 image:cdw-media/media/image29.png[cdw-media/media/image29,width=460,height=371]
 ____
 
