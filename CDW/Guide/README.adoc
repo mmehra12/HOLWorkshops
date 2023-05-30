@@ -1826,31 +1826,20 @@ ____
 +
 ____
 Fill out the form as follows.
+[width="100%",cols="40%,60%",]
+|===
+|*Policy Name* |<user_id>_RowLevelFilter
+|*Hive Database* |<user_id>_airlines
+|*Hive Table* |flights
+|===
 
-Policy Name: <user_id>_RowLevelFilter (Ex: wuser00_RowLevelFilter)
 
-Hive Database: <user_id>_airlines (Ex: wuser00_airlines)
+** Row Filtering Conditions:
+*** Select User: <user_id>
 
-Hive Table: flights (start typing, once you see this table in the list, select it)
+*** Access Types: select
+*** Row Level Filter: uniquecarrier="UA"
 
-Row Filtering Conditions:
-____
-
-* {blank}
-+
-____
-Select User: <user_id>
-____
-* {blank}
-+
-____
-Access Types: select
-____
-* {blank}
-+
-____
-Row Level Filter: uniquecarrier="UA"
-____
 
 Click the Add button to accept this Policy.
 
@@ -1859,14 +1848,14 @@ image:cdw-media/media/image46.png[cdw-media/media/image46,width=624,height=357]
 The new policy is added to the Row Level Filter policies (as below).
 
 image:cdw-media/media/image64.png[cdw-media/media/image64,width=624,height=138]
-
+____
 === Step 2 : Test New Policy
 
 * {blank}
 +
 ____
 Test the policy is working - Open HUE for the CDW Impala Virtual Warehouse assigned to you and execute the following query.
-____
+
 
 [source,sql]
 ----
@@ -1879,8 +1868,6 @@ GROUP BY
   uniquecarrier;
 ----
 
-
-____
 You should now only see 1 row returned for this query - after the policy was applied you will only be able to access uniquecarrier = UA and no other carriers.
 
 image:cdw-media/media/image5.png[cdw-media/media/image5,width=624,height=346]
@@ -1896,17 +1883,15 @@ In this step you will build a Logistics Dashboard using Cloudera Data Visualizat
 +
 ____
 If you are not on the CDP home page, then go there and click on the following CDW icon to go into Cloudera Data Warehouse.
-____
 
 image:cdw-media/media/image94.png[cdw-media/media/image94,width=624,height=381]
+____
 
 * {blank}
 +
 ____
 Click on the Data Visualization option in the left windowpane. You’ll see an option Data VIZ next to the data-viz application with the name *hol-data-viz*. It should open a new window.
-____
 
-____
 image:cdw-media/media/image2.png[cdw-media/media/image2,width=624,height=78]
 ____
 
@@ -1914,25 +1899,25 @@ ____
 +
 ____
 There are 4 areas of CDV - HOME, SQL, VISUALS, DATA - these are the tabs at the top of the screen in the black bar to the right of the Cloudera Data Visualization banner.
-____
+
 
 image:cdw-media/media/image116.png[cdw-media/media/image116,width=624,height=157]
+____
 
 * {blank}
 +
 ____
 Click on DATA in the top banner. A Dataset is a Semantic Layer where you can create a business view on top of the data - data is not copied; this is just a logical layer.
-____
+
 
 image:cdw-media/media/image37.png[cdw-media/media/image37,width=624,height=370]
+____
 
 * {blank}
 +
 ____
 Create a connection - click on the NEW CONNECTION button on the left menu. Enter the details as shown in the screenshot and click on TEST.
-____
 
-____
 *Connection type:* Select CDW Impala.
 
 *Connection name*: <user_id>-airlines-lakehouse (Ex-wuser00-airlines-lakehouse).
@@ -1946,29 +1931,32 @@ ____
 *Username:* Gets automatically filled up.
 
 *Password:* Blank
-____
+
 
 image:cdw-media/media/image57.png[cdw-media/media/image57,width=624,height=326]
 
 image:cdw-media/media/image3.png[cdw-media/media/image3,width=435,height=505]
+____
 
 * {blank}
 +
 ____
 Click on CONNECT.
-____
+
 
 image:cdw-media/media/image52.png[cdw-media/media/image52,width=340,height=399]
+____
 
 * {blank}
 +
 ____
 You will see your connection in the list of connections on the left menu. On the right side of the screen you will see Datasets and the Connection Explorer. Click on NEW DATASET.
-____
+
 
 image:cdw-media/media/image100.png[cdw-media/media/image100,width=471,height=326]
 
 image:cdw-media/media/image67.png[cdw-media/media/image67,width=527,height=292]
+____
 
 * {blank}
 +
