@@ -1897,7 +1897,7 @@ image:cdw-media/media/image126.png[cdw-media/media/image126,width=624,height=305
 * {blank}
 +
 ____
-Let’s build 1st visual - Top 25 Routes by Avg Departure Delay. CDV will add a Table visual displaying a sample of the data from the Dataset as the default visualization when you create a new Dashboard or new Visuals on the Dashboard (see New Dashboard screen above). The next step is to modify (Edit) the default visualization to suit your needs.
+Let’s build 1st visual - Top 50 Routes by Avg Departure Delay. CDV will add a Table visual displaying a sample of the data from the Dataset as the default visualization when you create a new Dashboard or new Visuals on the Dashboard (see New Dashboard screen above). The next step is to modify (Edit) the default visualization to suit your needs.
 ____
 
 * {blank}
@@ -1915,7 +1915,7 @@ image:cdw-media/media/image101.png[cdw-media/media/image101,width=298,height=421
 * {blank}
 +
 ____
-Click on the arrow next to avg(Depdelay). Enter 25 against the text box labeled Top K. Click on REFRESH VISUAL.
+Click on the arrow next to avg(Depdelay). Enter 50 against the text box labeled Top K. Click on REFRESH VISUAL.
 ____
 
 image:cdw-media/media/image97.png[cdw-media/media/image97,width=210,height=328]
