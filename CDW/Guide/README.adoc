@@ -962,9 +962,10 @@ One of the key features for Iceberg tables is the ability to evolve the partitio
 
 [source,sql]
 ----
-ALTER TABLE ${user_id}_airlines.flights
-
-SET PARTITION spec ( year, month );
+ALTER TABLE 
+  ${user_id}_airlines.flights 
+SET 
+  PARTITION spec (year, month);
 ----
 [source,sql]
 ----
