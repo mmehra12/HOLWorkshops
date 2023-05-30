@@ -849,39 +849,35 @@ WHERE
 ++++
 ____
 ==== Step 4 : CHECK ACID CAPABILITIES
-
+____
 * {blank}
 +
-____
-*Insert New record*
-____
 
-____
+*Insert New record*
+
+
+
 We shall now add a new record to the airlines_orc table to see some Hive ACID capabilities.
-____
+
 
 [source,sql]
 ----
 INSERT INTO ${user_id}_airlines.airlines_orc VALUES("PAW","Paradise Air");
 ----
-____
+
 ++++
 <p align="center">
   <img width="624" height="229" src="cdw-media/media/image23.png">
 </p>
 ++++
 
-____
-
 * {blank}
 +
-____
-*Update Existing Record*
-____
 
-____
+*Update Existing Record*
+
 Let’s update an existing record to change the description of United Airlines to Adrenaline Airlines to see more of the ACID capablities provided by Hive ACID. Run the following SQL.
-____
+
 
 [source,sql]
 ----
@@ -901,11 +897,8 @@ WHEN MATCHED THEN UPDATE SET description = s.description
 WHEN NOT MATCHED THEN INSERT VALUES (s.code,s.description);
 ----
 
-____
-
-
 Run the following query to return the following result - codes XX and PAW were inserted rows, and code UA which had its description value changed from United Air Lines Inc. to Adrenaline Airlines.
-____
+
 
 [source,sql]
 ----
@@ -921,7 +914,6 @@ WHERE
   <img width="624" height="330" src="cdw-media/media/image112.png">
 </p>
 ++++
-
 
 === MIGRATE HIVE TO ICEBERG TABLE
 
