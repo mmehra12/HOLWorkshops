@@ -22,7 +22,7 @@ link:#lab-2---raw-layer[[.underline]#LAB 2 - RAW LAYER#]
 
 ** link:#database-and-table-creation[[.underline]#DATABASE AND TABLE CREATION#]
 
-*** link:#step-1-go-to-hue-hive-cluster[[.underline]#Step 1 : Go To Hue [Hive Cluster]#]
+*** link:#step-1-go-to-hue-hive-cluster[[.underline]#Step 1 : Go To Hue [Hive Cluster]#
 
 *** link:#step-2-create-database[[.underline]#Step 2 : CREATE DATABASE#]
 
