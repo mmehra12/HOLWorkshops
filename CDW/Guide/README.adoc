@@ -1218,11 +1218,20 @@ WHERE
 ____
 Go to *IMPALA* virtual warehouse and switch the Editor to use IMPALA instead of UNIFIED ANALYTICS
 
-image:cdw-media/media/image86.png[cdw-media/media/image86,width=624,height=206]
+++++
+<p align="center">
+  <img width="624" height="206" src="cdw-media/media/image86.png">
+</p>
+++++
+
 ____
 
 ____
-image:cdw-media/media/image93.png[cdw-media/media/image93,width=511,height=216]
+++++
+<p align="center">
+  <img width="511" height="216" src="cdw-media/media/image93.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1253,9 +1262,16 @@ ORDER BY
 
 Run Explain Plan against the above analytic queries to see how the new partition helps.
 
-image:cdw-media/media/image50.png[cdw-media/media/image50,width=561,height=187]
-
-image:cdw-media/media/image128.png[cdw-media/media/image128,width=394,height=526]
+++++
+<p align="center">
+  <img width="561" height="187" src="cdw-media/media/image50.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="394" height="526" src="cdw-media/media/image128.png">
+</p>
+++++
 
 * {blank}
 +
@@ -1282,8 +1298,11 @@ ORDER BY
   month asc;
 ----
 
-
-image:cdw-media/media/image65.png[cdw-media/media/image65,width=467,height=592]
+++++
+<p align="center">
+  <img width="467" height="592" src="cdw-media/media/image65.png">
+</p>
+++++
 
 In the output notice the amount of data that needs to be scanned for this query, about 11 MB, is significantly less than that of the first, 138 MB. This shows an important capability of Iceberg, Partition Pruning. Meaning that much less data is scanned for this query and only the selected month of data needs to be processed.
 
@@ -1302,8 +1321,12 @@ WHERE
   year >= 2008;
 ----
 
+++++
+<p align="center">
+  <img width="624" height="489" src="cdw-media/media/image127.png">
+</p>
+++++
 
-image:cdw-media/media/image127.png[cdw-media/media/image127,width=624,height=489]
 
 To see snapshots, execute the following SQL.
 
@@ -1319,9 +1342,16 @@ In the output there should be 3 Snapshots, described below. Note that we have be
 
 Get the details of the snapshots and store it in a notepad.
 
-image:cdw-media/media/image8.png[cdw-media/media/image8,width=624,height=113]
-
-image:cdw-media/media/image45.png[cdw-media/media/image45,width=274,height=213]
+++++
+<p align="center">
+  <img width="624" height="113" src="cdw-media/media/image8.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="274" height="213" src="cdw-media/media/image45.png">
+</p>
+++++
 
 === Iceberg Time Travel [Table Maintenance]
 
