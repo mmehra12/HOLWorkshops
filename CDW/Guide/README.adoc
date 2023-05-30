@@ -206,9 +206,11 @@ ____
 *As a BI Analyst:* Start digging into the data - looking for “needle in a haystack” - running a complex query that will find which engines seem to be correlated to airplane delays for any reason.
 
 ____
-____
-*[Lab 3]: Set it up.*
 
+* {blank}
++
+*[Lab 3]: Set it up.*
+____
 ** {blank}
 +
 
