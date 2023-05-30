@@ -238,6 +238,8 @@ ____
 
 ____
 
+* {blank}
++
 *[Lab 4]: Making it better.*
 ____
 ** {blank}
@@ -260,56 +262,59 @@ Migrate Tables to Iceberg (We want snapshot and rollback).
 Create new Iceberg tables (we want partitioning).
 ____
 
+* {blank}
++
+
 *[Lab 5]: Optimizing for production.*
 ____
 ** {blank}
 +
-____
+
 Loading more data - change partitioning to maintain performance (NOTE: Ongoing ELT = CDE?).
-____
+
 ** {blank}
 +
-____
+
 Bad data is loaded - use time travel to detect, and rollback to resolve.
-____
+
 ** {blank}
 +
-____
+
 Introduce materialized views to support scaling to 1000’s of simultaneous users.
-____
+
 ** {blank}
 +
-____
+
 As an admin: Monitor, report, kill queries that run amock, etc.
 ____
 * {blank}
 +
-____
+
 *[Lab 6]: Security & Governance.*
 ____
 ** {blank}
 +
-____
+
 Check on the lineage to enable governance/audit.
-____
+
 ** {blank}
 +
-____
+
 Row level security to make sure only relevant party can see data.
 ____
+
 * {blank}
 +
-____
 *[Lab 7]: Cloudera Data Visualization*
 ____
 ** {blank}
 +
-____
+
 Data Modeling for the lakehouse.
-____
+
 ** {blank}
 +
-____
+
 Data Visualization for insights.
 ____
 
