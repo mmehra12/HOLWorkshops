@@ -1753,7 +1753,7 @@ ____
 +
 ____
 The lineage shows:
-____
+
 ** {blank}
 +
 ____
@@ -1775,7 +1775,7 @@ ____
 [red box] - traffic_cancel_airlines is a Materialized View that uses data from the flights Iceberg table.
 ____
 
-____
+
 ++++
 <p align="center">
   <img width="545" height="192" src="cdw-media/media/image117.png">
