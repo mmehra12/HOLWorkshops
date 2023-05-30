@@ -242,27 +242,24 @@ ____
 ____
 ** {blank}
 +
-____
 *As a BI Analyst:* Start curating data and building a data lakehouse to improve quality by tweaking data, performance by optimizing schema structures, and ensure reliability and trustworthiness of the data through snapshots, time travel, and rollback.
-____
+
 ** {blank}
 +
-____
+
 Create Hive ACID tables and tweak data for consistency (ex: airline name changes - ensure reporting is consistent with the new name to avoid end user confusion, a new airline joins our customer list, make sure they’re tracked for future data collection, etc..).
-____
+
 ** {blank}
 +
-____
+
 Migrate Tables to Iceberg (We want snapshot and rollback).
-____
+
 ** {blank}
 +
-____
+
 Create new Iceberg tables (we want partitioning).
 ____
-* {blank}
-+
-____
+
 *[Lab 5]: Optimizing for production.*
 ____
 ** {blank}
