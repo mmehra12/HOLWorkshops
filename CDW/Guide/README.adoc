@@ -329,9 +329,12 @@ image:cdw-media/media/image72.png[cdw-media/media/image72,width=341,height=271]
 
 Once you log in successfully you will be able to see the CDP HomePage with all the data services and the management services. Click on the username at the bottom left of the screen and select *PROFILE*
 
+image:cdw-media/media/image41.png[cdw-media/media/image41,width=366,height=204]
+
+
 image:cdw-media/media/image89.png[cdw-media/media/image89,width=230,height=262]
 
-image:cdw-media/media/image41.png[cdw-media/media/image41,width=366,height=204]
+
 
 ==== Step 3 : Set Workload Password
 
