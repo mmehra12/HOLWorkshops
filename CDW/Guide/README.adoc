@@ -855,8 +855,6 @@ ____
 
 *Insert New record*
 
-
-
 We shall now add a new record to the airlines_orc table to see some Hive ACID capabilities.
 
 
@@ -1069,21 +1067,42 @@ ORDER BY year desc;
 
 Now, make sure that the following 5 tables are created up until this point as shown in the screenshot below.
 
-image:cdw-media/media/image83.png[cdw-media/media/image83,width=302,height=284]
+++++
+<p align="center">
+  <img width="302" height="284" src="cdw-media/media/image83.png">
+</p>
+++++
+
 
 As a final step here let’s run the same analytic query we ran against the Raw layer now in our Data Lakehouse DW, to see what happens with performance. From the cloudera console select the IMPALA virtual warehouse assigned to you
 
-image:cdw-media/media/image58.png[cdw-media/media/image58,width=624,height=152]
+++++
+<p align="center">
+  <img width="624" height="152" src="cdw-media/media/image58.png">
+</p>
+++++
+
 
 Make sure that 'Unified Analytics' is NOT selected.
 
-image:cdw-media/media/image120.png[cdw-media/media/image120,width=527,height=271]
+++++
+<p align="center">
+  <img width="527" height="271" src="cdw-media/media/image120.png">
+</p>
+++++
 
 Instead click on the Editor option in the left top corner and select Impala editor.
 
-image:cdw-media/media/image22.png[cdw-media/media/image22,width=479,height=316]
-
-image:cdw-media/media/image30.png[cdw-media/media/image30,width=624,height=294]
+++++
+<p align="center">
+  <img width="479" height="316" src="cdw-media/media/image22.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="624" height="294" src="cdw-media/media/image30.png">
+</p>
+++++
 
 Now run the following query again.
 
@@ -1122,7 +1141,11 @@ WHERE  planes.tailnum IN
                               GROUP BY tailnum) AS delays);
 ----
 
-image:cdw-media/media/image27.png[cdw-media/media/image27,width=624,height=464]
+++++
+<p align="center">
+  <img width="624" height="464" src="cdw-media/media/image27.png">
+</p>
+++++
 
 The Data Lakehouse DW query performs significantly better than the same query running against the CSV data.
 
@@ -1134,7 +1157,11 @@ In this Step we will look at some of the performance optimization and table main
 
 ==== Step 1 : Open HUE for the CDW Hive Virtual Warehouse
 
-image:cdw-media/media/image53.png[cdw-media/media/image53,width=624,height=172]
+++++
+<p align="center">
+  <img width="624" height="172" src="cdw-media/media/image53.png">
+</p>
+++++
 
 ==== Step 2 : Execute Query
 
@@ -1152,12 +1179,19 @@ SET
 SHOW CREATE TABLE ${user_id}_airlines.flights;
 ----
 
-
-image:cdw-media/media/image24.png[cdw-media/media/image24,width=624,height=265]
+++++
+<p align="center">
+  <img width="624" height="265" src="cdw-media/media/image24.png">
+</p>
+++++
 
 Check for the following where now the partition is by year, month.
 
-image:cdw-media/media/image36.png[cdw-media/media/image36,width=447,height=255]
+++++
+<p align="center">
+  <img width="447" height="255" src="cdw-media/media/image36.png">
+</p>
+++++
 
 ==== Step 3 : Check for optimizations
 
