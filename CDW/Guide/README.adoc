@@ -1,5 +1,8 @@
-image:cdw-media/media/imagecopy02.png[cdw-media/media/image02,width=700,height=350]
-
+++++
+<p align="center">
+  <img width="700" height="360" src="cdw-media/media/imagecopy02.png">
+</p>
+++++
 
 link:#preface[[.underline]#Preface#]
 
@@ -137,13 +140,26 @@ We will dive into this scenario to show Cloudera Data Warehouse (CDW) is used to
 
 The Hands on Labs will take you through how to use the Cloudera Data Warehouse service to quickly explore raw data, create curated versions of the data for simple reporting and dashboarding, and then scale up usage of the curated data by exposing it to more users.
 
-[sidebar]
-ER - Diagram of the data
-Fact Table: flights (86M rows)
-Dimension Table: airlines (1.5k rows), airports (3.3k rows) and planes (5k rows)
 
-image:cdw-media/media/image76.png[cdw-media/media/image76,width=508,height=462]
 
+[width="100%",cols="30%,70%"]
+|===
+|*Fact Table:* |flights (86M rows)
+|*Dimension Tables:* |airlines (1.5k rows), + 
+airports (3.3k rows) +
+planes (5k rows)
+|===
+
+++++
+<p align="center">
+  ER - Diagram of the data
+</p>
+++++
+++++
+<p align="center">
+  <img width="508" height="462" src="cdw-media/media/image76.png">
+</p>
+++++
 
 == Pre-requisites
 
@@ -309,7 +325,7 @@ ____
 
 For this workshop you will use the following credentials and resources
 
-[width="100%",cols="50%,50%",options="header",]
+[width="100%",cols="40%,60%",options="header",]
 |===
 |*Workshop Login Username* |<Check with your instructor>
 |*Workshop Login Password* |<Check with your instructor>
@@ -319,9 +335,10 @@ For this workshop you will use the following credentials and resources
 |*Impala Virtual Warehouse Name* |<Check with your instructor>
 |===
 
+
 === DEFINE CDP WORKLOAD PASSWORD
 
-==== Step 1 : Login 
+==== Step 1 : Login
 
 Login to the environment using the URL and credentials provided.. The login page will look like this.
 
