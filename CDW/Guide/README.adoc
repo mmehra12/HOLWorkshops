@@ -1156,15 +1156,15 @@ In this Step we will look at some of the performance optimization and table main
 === Iceberg in-place Partition Evolution[Performance Optimization]
 
 ==== Step 1 : Open HUE for the CDW Hive Virtual Warehouse
-
+____
 ++++
 <p align="center">
   <img width="624" height="172" src="cdw-media/media/image53.png">
 </p>
 ++++
-
+____
 ==== Step 2 : Execute Query
-
+____
 One of the key features for Iceberg tables is the ability to evolve the partition that is being used over time.
 
 [source,sql]
@@ -1192,7 +1192,7 @@ Check for the following where now the partition is by year, month.
   <img width="447" height="255" src="cdw-media/media/image36.png">
 </p>
 ++++
-
+____
 ==== Step 3 : Check for optimizations
 
 * {blank}
@@ -1211,7 +1211,7 @@ FROM
 WHERE 
   year = 2007;
 ----
-
+____
 
 * {blank}
 +
@@ -1224,9 +1224,7 @@ Go to *IMPALA* virtual warehouse and switch the Editor to use IMPALA instead of 
 </p>
 ++++
 
-____
 
-____
 ++++
 <p align="center">
   <img width="511" height="216" src="cdw-media/media/image93.png">
@@ -1238,7 +1236,7 @@ ____
 +
 ____
 Copy/paste the following in the HUE Editor, but *DO NOT* execute the query.
-____
+
 
 [source,sql]
 ----
@@ -1275,9 +1273,9 @@ Run Explain Plan against the above analytic queries to see how the new partition
 
 * {blank}
 +
-____
+
 Copy/paste the following in the HUE Editor, but DO NOT execute the query but check the EXPLAIN PLAN.
-____
+
 
 [source,sql]
 ----
@@ -1305,6 +1303,7 @@ ORDER BY
 ++++
 
 In the output notice the amount of data that needs to be scanned for this query, about 11 MB, is significantly less than that of the first, 138 MB. This shows an important capability of Iceberg, Partition Pruning. Meaning that much less data is scanned for this query and only the selected month of data needs to be processed.
+____
 
 === Iceberg Snapshots [Table Maintenance]
 
