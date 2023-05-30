@@ -1077,25 +1077,17 @@ ____
 -- SELECT DATA USING TIMESTAMP FOR SNAPSHOT
 
 SELECT year, count(*)
-
 FROM ${user_id}_airlines.flights
-
 FOR SYSTEM_TIME AS OF '${create_ts}'
-
 GROUP BY year
-
 ORDER BY year desc;
 
 -- SELECT DATA USING TIMESTAMP FOR SNAPSHOT
 
 SELECT year, count(*)
-
 FROM ${user_id}_airlines.flights
-
 FOR SYSTEM_VERSION AS OF ${snapshot_id}
-
 GROUP BY year
-
 ORDER BY year desc;
 ----
 
@@ -1174,15 +1166,9 @@ CREATE EXTERNAL TABLE ${user_id}_airlines.airlines (code string, description str
 INSERT INTO ${user_id}_airlines.airlines SELECT * FROM ${user_id}_airlines_raw.airlines_csv;
 
 SELECT airlines.code AS code, MIN(airlines.description) AS description,
-
-flights.month AS month,
-
-sum(flights.cancelled) AS cancelled
-
+flights.month AS month, sum(flights.cancelled) AS cancelled
 FROM ${user_id}_airlines.flights flights , ${user_id}_airlines.airlines airlines
-
 WHERE flights.uniquecarrier = airlines.code
-
 group by airlines.code, flights.month;
 ----
 
@@ -1238,19 +1224,21 @@ ____
 ----
 DROP MATERIALIZED VIEW IF EXISTS ${user_id}_airlines.traffic_cancel_airlines;
 
-CREATE MATERIALIZED VIEW ${user_id}_airlines.traffic_cancel_airlines
-
-as SELECT airlines.code AS code, MIN(airlines.description) AS description,
-
-flights.month AS month,
-
-sum(flights.cancelled) AS cancelled,
-
-count(flights.diverted) AS diverted
-
-FROM ${user_id}_airlines.flights flights JOIN ${user_id}_airlines.airlines airlines ON (flights.uniquecarrier = airlines.code)
-
-group by airlines.code, flights.month;
+CREATE MATERIALIZED VIEW ${user_id}_airlines.traffic_cancel_airlines as 
+SELECT 
+  airlines.code AS code, 
+  MIN(airlines.description) AS description, 
+  flights.month AS month, 
+  sum(flights.cancelled) AS cancelled, 
+  count(flights.diverted) AS diverted 
+FROM 
+  ${user_id}_airlines.flights flights 
+  JOIN ${user_id}_airlines.airlines airlines ON (
+    flights.uniquecarrier = airlines.code
+  ) 
+group by 
+  airlines.code, 
+  flights.month;
 ----
 [source,sql]
 ----
@@ -1268,21 +1256,24 @@ ____
 
 [source,sql]
 ----
-SET hive.query.results.cache.enabled=false;
+SET hive.query.results.cache.enabled = false;
 
-SELECT airlines.code AS code, MIN(airlines.description) AS description,
+SELECT 
+  airlines.code AS code, 
+  MIN(airlines.description) AS description, 
+  flights.month AS month, 
+  sum(flights.cancelled) AS cancelled 
+FROM 
+  ${user_id}_airlines.flights flights, 
+  ${user_id}_airlines.airlines airlines 
+WHERE 
+  flights.uniquecarrier = airlines.code 
+group by 
+  airlines.code, 
+  flights.month 
+order by 
+  airlines.code;
 
-flights.month AS month,
-
-sum(flights.cancelled) AS cancelled
-
-FROM ${user_id}_airlines.flights flights , ${user_id}_airlines.airlines airlines
-
-WHERE flights.uniquecarrier = airlines.code
-
-group by airlines.code, flights.month
-
-order by airlines.code;
 ----
 
 image:cdw-media/media/image79.png[cdw-media/media/image79,width=624,height=385]
@@ -1479,11 +1470,13 @@ ____
 
 [source,sql]
 ----
-SELECT uniquecarrier, count(*)
-
-FROM ${user_id}_airlines.flights
-
-GROUP BY uniquecarrier;
+SELECT 
+  uniquecarrier, 
+  count(*) 
+FROM 
+  ${user_id}_airlines.flights 
+GROUP BY 
+  uniquecarrier;
 ----
 
 
