@@ -180,9 +180,9 @@ Below are the high-level steps for what we will be doing in the workshop.
 
 * {blank}
 +
-____
-*[Lab 1 & 2]: General introduction to CDW* to get ourselves oriented for the workshop.
 
+*[Lab 1 & 2]: General introduction to CDW* to get ourselves oriented for the workshop.
+____
 ** {blank}
 +
 *As an Admin:* Create and enable the BI analyst team with a Virtual Warehouse.
