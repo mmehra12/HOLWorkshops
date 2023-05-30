@@ -370,7 +370,6 @@ Create new databases. Enter the following query and then make sure that you ente
 [source,sql]
 ----
 CREATE DATABASE ${user_id}_airlines_raw;
-
 CREATE DATABASE ${user_id}_airlines;
 ----
 
@@ -379,7 +378,6 @@ Example Query
 [source,sql]
 ----
 CREATE DATABASE apac01_airlines_raw;
-
 CREATE DATABASE apac01_airlines;
 ----
 
@@ -498,63 +496,34 @@ DO NOT forget to change the ${user_id}
 [source,sql]
 ----
 SELECT model,
-
 engine_type
-
 FROM ${user_id}_airlines_raw.planes_csv
-
 WHERE planes_csv.tailnum IN
-
 (SELECT tailnum
-
 FROM
-
 (SELECT tailnum,
-
 count(*),
-
 avg(depdelay) AS avg_delay,
-
 max(depdelay),
-
 avg(taxiout),
-
 avg(cancelled),
-
 avg(weatherdelay),
-
 max(weatherdelay),
-
 avg(nasdelay),
-
 max(nasdelay),
-
 avg(securitydelay),
-
 max(securitydelay),
-
 avg(lateaircraftdelay),
-
 max(lateaircraftdelay),
-
 avg(airtime),
-
 avg(actualelapsedtime),
-
 avg(distance)
-
 FROM ${user_id}_airlines_raw.flights_csv
-
 WHERE tailnum IN ('N194JB',
-
 'N906S',
-
 'N575ML',
-
 'N852NW',
-
 'N000AA')
-
 GROUP BY tailnum) AS delays);
 
 ----
@@ -596,15 +565,10 @@ Create planes table in Hive table format and stored its data in parquet file for
 drop table if exists ${user_id}_airlines.planes;
 
 CREATE EXTERNAL TABLE ${user_id}_airlines.planes (
-
 tailnum STRING, owner_type STRING, manufacturer STRING, issue_date STRING,
-
 model STRING, status STRING, aircraft_type STRING, engine_type STRING, year INT
-
 )
-
 STORED AS PARQUET
-
 TBLPROPERTIES ('external.table.purge'='true');
 ----
 
@@ -839,7 +803,6 @@ drop table if exists ${user_id}_airlines.airports;
 
 CREATE EXTERNAL TABLE ${user_id}_airlines.airports
 STORED BY ICEBERG AS
-
 SELECT * FROM ${user_id}_airlines_raw.airports_csv;
 
 DESCRIBE FORMATTED ${user_id}_airlines.airports;
@@ -857,31 +820,18 @@ In this step we will create a partitioned table, in Iceberg Table Format, stored
 drop table if exists ${user_id}_airlines.flights;
 
 CREATE EXTERNAL TABLE ${user_id}_airlines.flights (
-
 month int, dayofmonth int,
-
 dayofweek int, deptime int, crsdeptime int, arrtime int,
-
 crsarrtime int, uniquecarrier string, flightnum int, tailnum string,
-
 actualelapsedtime int, crselapsedtime int, airtime int, arrdelay int,
-
 depdelay int, origin string, dest string, distance int, taxiin int,
-
 taxiout int, cancelled int, cancellationcode string, diverted string,
-
 carrierdelay int, weatherdelay int, nasdelay int, securitydelay int,
-
 lateaircraftdelay int
-
 )
-
 PARTITIONED BY (year int)
-
 STORED BY ICEBERG
-
 STORED AS PARQUET
-
 tblproperties ('format-version'='2');
 
 SHOW CREATE TABLE ${user_id}_airlines.flights;
@@ -1090,7 +1040,6 @@ In the previous steps we have loaded data into the flights iceberg table. We wil
 INSERT INTO ${user_id}_airlines.flights
 
 SELECT * FROM ${user_id}_airlines_raw.flights_csv
-
 WHERE year >= 2008;
 ----
 
@@ -1125,7 +1074,7 @@ ____
 
 [source,sql]
 ----
-SELECT DATA USING TIMESTAMP FOR SNAPSHOT
+-- SELECT DATA USING TIMESTAMP FOR SNAPSHOT
 
 SELECT year, count(*)
 
