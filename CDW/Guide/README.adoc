@@ -698,7 +698,7 @@ Make sure that you are using the HUE of the HIVE virtual warehouse that has been
 
 
 ==== Step 1 : CREATE and LOAD PLANES TABLE
-
+____
 * {blank}
 +
 ____
@@ -770,9 +770,9 @@ SELECT * FROM ${user_id}_airlines.planes LIMIT 100;
   <img width="624" height="360" src="cdw-media/media/image20.png">
 </p>
 ++++
-
+____
 ==== Step 2 : DESCRIBE CREATED TABLE
-
+____
 * {blank}
 +
 ____
@@ -817,9 +817,9 @@ ____
 ++++
 
 ____
-
+____
 ==== Step 3 : CREATE AND LOAD AIRLINES TABLE
-
+____
 Create airlines table in Hive table format and orc file format. This table should also be fully ACID capable. We will use Create Table As Select (CTAS). Since, airlines table can change we need the ability to Insert/Update/Delete records.
 
 Run the following query to create the table
@@ -857,7 +857,7 @@ WHERE
   <img width="400" height="251" src="cdw-media/media/image73.png">
 </p>
 ++++
-
+____
 ==== Step 4 : CHECK ACID CAPABILITIES
 
 * {blank}
