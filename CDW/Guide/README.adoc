@@ -289,7 +289,7 @@ As an admin: Monitor, report, kill queries that run amock, etc.
 ____
 * {blank}
 +
-
+[red]#*and*#
 *[Lab 6]: Security & Governance.*
 ____
 ** {blank}
