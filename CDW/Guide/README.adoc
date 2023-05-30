@@ -1335,8 +1335,12 @@ To see snapshots, execute the following SQL.
 DESCRIBE HISTORY ${user_id}_airlines.flights;
 ----
 
+++++
+<p align="center">
+  <img width="624" height="354" src="cdw-media/media/image108.png">
+</p>
+++++
 
-image:cdw-media/media/image108.png[cdw-media/media/image108,width=624,height=354]
 
 In the output there should be 3 Snapshots, described below. Note that we have been reading/writing data from/to the Iceberg table from both Hive & Impala. It is an important aspect of Iceberg Tables that they support multi-function analytics - ie. many engines can work with Iceberg tables (Cloudera Data Warehouse [Hive & Impala], Cloudera Data Engineering [Spark], Cloudera Machine Learning [Spark], Cloudera DataFlow [NiFi], and DataHub Clusters).
 
@@ -1390,7 +1394,11 @@ ORDER BY
 
 After pasting the query you will see the following two options for *create_ts* and *snapshot_id*
 
-image:cdw-media/media/image78.png[cdw-media/media/image78,width=624,height=194]
+++++
+<p align="center">
+  <img width="624" height="194" src="cdw-media/media/image78.png">
+</p>
+++++
 
 * {blank}
 +
@@ -1399,7 +1407,11 @@ From the notepad just copy the first value of the timestamp. It could be the dat
 ____
 
 ____
-image:cdw-media/media/image68.png[cdw-media/media/image68,width=624,height=349]
+++++
+<p align="center">
+  <img width="624" height="349" src="cdw-media/media/image68.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1410,8 +1422,11 @@ ____
 
 === Iceberg Rollback [Table Maintenance] - DO NOT RUN
 
-image:cdw-media/media/image98.png[cdw-media/media/image98,width=624,height=366]
-
+++++
+<p align="center">
+  <img width="624" height="366" src="cdw-media/media/image98.png">
+</p>
+++++
 Sometimes data can be loaded incorrectly, due to many common issues - missing fields, only part of the data being loaded, bad data, etc.
 
 In situations like this data would need to be removed, corrected, and reloaded. Iceberg can help with the Rollback command to remove the “unwanted” data.
@@ -1444,7 +1459,12 @@ This can be used for both Iceberg tables and Hive tables.
 
 Go to the HUE UI of the HIVE virtual warehouse assigned to you
 
-image:cdw-media/media/image124.png[cdw-media/media/image124,width=624,height=157]
+++++
+<p align="center">
+  <img width="624" height="157" src="cdw-media/media/image124.png">
+</p>
+++++
+
 
 * {blank}
 +
@@ -1509,7 +1529,12 @@ ____
 Let’s look at the Query Plan that was used to execute this query. On the left side click on Jobs, as shown in the screenshot below.
 ____
 
-image:cdw-media/media/image114.png[cdw-media/media/image114,width=624,height=153]
+++++
+<p align="center">
+  <img width="624" height="153" src="cdw-media/media/image114.png">
+</p>
+++++
+
 
 * {blank}
 +
@@ -1517,7 +1542,11 @@ ____
 Then click on Queries. This is where an Admin will go when he wants to investigate the queries. In our case for this lab, we’d like to look at the query we just executed to see how it ran and the steps taken to execute the query. Administrators would also be able to perform other monitoring and maintenance tasks for what is running (or has been run). Monitoring and maintenance tasks could include cancel (kill) queries, see what is running, analyze whether queries that have been executed are optimized, etc.
 ____
 
-image:cdw-media/media/image39.png[cdw-media/media/image39,width=624,height=258]
+++++
+<p align="center">
+  <img width="624" height="258" src="cdw-media/media/image39.png">
+</p>
+++++
 
 * {blank}
 +
@@ -1527,9 +1556,19 @@ ____
 * {blank}
 +
 ____
-This is where you can analyze queries at a deep level. For this lab let’s take a look at the Explain details, by clicking on the *Visual Explain* tab. It might take a while to appear, please click on refresh. This plan shows that this query needs to Read flights (86M rows) and airlines (1.5K rows) with hash join, group, and sort. This is a lot of data processing and if we run this query constantly it would be good to reduce the time this query takes to execute.image:cdw-media/media/image42.png[cdw-media/media/image42,width=624,height=169]
+This is where you can analyze queries at a deep level. For this lab let’s take a look at the Explain details, by clicking on the *Visual Explain* tab. It might take a while to appear, please click on refresh. This plan shows that this query needs to Read flights (86M rows) and airlines (1.5K rows) with hash join, group, and sort. This is a lot of data processing and if we run this query constantly it would be good to reduce the time this query takes to execute.
 
-image:cdw-media/media/image32.png[cdw-media/media/image32,width=624,height=209]
+++++
+<p align="center">
+  <img width="624" height="169" src="cdw-media/media/image42.png">
+</p>
+++++
+
+++++
+<p align="center">
+  <img width="624" height="209" src="cdw-media/media/image32.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1539,7 +1578,12 @@ Click on the Editor option on the left side as shown.
 ____
 
 ____
-image:cdw-media/media/image7.png[cdw-media/media/image7,width=624,height=180]
+++++
+<p align="center">
+  <img width="624" height="180" src="cdw-media/media/image7.png">
+</p>
+++++
+
 ____
 
 * {blank}
@@ -1579,7 +1623,13 @@ SHOW MATERIALIZED VIEWS in ${user_id}_airlines;
 * {blank}
 +
 ____
-Run Dashboard Query again to see usage of the MV - Copy/paste the following, make sure to highlight the entire block, and execute the following. This time an order by was added to make this query must do more work.image:cdw-media/media/image34.png[cdw-media/media/image34,width=624,height=245]
+Run Dashboard Query again to see usage of the MV - Copy/paste the following, make sure to highlight the entire block, and execute the following. This time an order by was added to make this query must do more work.
+++++
+<p align="center">
+  <img width="624" height="245" src="cdw-media/media/image34.png">
+</p>
+++++
+
 ____
 
 [source,sql]
@@ -1603,10 +1653,19 @@ order by
   airlines.code;
 
 ----
+++++
+<p align="center">
+  <img width="624" height="385" src="cdw-media/media/image79.png">
+</p>
+++++
 
-image:cdw-media/media/image79.png[cdw-media/media/image79,width=624,height=385]
+Let’s look at the Query Plan that was used to execute this query. On the left menu select Jobs. On the Jobs Browser - select the Queries tab to the right of the Job browser header. Hover over & click on the Query just executed (should be the first row). Click on the *Visual Explain* tab. 
 
-Let’s look at the Query Plan that was used to execute this query. On the left menu select Jobs. On the Jobs Browser - select the Queries tab to the right of the Job browser header. Hover over & click on the Query just executed (should be the first row). Click on the *Visual Explain* tab. image:cdw-media/media/image99.png[cdw-media/media/image99,width=478,height=231]
+++++
+<p align="center">
+  <img width="478" height="231" src="cdw-media/media/image99.png">
+</p>
+++++
 
 With query rewrite the materialized view is used and the new plan just reads the MV and sorts the data vs. reading flights (86M rows) and airlines (1.5K rows) with hash join, group and sorts. This results in significant reduction in run time for this query.
 
@@ -1621,7 +1680,11 @@ Go to the Cloudera Data Platform Console and click on Data Catalog
 ____
 
 ____
-image:cdw-media/media/image44.png[cdw-media/media/image44,width=624,height=412]
+++++
+<p align="center">
+  <img width="624" height="412" src="cdw-media/media/image44.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1631,7 +1694,12 @@ Change the radio button to select the appropriate data lake. In this case it is 
 ____
 
 ____
-image:cdw-media/media/imagecopy.png[cdw-media/media/image123,width=624,height=385]
+++++
+<p align="center">
+  <img width="624" height="385" src="cdw-media/media/image123.png">
+</p>
+++++
+
 ____
 
 * {blank}
@@ -1641,7 +1709,12 @@ Filter for Assets we created - below the Data Lakes on the left of the screen un
 ____
 
 ____
-image:cdw-media/media/image66.png[cdw-media/media/image66,width=624,height=380]
+++++
+<p align="center">
+  <img width="624" height="380" src="cdw-media/media/image66.png">
+</p>
+++++
+
 ____
 
 * {blank}
@@ -1651,9 +1724,16 @@ Under DATABASE, click Add new Value. In the box that appears start typing your <
 ____
 
 ____
-image:cdw-media/media/image26.png[cdw-media/media/image26,width=468,height=378]
-
-image:cdw-media/media/image87.png[cdw-media/media/image87,width=449,height=421]
+++++
+<p align="center">
+  <img width="468" height="378" src="cdw-media/media/image26.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="449" height="421" src="cdw-media/media/image87.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1663,7 +1743,11 @@ You should now see the tables and materialized views that have been created in t
 ____
 
 ____
-image:cdw-media/media/image75.png[cdw-media/media/image75,width=465,height=286]
+++++
+<p align="center">
+  <img width="465" height="286" src="cdw-media/media/image75.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1673,7 +1757,11 @@ This page shows information about the flights table such as the table owner, whe
 ____
 
 ____
-image:cdw-media/media/image71.png[cdw-media/media/image71,width=519,height=286]
+++++
+<p align="center">
+  <img width="519" height="286" src="cdw-media/media/image71.png">
+</p>
+++++
 ____
 
 * {blank}
@@ -1703,7 +1791,12 @@ ____
 ____
 
 ____
-image:cdw-media/media/image117.png[cdw-media/media/image117,width=545,height=192]
+++++
+<p align="center">
+  <img width="545" height="192" src="cdw-media/media/image117.png">
+</p>
+++++
+
 ____
 
 * {blank}
@@ -1713,7 +1806,12 @@ Click on the Policy tab to see what security policies have been applied on this 
 ____
 
 ____
-image:cdw-media/media/image9.png[cdw-media/media/image9,width=535,height=364]
+++++
+<p align="center">
+  <img width="535" height="364" src="cdw-media/media/image9.png">
+</p>
+++++
+
 ____
 
 * {blank}
