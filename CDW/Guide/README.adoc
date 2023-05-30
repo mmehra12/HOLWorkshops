@@ -1051,11 +1051,21 @@ ____
 
 [source,sql]
 ----
-SELECT year, month, count(*)
-FROM ${user_id}_airlines.flights
-WHERE year = 2007 AND month = 12
-GROUP BY year, month
-ORDER BY year desc, month asc;
+SELECT 
+  year, 
+  month, 
+  count(*) 
+FROM 
+  ${user_id}_airlines.flights 
+WHERE 
+  year = 2007 
+  AND month = 12 
+GROUP BY 
+  year, 
+  month 
+ORDER BY 
+  year desc, 
+  month asc;
 ----
 
 
@@ -1069,10 +1079,13 @@ In the previous steps we have loaded data into the flights iceberg table. We wil
 
 [source,sql]
 ----
-INSERT INTO ${user_id}_airlines.flights
-
-SELECT * FROM ${user_id}_airlines_raw.flights_csv
-WHERE year >= 2008;
+INSERT INTO ${user_id}_airlines.flights 
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines_raw.flights_csv 
+WHERE 
+  year >= 2008;
 ----
 
 
