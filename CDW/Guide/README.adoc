@@ -1199,7 +1199,7 @@ ____
 +
 ____
 Load new data into the flights table using the NEW partition definition. This query will take a while to run
-____
+
 
 [source,sql]
 ----
