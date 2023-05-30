@@ -182,65 +182,60 @@ Below are the high-level steps for what we will be doing in the workshop.
 +
 ____
 *[Lab 1 & 2]: General introduction to CDW* to get ourselves oriented for the workshop.
-____
+
 ** {blank}
 +
-____
 *As an Admin:* Create and enable the BI analyst team with a Virtual Warehouse.
-____
+
 ** {blank}
 +
-____
+
 *As a BI Analyst*: Get familiar with CDW on CDP and set up our first VW to start working.
-____
+
 ** {blank}
 +
-____
 *As a BI Analyst:* Wrangle our first set of data - sent to us as a series of .csv files exported from “somewhere else”.
-____
+
 ** {blank}
 +
-____
 *As an Admin:* Monitor the VW and watch as it scales up and down, suspends, etc.
-____
+
 ** {blank}
 +
-____
+
 *As a BI Analyst:* Start digging into the data - looking for “needle in a haystack” - running a complex query that will find which engines seem to be correlated to airplane delays for any reason.
+
 ____
-* {blank}
-+
 ____
 *[Lab 3]: Set it up.*
-____
+
 ** {blank}
 +
-____
+
 *As an Admin:* Create and enable the BI analyst team with a Virtual Warehouse.
-____
+
 ** {blank}
 +
-____
+
 *As a BI Analyst:* Get familiar with CDW on CDP, and set up our first VW to start working.
-____
+
 ** {blank}
 +
-____
+
 *As a BI Analyst:* Wrangle our first set of data - sent to us as a series of .csv files exported from “somewhere else”.
-____
+
 ** {blank}
 +
-____
+
 *As an Admin:* Monitor the VW and watch as it scales up and down, suspends, etc.
-____
+
 ** {blank}
 +
-____
+
 *As a BI Analyst:* Start digging into the data - looking for “needle in a haystack” - running a complex query that will find which engines seem to be correlated to airplane delays for any reason.
+
 ____
-* {blank}
-+
-____
+
 *[Lab 4]: Making it better.*
 ____
 ** {blank}
