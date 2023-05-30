@@ -401,7 +401,7 @@ Run the following DDL in the editor.
 
 This will create External Tables on CSV Data Files that have been uploaded previously by your instructor in AWS S3. This provides a fast way to allow SQL layers on top of data in cloud storage.
 
-*NOTE : Replace ${user_id} with the user name assigned to you*
+IMPORTANT: Replace ${user_id} with the user name assigned to you
 
 **--FLIGHTS TABLE**
 
@@ -501,8 +501,7 @@ We will now run a compute heavy query and check how that affects the scaling up/
 
 Query:
 
-[NOTE].
-DO NOT forget to change the ${user_id}
+IMPORTANT: DO NOT forget to change the ${user_id}
 
 [source,sql]
 ----
@@ -566,7 +565,7 @@ image:cdw-media/media/image109.png[cdw-media/media/image109,width=624,height=240
 
 === CURATED LAYER CREATION
 
-NOTE : Make sure that you are using the HUE of the HIVE virtual warehouse that has been assigned to you.
+IMPORTANT: Make sure that you are using the HUE of the HIVE virtual warehouse that has been assigned to you.
 
 image:cdw-media/media/image56.png[cdw-media/media/image56,width=624,height=153]
 
@@ -1250,9 +1249,9 @@ group by
 ----
 
 
-Note: Hive has built in performance improvements, such as a *Query Cache* that stores results of queries run so that similar queries don’t have to retrieve data, they can just get the results from the cache. In this step we are turning that off using the SET statement, this will ensure when we look at the query plan, we will not retrieve the data from the cache.
+IMPORTANT: Hive has built in performance improvements, such as a *Query Cache* that stores results of queries run so that similar queries don’t have to retrieve data, they can just get the results from the cache. In this step we are turning that off using the SET statement, this will ensure when we look at the query plan, we will not retrieve the data from the cache.
 
-Note: With this query you are combining an Iceberg Table Format (flight table) with a Hive Table Format (airlines ORC table) in the same query.
+IMPORTANT: With this query you are combining an Iceberg Table Format (flight table) with a Hive Table Format (airlines ORC table) in the same query.
 
 * {blank}
 +
