@@ -325,7 +325,7 @@ ____
 
 For this workshop you will use the following credentials and resources
 
-[width="100%",cols="40%,60%",options="header",]
+[width="100%",cols="40%,60%",]
 |===
 |*Workshop Login Username* |<Check with your instructor>
 |*Workshop Login Password* |<Check with your instructor>
@@ -342,22 +342,38 @@ For this workshop you will use the following credentials and resources
 
 Login to the environment using the URL and credentials provided.. The login page will look like this.
 
-image:cdw-media/media/image72.png[cdw-media/media/image72,width=341,height=271]
+++++
+<p align="center">
+  <img width="350" height="400" src="cdw-media/media/image72.png">
+</p>
+++++
+
 
 ==== Step 2 : Go to Profile
 
 Once you log in successfully you will be able to see the CDP HomePage with all the data services and the management services. Click on the username at the bottom left of the screen and select *PROFILE*
 
-image:cdw-media/media/image41.png[cdw-media/media/image41,width=366,height=204]
+++++
+<p align="center">
+  <img width="366" height="204" src="cdw-media/media/image41.png">
+</p>
+++++
 
-
-image:cdw-media/media/image89.png[cdw-media/media/image89,width=230,height=262]
+++++
+<p align="center">
+  <img width="230" height="310" src="cdw-media/media/image89.png">
+</p>
+++++
 
 
 
 ==== Step 3 : Set Workload Password
 
-image:cdw-media/media/image119.png[cdw-media/media/image119,width=426,height=302]
+++++
+<p align="center">
+  <img width="430" height="310" src="cdw-media/media/image119.png">
+</p>
+++++
 
 Click option Set Workload Password.
 
