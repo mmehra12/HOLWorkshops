@@ -1402,7 +1402,7 @@ ____
 * {blank}
 +
 ____
-From the notepad just copy the first value of the timestamp. It could be the date or the timestamp. Paste it in the create_ts box. In our case the value was 2023-04-04 06:51:14.360000000. Then execute the higlighted query only (1st query).
+From the notepad just copy the first value of the timestamp. It could be the date or the timestamp. Paste it in the create_ts box. Then execute the higlighted query only (1st query).
 
 ++++
 <p align="center">
@@ -1414,7 +1414,7 @@ ____
 * {blank}
 +
 ____
-From the notepad just copy the second value of the snapshot id. In our case the value was 6341506406760449831. Paste it in the snapshot_id box. Then execute the highlighted query only (2nd query).
+From the notepad just copy the second value of the snapshot id. Paste it in the snapshot_id box. Then execute the highlighted query only (2nd query).
 ____
 
 === Iceberg Rollback [Table Maintenance] - DO NOT RUN
@@ -1674,9 +1674,7 @@ In this Lab you will experience the combination of what the Data Warehouse and t
 +
 ____
 Go to the Cloudera Data Platform Console and click on Data Catalog
-____
 
-____
 ++++
 <p align="center">
   <img width="624" height="412" src="cdw-media/media/image44.png">
@@ -1688,9 +1686,7 @@ ____
 +
 ____
 Change the radio button to select the appropriate data lake. In this case it is <environment-name-shared-by-instructor>
-____
 
-____
 ++++
 <p align="center">
   <img width="624" height="385" src="cdw-media/media/image123.png">
@@ -1703,9 +1699,7 @@ ____
 +
 ____
 Filter for Assets we created - below the Data Lakes on the left of the screen under Filters, select TYPE to be Hive Table. The right side of the screen will update to reflect this selection.
-____
 
-____
 ++++
 <p align="center">
   <img width="624" height="380" src="cdw-media/media/image66.png">
@@ -1718,9 +1712,7 @@ ____
 +
 ____
 Under DATABASE, click Add new Value. In the box that appears start typing your <user_id> when you see the <user_id>_airlines database pop up select it.
-____
 
-____
 ++++
 <p align="center">
   <img width="468" height="378" src="cdw-media/media/image26.png">
@@ -1737,9 +1729,7 @@ ____
 +
 ____
 You should now see the tables and materialized views that have been created in the <user_id>_airlines database. Click on flights in the Name column to view more details on the table.
-____
 
-____
 ++++
 <p align="center">
   <img width="465" height="286" src="cdw-media/media/image75.png">
@@ -1751,9 +1741,7 @@ ____
 +
 ____
 This page shows information about the flights table such as the table owner, when the table was created, when it was last accessed, and other properties. Below the summary details is the Overview tab which shows the lineage - hover over the flights click on the “i” icon that appears to see more detail on this table.
-____
 
-____
 ++++
 <p align="center">
   <img width="519" height="286" src="cdw-media/media/image71.png">
