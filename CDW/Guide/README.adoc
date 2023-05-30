@@ -989,9 +989,13 @@ ____
 
 [source,sql]
 ----
-INSERT INTO ${user_id}_airlines.flights
-SELECT * FROM ${user_id}_airlines_raw.flights_csv
-WHERE year = 2007;
+INSERT INTO ${user_id}_airlines.flights 
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines_raw.flights_csv 
+WHERE 
+  year = 2007;
 ----
 
 
@@ -1015,11 +1019,21 @@ ____
 
 [source,sql]
 ----
-SELECT year, month, count(*)
-FROM ${user_id}_airlines.flights
-WHERE year = 2006 AND month = 12
-GROUP BY year, month
-ORDER BY year desc, month asc;
+SELECT 
+  year, 
+  month, 
+  count(*) 
+FROM 
+  ${user_id}_airlines.flights 
+WHERE 
+  year = 2006 
+  AND month = 12 
+GROUP BY 
+  year, 
+  month 
+ORDER BY 
+  year desc, 
+  month asc;
 ----
 
 
