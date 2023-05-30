@@ -1270,12 +1270,12 @@ Run Explain Plan against the above analytic queries to see how the new partition
   <img width="394" height="526" src="cdw-media/media/image128.png">
 </p>
 ++++
-
+____
 * {blank}
 +
 
 Copy/paste the following in the HUE Editor, but DO NOT execute the query but check the EXPLAIN PLAN.
-
+____
 
 [source,sql]
 ----
