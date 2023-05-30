@@ -289,7 +289,6 @@ As an admin: Monitor, report, kill queries that run amock, etc.
 ____
 * {blank}
 +
-[red]#*and*#
 *[Lab 6]: Security & Governance.*
 ____
 ** {blank}
@@ -338,7 +337,7 @@ For this workshop you will use the following credentials and resources
 === DEFINE CDP WORKLOAD PASSWORD
 
 ==== Step 1 : Login
-
+____
 Login to the environment using the URL and credentials provided.. The login page will look like this.
 
 ++++
@@ -346,10 +345,10 @@ Login to the environment using the URL and credentials provided.. The login page
   <img width="350" height="400" src="cdw-media/media/image72.png">
 </p>
 ++++
-
+____
 
 ==== Step 2 : Go to Profile
-
+____
 Once you log in successfully you will be able to see the CDP HomePage with all the data services and the management services. Click on the username at the bottom left of the screen and select *PROFILE*
 
 ++++
@@ -363,11 +362,11 @@ Once you log in successfully you will be able to see the CDP HomePage with all t
   <img width="230" height="310" src="cdw-media/media/image89.png">
 </p>
 ++++
-
+____
 
 
 ==== Step 3 : Set Workload Password
-
+____
 ++++
 <p align="center">
   <img width="430" height="310" src="cdw-media/media/image119.png">
@@ -385,6 +384,7 @@ Enter the Password shared by the instructor and Confirm Password.
 ++++
 
 Click the button *Set Workload Password.*
+____
 
 == LAB 2 - RAW LAYER
 
