@@ -768,35 +768,33 @@ ____
 ____
 * {blank}
 +
-____
 Execute the following command.
-____
+
 
 [source,sql]
 ----
 DESCRIBE FORMATTED ${user_id}_airlines.planes;
 ----
-____
+
 In the output look for the following.
-____
+
 
 * {blank}
 +
-____
+
 *Location:* s3a://handsonworkshop/my-data/warehouse/tablespace/external/hive/wuser00_airlines.db/planes
-____
-* {blank}
-+
-____
-*Table Type:* EXTERNAL_TABLE
-____
-* {blank}
-+
-____
-*SerDe Library:* org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-____
 
-____
+* {blank}
++
+
+*Table Type:* EXTERNAL_TABLE
+
+* {blank}
++
+
+*SerDe Library:* org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
+
+
 ++++
 <p align="center">
   <img width="624" height="298" src="cdw-media/media/image59.png">
@@ -808,9 +806,8 @@ ____
   <img width="624" height="294" src="cdw-media/media/image131.png">
 </p>
 ++++
+____
 
-____
-____
 ==== Step 3 : CREATE AND LOAD AIRLINES TABLE
 ____
 Create airlines table in Hive table format and orc file format. This table should also be fully ACID capable. We will use Create Table As Select (CTAS). Since, airlines table can change we need the ability to Insert/Update/Delete records.
