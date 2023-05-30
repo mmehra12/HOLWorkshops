@@ -1210,19 +1210,30 @@ ____
 
 [source,sql]
 ----
-SET hive.query.results.cache.enabled=false;
+SET hive.query.results.cache.enabled = false;
 
-drop table if exists ${user_id}_airlines.airlines;
+drop 
+  table if exists ${user_id}_airlines.airlines;
 
 CREATE EXTERNAL TABLE ${user_id}_airlines.airlines (code string, description string) STORED BY ICEBERG STORED AS ORC TBLPROPERTIES ('format-version' = '2');
-
-INSERT INTO ${user_id}_airlines.airlines SELECT * FROM ${user_id}_airlines_raw.airlines_csv;
-
-SELECT airlines.code AS code, MIN(airlines.description) AS description,
-flights.month AS month, sum(flights.cancelled) AS cancelled
-FROM ${user_id}_airlines.flights flights , ${user_id}_airlines.airlines airlines
-WHERE flights.uniquecarrier = airlines.code
-group by airlines.code, flights.month;
+INSERT INTO ${user_id}_airlines.airlines 
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines_raw.airlines_csv;
+SELECT 
+  airlines.code AS code, 
+  MIN(airlines.description) AS description, 
+  flights.month AS month, 
+  sum(flights.cancelled) AS cancelled 
+FROM 
+  ${user_id}_airlines.flights flights, 
+  ${user_id}_airlines.airlines airlines 
+WHERE 
+  flights.uniquecarrier = airlines.code 
+group by 
+  airlines.code, 
+  flights.month;
 ----
 
 
