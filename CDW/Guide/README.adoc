@@ -701,9 +701,9 @@ Make sure that you are using the HUE of the HIVE virtual warehouse that has been
 ____
 * {blank}
 +
-____
+
 From the data that is stored in the RAW layer(CSV format) we will now create a table using that data
-____
+
 
 Create planes table in Hive table format and stored its data in parquet file format.
 
@@ -725,15 +725,11 @@ CREATE EXTERNAL TABLE ${user_id}_airlines.planes (
 </p>
 ++++
 
-____
-
-____
-
 * {blank}
 +
-____
+
 Load planes table with data from the Raw layer table planes_csv.
-____
+
 
 [source,sql]
 ----
@@ -750,15 +746,12 @@ FROM
 </p>
 ++++
 
-____
-
-____
 
 * {blank}
 +
-____
+
 Once the data is loaded successfully, run the below query to verify if the table now contains data.
-____
+
 
 
 [source,sql]
