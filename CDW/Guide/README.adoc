@@ -1362,7 +1362,6 @@ Get the details of the snapshots and store it in a notepad.
 +
 ____
 Copy/paste the following data into the Impala Editor, but DO NOT execute.
-____
 
 [source,sql]
 ----
@@ -1398,14 +1397,13 @@ After pasting the query you will see the following two options for *create_ts* a
   <img width="624" height="194" src="cdw-media/media/image78.png">
 </p>
 ++++
+____
 
 * {blank}
 +
 ____
 From the notepad just copy the first value of the timestamp. It could be the date or the timestamp. Paste it in the create_ts box. In our case the value was 2023-04-04 06:51:14.360000000. Then execute the higlighted query only (1st query).
-____
 
-____
 ++++
 <p align="center">
   <img width="624" height="349" src="cdw-media/media/image68.png">
