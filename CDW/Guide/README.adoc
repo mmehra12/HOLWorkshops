@@ -803,9 +803,18 @@ ____
 ____
 
 ____
-image:cdw-media/media/image59.png[cdw-media/media/image59,width=624,height=298]
+++++
+<p align="center">
+  <img width="624" height="298" src="cdw-media/media/image59.png">
+</p>
+++++
 
-image:cdw-media/media/image131.png[cdw-media/media/image131,width=624,height=294]
+++++
+<p align="center">
+  <img width="624" height="294" src="cdw-media/media/image131.png">
+</p>
+++++
+
 ____
 
 ==== Step 3 : CREATE AND LOAD AIRLINES TABLE
@@ -824,8 +833,11 @@ SELECT
 FROM 
   ${user_id}_airlines_raw.airlines_csv;
 ----
-
-image:cdw-media/media/image13.png[cdw-media/media/image13,width=536,height=176]
+++++
+<p align="center">
+  <img width="536" height="180" src="cdw-media/media/image13.png">
+</p>
+++++
 
 Run the following query to check data in the airlines_orc table and it should return only 1 row for code 'UA'.
 
@@ -839,7 +851,11 @@ WHERE
   code IN ("UA", "XX", "PAW");
 ----
 
-image:cdw-media/media/image73.png[cdw-media/media/image73,width=400,height=251]
+++++
+<p align="center">
+  <img width="400" height="251" src="cdw-media/media/image73.png">
+</p>
+++++
 
 ==== Step 4 : CHECK ACID CAPABILITIES
 
@@ -858,7 +874,12 @@ ____
 INSERT INTO ${user_id}_airlines.airlines_orc VALUES("PAW","Paradise Air");
 ----
 ____
-image:cdw-media/media/image23.png[cdw-media/media/image23,width=624,height=229]
+++++
+<p align="center">
+  <img width="624" height="229" src="cdw-media/media/image23.png">
+</p>
+++++
+
 ____
 
 * {blank}
@@ -904,8 +925,12 @@ FROM
 WHERE 
   code IN ("UA", "XX", "PAW");
 ----
+++++
+<p align="center">
+  <img width="624" height="330" src="cdw-media/media/image112.png">
+</p>
+++++
 
-image:cdw-media/media/image112.png[cdw-media/media/image112,width=624,height=328]
 
 === MIGRATE HIVE TO ICEBERG TABLE
 
@@ -1005,14 +1030,26 @@ tblproperties ('format-version'='2');
 SHOW CREATE TABLE ${user_id}_airlines.flights;
 ----
 
-
-image:cdw-media/media/image82.png[cdw-media/media/image82,width=624,height=321]
+++++
+<p align="center">
+  <img width="624" height="321" src="cdw-media/media/image82.png">
+</p>
+++++
 
 The SHOW CREATE TABLE command is the unformatted version of DESCRIBE FORMATTED command. Pay attention to the PARTITIONED BY SPEC, where we have partitioned the flights table using the *year* column.
 
-image:cdw-media/media/image103.png[cdw-media/media/image103,width=624,height=297]
+++++
+<p align="center">
+  <img width="624" height="321" src="cdw-media/media/image103.png">
+</p>
+++++
+++++
+<p align="center">
+  <img width="624" height="250" src="cdw-media/media/image62.png">
+</p>
+++++
 
-image:cdw-media/media/image62.png[cdw-media/media/image62,width=624,height=250]
+
 
 We insert data into this table it will write data together within the same partition (ie. all 2006 data is written to the same location, all 2005 data is written to the same location, etc.). This command will take some time to run.
 
@@ -1023,8 +1060,12 @@ SELECT * FROM ${user_id}_airlines_raw.flights_csv
 WHERE year <= 2006;
 ----
 
+++++
+<p align="center">
+  <img width="624" height="202" src="cdw-media/media/image60.png">
+</p>
+++++
 
-image:cdw-media/media/image60.png[cdw-media/media/image60,width=624,height=202]
 
 Run the following SQL and notice that each of the years have a range of data within a few million flights (each record in the flights table counts as a flight).
 
@@ -1035,8 +1076,12 @@ FROM ${user_id}_airlines.flights
 GROUP BY year
 ORDER BY year desc;
 ----
+++++
+<p align="center">
+  <img width="624" height="408" src="cdw-media/media/image55.png">
+</p>
+++++
 
-image:cdw-media/media/image55.png[cdw-media/media/image55,width=624,height=408]
 
 Now, make sure that the following 5 tables are created up until this point as shown in the screenshot below.
 
