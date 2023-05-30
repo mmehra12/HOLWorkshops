@@ -597,7 +597,6 @@ ____
 [source,sql]
 ----
 INSERT INTO ${user_id}_airlines.planes
-
 SELECT * FROM ${user_id}_airlines_raw.planes_csv;
 ----
 
