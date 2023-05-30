@@ -379,7 +379,11 @@ Click option Set Workload Password.
 
 Enter the Password shared by the instructor and Confirm Password.
 
-image:cdw-media/media/image84.png[cdw-media/media/image84,width=566,height=275]
+++++
+<p align="center">
+  <img width="566" height="280" src="cdw-media/media/image84.png">
+</p>
+++++
 
 Click the button *Set Workload Password.*
 
@@ -389,7 +393,11 @@ The objective of this step is to create External tables on top of raw CSV files 
 
 To access Data Warehouse data service click on Data Warehouse on the left.
 
-image:cdw-media/media/image38.png[cdw-media/media/image38,width=193,height=434]
+++++
+<p align="center">
+  <img width="200" height="434" src="cdw-media/media/image38.png">
+</p>
+++++
 
 === DATABASE AND TABLE CREATION
 
@@ -399,7 +407,13 @@ Hue is associated with each of the virtual clusters that are present under the D
 
 In the virtual cluster that has been assigned to you select HUE from the top right corner of the virtual cluster.
 
-image:cdw-media/media/image80.png[cdw-media/media/image80,width=624,height=129]
+++++
+<p align="center">
+  <img width="624" height="129" src="cdw-media/media/image80.png">
+</p>
+++++
+
+
 
 ==== Step 2 : CREATE DATABASE
 
@@ -419,8 +433,12 @@ CREATE DATABASE apac01_airlines_raw;
 CREATE DATABASE apac01_airlines;
 ----
 
+++++
+<p align="center">
+  <img width="293" height="259" src="cdw-media/media/image115.png">
+</p>
+++++
 
-image:cdw-media/media/image115.png[cdw-media/media/image115,width=293,height=259]
 
 Verify if the database is created using the following query. Do not forget to replace the ${user-id} with your actual username
 
@@ -428,7 +446,11 @@ Verify if the database is created using the following query. Do not forget to re
 ----
 SHOW DATABASES LIKE '${user_id}%';
 ----
-image:cdw-media/media/image125.png[cdw-media/media/image125,width=358,height=436]
+++++
+<p align="center">
+  <img width="358" height="436" src="cdw-media/media/image125.png">
+</p>
+++++
 
 ==== Step 3 : CREATE EXTERNAL TABLES
 
@@ -503,7 +525,12 @@ CREATE EXTERNAL TABLE ${user_id}_airlines_raw.airports_csv(
 ) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' STORED AS TEXTFILE LOCATION 's3a://handsonworkshop/my-data/meta-cdw-workshop/airlines-raw/airlines-csv/airports' tblproperties("skip.header.line.count" = "1");
 ----
 
-image:cdw-media/media/image1.png[cdw-media/media/image1,width=624,height=297]
+++++
+<p align="center">
+  <img width="624" height="300" src="cdw-media/media/image1.png">
+</p>
+++++
+
 
 ==== Step 4 : VERIFY IF THE TABLES ARE CREATED
 
