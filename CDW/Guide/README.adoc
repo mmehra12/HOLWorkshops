@@ -2016,11 +2016,12 @@ ____
 +
 ____
 Now we will create a join between another table. Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: wuser00_airlines) and table name airlines.
-____
+
 
 image:cdw-media/media/image43.png[cdw-media/media/image43,width=505,height=248]
 
 image:cdw-media/media/image63.png[cdw-media/media/image63,width=389,height=236]
+____
 
 * {blank}
 +
