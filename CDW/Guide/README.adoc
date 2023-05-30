@@ -667,10 +667,11 @@ Run the following query to create the table
 ----
 drop table if exists ${user_id}_airlines.airlines_orc;
 
-CREATE TABLE ${user_id}_airlines.airlines_orc
-STORED AS ORC
-AS
-SELECT * FROM ${user_id}_airlines_raw.airlines_csv;
+CREATE TABLE ${user_id}_airlines.airlines_orc STORED AS ORC AS 
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines_raw.airlines_csv;
 ----
 
 image:cdw-media/media/image13.png[cdw-media/media/image13,width=536,height=176]
@@ -679,7 +680,12 @@ Run the following query to check data in the airlines_orc table and it should re
 
 [source,sql]
 ----
-SELECT * FROM ${user_id}_airlines.airlines_orc WHERE code IN ("UA","XX","PAW");
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines.airlines_orc 
+WHERE 
+  code IN ("UA", "XX", "PAW");
 ----
 
 image:cdw-media/media/image73.png[cdw-media/media/image73,width=400,height=251]
@@ -727,11 +733,8 @@ INSERT INTO ${user_id}_airlines.airlines_dim_updates VALUES("XX","Get Out of My 
 -- Merge inserted records into Airlines_orc table
 
 MERGE INTO ${user_id}_airlines.airlines_orc USING (SELECT * FROM ${user_id}_airlines.airlines_dim_updates) AS s
-
 ON s.code = airlines_orc.code
-
 WHEN MATCHED THEN UPDATE SET description = s.description
-
 WHEN NOT MATCHED THEN INSERT VALUES (s.code,s.description);
 ----
 
@@ -743,7 +746,12 @@ ____
 
 [source,sql]
 ----
-SELECT * FROM ${user_id}_airlines.airlines_orc WHERE code IN ("UA","XX","PAW");
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines.airlines_orc 
+WHERE 
+  code IN ("UA", "XX", "PAW");
 ----
 
 image:cdw-media/media/image112.png[cdw-media/media/image112,width=624,height=328]
