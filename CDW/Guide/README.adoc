@@ -1918,7 +1918,7 @@ ____
 Click on the arrow next to avg(Depdelay). Enter 50 against the text box labeled Top K. Click on REFRESH VISUAL.
 ____
 
-image:cdw-media/media/image97.png[cdw-media/media/image97,width=210,height=328]
+image:cdw-media/media/imagecopy01.png[cdw-media/media/imagecopy01,width=300,height=328]
 
 image:cdw-media/media/image47.png[cdw-media/media/image47,width=624,height=241]
 
