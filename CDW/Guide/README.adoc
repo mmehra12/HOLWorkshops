@@ -1265,7 +1265,9 @@ ____
 * {blank}
 +
 ____
-This is where you can analyze queries at a deep level. For this lab let’s take a look at the Explain details, by clicking on the *Visual Explain* tab. It might take a while to appear, please click on refresh. This plan shows that this query needs to Read flights (86M rows) and airlines (1.5K rows) with hash join, group, and sort. This is a lot of data processing and if we run this query constantly it would be good to reduce the time this query takes to execute.image:cdw-media/media/image42.png[cdw-media/media/image42,width=624,height=169]image:cdw-media/media/image32.png[cdw-media/media/image32,width=624,height=209]
+This is where you can analyze queries at a deep level. For this lab let’s take a look at the Explain details, by clicking on the *Visual Explain* tab. It might take a while to appear, please click on refresh. This plan shows that this query needs to Read flights (86M rows) and airlines (1.5K rows) with hash join, group, and sort. This is a lot of data processing and if we run this query constantly it would be good to reduce the time this query takes to execute.image:cdw-media/media/image42.png[cdw-media/media/image42,width=624,height=169]
+
+image:cdw-media/media/image32.png[cdw-media/media/image32,width=624,height=209]
 ____
 
 * {blank}
