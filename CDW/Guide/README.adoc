@@ -969,7 +969,7 @@ ____
 |===
 
 ==== Use Create table as Select(CTAS)
-
+____
 Run the following SQL to create airports table using CTAS. Notice the syntax to create an Iceberg Table within Hive is “*_Stored by Iceberg_*”.
 
 [source,sql]
@@ -985,7 +985,7 @@ DESCRIBE FORMATTED ${user_id}_airlines.airports;
 
 
 Look for: Table Type, Location (location of where table data is stored), SerDe Library, and in Table Parameters look for properties storage_handler, metadata_location, and table_type.
-
+____
 === CREATE ICEBERG TABLES
 
 In this step we will create a partitioned table, in Iceberg Table Format, stored in Parquet File Format. Other than that we could specify other file formats that are supported for Iceberg which are: ORC and Avro.
