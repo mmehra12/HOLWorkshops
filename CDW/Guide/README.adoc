@@ -606,8 +606,11 @@ ____
 
 [source,sql]
 ----
-INSERT INTO ${user_id}_airlines.planes
-SELECT * FROM ${user_id}_airlines_raw.planes_csv;
+INSERT INTO ${user_id}_airlines.planes 
+SELECT 
+  * 
+FROM 
+  ${user_id}_airlines_raw.planes_csv;
 ----
 
 image:cdw-media/media/image90.png[cdw-media/media/image90,width=624,height=269]
