@@ -544,17 +544,29 @@ SHOW TABLES;
 
 Make sure that 4 tables (airlines_csv, airports_csv, flights_csv, planes_csv) are created as shown below.
 
-image:cdw-media/media/image110.png[cdw-media/media/image110,width=521,height=373]
+++++
+<p align="center">
+  <img width="521" height="373" src="cdw-media/media/image110.png">
+</p>
+++++
 
 ==== Step 5 : QUERY CREATED TABLES USING IMPALA VIRTUAL WAREHOUSE
 
 Go to the page where now you will access HUE of an Impala virtual warehouse assigned to you. Click on HUE for impala as shown in the screenshot below.
 
-image:cdw-media/media/image40.png[cdw-media/media/image40,width=559,height=155]
+++++
+<p align="center">
+  <img width="559" height="155" src="cdw-media/media/image40.png">
+</p>
+++++
 
 Make sure that you click to get Impala instead of default in the HUE browser as shown below and then click the refresh button.
 
-image:cdw-media/media/image10.png[cdw-media/media/image10,width=376,height=279]
+++++
+<p align="center">
+  <img width="376" height="279" src="cdw-media/media/image10.png">
+</p>
+++++
 
 Now, copy paste the following in the HUE editor and click on Run as shown below.
 
@@ -563,8 +575,11 @@ Now, copy paste the following in the HUE editor and click on Run as shown below.
 select count(*) from ${user_id}_airlines_raw.flights_csv;
 ----
 
-
-image:cdw-media/media/image18.png[cdw-media/media/image18,width=582,height=353]
+++++
+<p align="center">
+  <img width="582" height="353" src="cdw-media/media/image18.png">
+</p>
+++++
 
 Over the course of this workshop we will execute many queries which are compute heavy and this will make the virtual warehouse that is assigned to you to auto scale up and down based on the workload.
 
@@ -627,21 +642,39 @@ WHERE
   );
 ----
 
-image:cdw-media/media/image129.png[cdw-media/media/image129,width=624,height=281]
+++++
+<p align="center">
+  <img width="624" height="281" src="cdw-media/media/image129.png">
+</p>
+++++
+
 
 Post execution, look at the graph on your virtual warehouse.
 
-image:cdw-media/media/image11.png[cdw-media/media/image11,width=624,height=224]
+++++
+<p align="center">
+  <img width="624" height="224" src="cdw-media/media/image11.png">
+</p>
+++++
 
 Go back to the editor and observe the amount of time the query has taken to complete.
 
-image:cdw-media/media/image113.png[cdw-media/media/image113,width=624,height=285]
+++++
+<p align="center">
+  <img width="624" height="285" src="cdw-media/media/image113.png">
+</p>
+++++
 
 == LAB 3 - DATA LAKEHOUSE
 
 In this Lab we will take steps to make use of Hive and Iceberg Table formats to provide us with best of both world scenarios in our Data Lakehouse.
 
-image:cdw-media/media/image109.png[cdw-media/media/image109,width=624,height=240]
+
+++++
+<p align="center">
+  <img width="624" height="240" src="cdw-media/media/image109.png">
+</p>
+++++
 
 === CURATED LAYER CREATION
 
@@ -656,7 +689,12 @@ endif::[]
 [IMPORTANT]
 Make sure that you are using the HUE of the HIVE virtual warehouse that has been assigned to you.
 
-image:cdw-media/media/image56.png[cdw-media/media/image56,width=624,height=153]
+++++
+<p align="center">
+  <img width="624" height="153" src="cdw-media/media/image56.png">
+</p>
+++++
+
 
 ==== Step 1 : CREATE and LOAD PLANES TABLE
 
@@ -680,7 +718,11 @@ CREATE EXTERNAL TABLE ${user_id}_airlines.planes (
 ) STORED AS PARQUET TBLPROPERTIES ('external.table.purge' = 'true');
 ----
 
-image:cdw-media/media/image132.png[cdw-media/media/image132,width=584,height=281]
+++++
+<p align="center">
+  <img width="584" height="281" src="cdw-media/media/image132.png">
+</p>
+++++
 
 ____
 
@@ -701,7 +743,11 @@ FROM
   ${user_id}_airlines_raw.planes_csv;
 ----
 
-image:cdw-media/media/image90.png[cdw-media/media/image90,width=624,height=269]
+++++
+<p align="center">
+  <img width="624" height="270" src="cdw-media/media/image90.png">
+</p>
+++++
 
 ____
 
@@ -718,7 +764,11 @@ ____
 ----
 SELECT * FROM ${user_id}_airlines.planes LIMIT 100;
 ----
-image:cdw-media/media/image20.png[cdw-media/media/image20,width=624,height=360]
+++++
+<p align="center">
+  <img width="624" height="360" src="cdw-media/media/image20.png">
+</p>
+++++
 
 ==== Step 2 : DESCRIBE CREATED TABLE
 
