@@ -959,7 +959,7 @@ ____
 In the output look for the following fields - look for the following (see image with highlighted fields) key values:
 ____
 
-[width="100%",cols="24%,76%",options="header",]
+[width="100%",cols="24%,76%",]
 |===
 |*Location* |Data is stored in cloud storage and in this case AWS S3 in the same location as the Hive Table Format.
 |*Table Type* |Indicates that it is an EXTERNAL TABLE.
