@@ -22,7 +22,7 @@ link:#lab-2---raw-layer[[.underline]#LAB 2 - RAW LAYER#]
 
 ** link:#database-and-table-creation[[.underline]#DATABASE AND TABLE CREATION#]
 
-*** link:#step-1-go-to-hue-hive-cluster[[.underline]#Step 1 : Go To Hue [Hive Cluster]#
+*** link:#step-1-go-to-hue-hive-cluster[[.underline]#Step 1 : Go To Hue Hive Cluster]#
 
 *** link:#step-2-create-database[[.underline]#Step 2 : CREATE DATABASE#]
 
@@ -58,7 +58,7 @@ link:#lab-3---data-lakehouse[[.underline]#LAB 3 - DATA LAKEHOUSE#]
 link:#lab-4---performance-optimization-and-table-maintenance[[.underline]#LAB 4 - PERFORMANCE OPTIMIZATION AND TABLE MAINTENANCE#]
 
 
-** link:#iceberg-in-place-partition-evolutionperformance-optimization[[.underline]#Iceberg in-place Partition Evolution[Performance Optimization]#]
+** link:#iceberg-in-place-partition-evolutionperformance-optimization[[.underline]#Iceberg in-place Partition Evolution-Performance Optimization#]
 
 *** link:#step-1-open-hue-for-the-cdw-hive-virtual-warehouse[[.underline]#Step 1 : Open HUE for the CDW Hive Virtual Warehouse#]
 
@@ -74,7 +74,7 @@ link:#lab-4---performance-optimization-and-table-maintenance[[.underline]#LAB 4 
 
 ** link:#iceberg-rollback-table-maintenance---do-not-run-1[[.underline]#Iceberg Rollback [Table Maintenance] - DO NOT RUN#
 
-** link:#materialized-views-performance-optimization[[.underline]#Materialized Views [Performance Optimization]#]
+** link:#materialized-views-performance-optimization[[.underline]#Materialized Views -Performance Optimization#]
 
 
 link:#lab-5---security-and-governance[[.underline]#LAB 5 - SECURITY AND GOVERNANCE#]
