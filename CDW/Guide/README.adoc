@@ -585,11 +585,11 @@ Create planes table in Hive table format and stored its data in parquet file for
 drop table if exists ${user_id}_airlines.planes;
 
 CREATE EXTERNAL TABLE ${user_id}_airlines.planes (
-tailnum STRING, owner_type STRING, manufacturer STRING, issue_date STRING,
-model STRING, status STRING, aircraft_type STRING, engine_type STRING, year INT
-)
-STORED AS PARQUET
-TBLPROPERTIES ('external.table.purge'='true');
+  tailnum STRING, owner_type STRING, 
+  manufacturer STRING, issue_date STRING, 
+  model STRING, status STRING, aircraft_type STRING, 
+  engine_type STRING, year INT
+) STORED AS PARQUET TBLPROPERTIES ('external.table.purge' = 'true');
 ----
 
 image:cdw-media/media/image132.png[cdw-media/media/image132,width=584,height=281]
