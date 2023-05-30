@@ -401,7 +401,7 @@ To access Data Warehouse data service click on Data Warehouse on the left.
 === DATABASE AND TABLE CREATION
 
 ==== Step 1 : Go To Hue [Hive Cluster]
-
+____
 Hue is associated with each of the virtual clusters that are present under the Database Catalog.
 
 In the virtual cluster that has been assigned to you select HUE from the top right corner of the virtual cluster.
@@ -411,11 +411,11 @@ In the virtual cluster that has been assigned to you select HUE from the top rig
   <img width="624" height="129" src="cdw-media/media/image80.png">
 </p>
 ++++
-
+____
 
 
 ==== Step 2 : CREATE DATABASE
-
+____
 Create new databases. Enter the following query and then make sure that you enter the user assigned to you as a prefix(replace ${user_id}) to the database name.
 
 [source,sql]
@@ -450,9 +450,9 @@ SHOW DATABASES LIKE '${user_id}%';
   <img width="358" height="436" src="cdw-media/media/image125.png">
 </p>
 ++++
-
+____
 ==== Step 3 : CREATE EXTERNAL TABLES
-
+____
 Run the following DDL in the editor.
 
 This will create External Tables on CSV Data Files that have been uploaded previously by your instructor in AWS S3. This provides a fast way to allow SQL layers on top of data in cloud storage.
@@ -529,10 +529,10 @@ CREATE EXTERNAL TABLE ${user_id}_airlines_raw.airports_csv(
   <img width="624" height="300" src="cdw-media/media/image1.png">
 </p>
 ++++
-
+____
 
 ==== Step 4 : VERIFY IF THE TABLES ARE CREATED
-
+____
 Run the following queries in the editor to verify if the tables are created correctly.
 
 [source,sql]
@@ -548,9 +548,10 @@ Make sure that 4 tables (airlines_csv, airports_csv, flights_csv, planes_csv) ar
   <img width="521" height="373" src="cdw-media/media/image110.png">
 </p>
 ++++
+____
 
 ==== Step 5 : QUERY CREATED TABLES USING IMPALA VIRTUAL WAREHOUSE
-
+____
 Go to the page where now you will access HUE of an Impala virtual warehouse assigned to you. Click on HUE for impala as shown in the screenshot below.
 
 ++++
@@ -663,6 +664,7 @@ Go back to the editor and observe the amount of time the query has taken to comp
   <img width="624" height="285" src="cdw-media/media/image113.png">
 </p>
 ++++
+____
 
 == LAB 3 - DATA LAKEHOUSE
 
