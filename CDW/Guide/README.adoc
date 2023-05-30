@@ -501,41 +501,51 @@ We will now run a compute heavy query and check how that affects the scaling up/
 
 Query:
 
+[NOTE].
 DO NOT forget to change the ${user_id}
 
 [source,sql]
 ----
-SELECT model,
-engine_type
-FROM ${user_id}_airlines_raw.planes_csv
-WHERE planes_csv.tailnum IN
-(SELECT tailnum
-FROM
-(SELECT tailnum,
-count(*),
-avg(depdelay) AS avg_delay,
-max(depdelay),
-avg(taxiout),
-avg(cancelled),
-avg(weatherdelay),
-max(weatherdelay),
-avg(nasdelay),
-max(nasdelay),
-avg(securitydelay),
-max(securitydelay),
-avg(lateaircraftdelay),
-max(lateaircraftdelay),
-avg(airtime),
-avg(actualelapsedtime),
-avg(distance)
-FROM ${user_id}_airlines_raw.flights_csv
-WHERE tailnum IN ('N194JB',
-'N906S',
-'N575ML',
-'N852NW',
-'N000AA')
-GROUP BY tailnum) AS delays);
-
+SELECT 
+  model, 
+  engine_type 
+FROM 
+  ${user_id}_airlines_raw.planes_csv 
+WHERE 
+  planes_csv.tailnum IN (
+    SELECT 
+      tailnum 
+    FROM 
+      (
+        SELECT 
+          tailnum, 
+          count(*), 
+          avg(depdelay) AS avg_delay, 
+          max(depdelay), 
+          avg(taxiout), 
+          avg(cancelled), 
+          avg(weatherdelay), 
+          max(weatherdelay), 
+          avg(nasdelay), 
+          max(nasdelay), 
+          avg(securitydelay), 
+          max(securitydelay), 
+          avg(lateaircraftdelay), 
+          max(lateaircraftdelay), 
+          avg(airtime), 
+          avg(actualelapsedtime), 
+          avg(distance) 
+        FROM 
+          ${user_id}_airlines_raw.flights_csv 
+        WHERE 
+          tailnum IN (
+            'N194JB', 'N906S', 'N575ML', 'N852NW', 
+            'N000AA'
+          ) 
+        GROUP BY 
+          tailnum
+      ) AS delays
+  );
 ----
 
 image:cdw-media/media/image129.png[cdw-media/media/image129,width=624,height=281]
