@@ -1849,6 +1849,7 @@ The new policy is added to the Row Level Filter policies (as below).
 
 image:cdw-media/media/image64.png[cdw-media/media/image64,width=624,height=138]
 ____
+
 === Step 2 : Test New Policy
 
 * {blank}
