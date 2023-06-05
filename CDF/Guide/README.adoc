@@ -1282,7 +1282,7 @@ ____
 |*Description* |syslog schema for dataflow workshop
 |*Type* |Avro schema provider
 |*Schema Group* |Kafka
-|*Compatibility* |Delete
+|*Compatibility* |BACKWARD
 |*Evolve* |True
 |*Schema Text* |Copy and paste the schema text below into the “Schema Text” field
 |===
