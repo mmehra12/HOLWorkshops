@@ -995,7 +995,7 @@ ____
 |===
 |*Property* |*Value*
 |*CDP Workload User* |immiapacXY
-|*CDP Workload User Password* |immiapac@2021
+|*CDP Workload User Password* |<The Password you set>>
 |*S3 Directory* |dirFlowCatalogDataDump
 |*CDP Environment* |TestParameter
 |===
