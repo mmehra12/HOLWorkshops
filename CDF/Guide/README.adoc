@@ -348,14 +348,14 @@ ____
 * {blank}
 +
 ____
-* Enter the shared password.
+* Enter a password that you can remember. We will require this throughout our labs
 
 image:media/media/image41.png[media/media/image41,width=545,height=239]
 
 * Click the button Set Workload Password.
 ____
 ____
-*Note* : USE A PASSWORD THAT YOU CAN REMEMBER.
+*Note* : DO NOT FORGET THE PASSWORD YOU SET
 ____
 
 
