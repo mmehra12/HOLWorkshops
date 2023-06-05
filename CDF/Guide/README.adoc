@@ -42,7 +42,7 @@ link:++#lab-0---introduction-and-setup++[*Lab 0 - Introduction and setup*]
 
 *** link:#step-3-click-on-the-user-name-at-the-bottom-left-of-the-screen-and-select-manage-keytab[Step 3 : Click on the User name at the bottom left of the screen and select Manage Keytab]
 
-*** link:#step-4-enter-your-workload-username-wuserxx-and-password.[Step 4 : Enter your Workload Username (wuserxx) and Password.]
+*** link:#step-4-enter-your-workload-username-immiapacxx-and-password.[Step 4 : Enter your Workload Username (immiapacxx) and Password.]
 
 *** link:#step-5-click-on-unlock-keytab[Step 5 : Click on unlock KeyTab]
 
@@ -333,7 +333,7 @@ You will need to define your CDP Workload Password that will be used to access n
 * {blank}
 +
 ____
-* Click on your user name (Ex: wuser00@workshop.com) at the lower left corner.
+* Click on your user name (Ex: immiapac00@workshop.com) at the lower left corner.
 * Click on Profile.
 
 image:media/media/image153.png[media/media/image153,width=596,height=349]
@@ -458,7 +458,7 @@ ____
 image:media/media/image16.png[media/media/image16,width=404,height=362]
 ____
 
-===== Step 4 : Enter your Workload Username (wuserxx) and Password. 
+===== Step 4 : Enter your Workload Username (immiapacxx) and Password. 
 
 image:media/media/image108.png[media/media/image108,width=328,height=218]
 
@@ -503,7 +503,7 @@ ____
 
 ===== Step 4 : Enter your Principal Name which is the same as your workload username
 
-Example : wuserXY* 
+Example : immiapacXY* 
 ____
 * Click on Lock KeyTab
 
@@ -570,7 +570,7 @@ Workspace Name : *_The name of the environment will be shared by the INSTRUCTOR_
 
 Draft Name : \{user_id}_datadump_flow
 
-_Example : wuserXY_datadump_flow_
+_Example : immiapacXY_datadump_flow_
 
 
 image:media/media/image20.png[media/media/image20,width=361,height=212]
@@ -623,7 +623,7 @@ Name : CDP Workload User
 
 Value : <The username assigned to you>
 
-EXAMPLE : wuser01
+EXAMPLE : immiapac01
 
 image:media/media/image110.png[media/media/image110,width=330,height=310]
 ____
@@ -641,7 +641,7 @@ ____
 * Name : CDP Workload User Password
 
 * Value : <Workload Password set by yourself in Lab 0>
-** EXAMPLE : Wuser@2021
+** EXAMPLE : immiapac@2021
 
 image:media/media/image103.png[media/media/image103,width=227,height=260]
 image:media/media/image49.png[media/media/image49,width=298,height=281]
@@ -970,7 +970,7 @@ ____
 ==== *Step 4:* Deployment Name
 ____
 Give the deployment a unique name( \{user_id}_flow_prod), then click Next
-* Example : wuser01_flow_prod
+* Example : immiapac01_flow_prod
 
 
 image:media/media/image44.png[media/media/image44,width=416,height=252]
@@ -994,8 +994,8 @@ ____
 [width="100%",cols="50%,50%",options="header",]
 |===
 |*Property* |*Value*
-|*CDP Workload User* |wuserXY
-|*CDP Workload User Password* |Wuser@2021
+|*CDP Workload User* |immiapacXY
+|*CDP Workload User Password* |immiapac@2021
 |*S3 Directory* |dirFlowCatalogDataDump
 |*CDP Environment* |TestParameter
 |===
@@ -1490,13 +1490,13 @@ Add the Flow Parameters as below, then click *Next*.
 [width="100%",cols="50%,50%",options="header",]
 |===
 |*Property* |*Value*
-|*CDP Workload User* |The workload username for the current user. Example : wuser00
+|*CDP Workload User* |The workload username for the current user. Example : immiapac00
 |*CDP Workload Password* | The workload password for the current user [This password was set by you in Lab 0, section 3]
 |*Filter Rule* |SELECT * FROM FLOWFILE
 |*Kafka Broker Endpoint* |A comma separated list of Kafka Brokers.
-|*Kafka Destination Topic* |<username>-syslog (Ex: wuser00-syslog)
+|*Kafka Destination Topic* |<username>-syslog (Ex: immiapac00-syslog)
 |*Kafka Producer ID* |nifi_dfx_p1
-|*Schema Name* |<username>-syslog (Ex: wuser00-syslog)
+|*Schema Name* |<username>-syslog (Ex: immiapac00-syslog)
 |*Schema Registry Hostname* |The hostname of the master server in the Kafka Datahub(kafka-smm-cluster)[Refer screenshot below] Example : *kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site*
 |===
 image:media/media/image135.png[media/media/image135,width=448,height=289]
@@ -1630,7 +1630,7 @@ kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cl
 
 *SASL Username :* <workload-username>
 
-Example : wuserXY
+Example : immiapacXY
 
 *SASL Password :* <Set in Lab 0 Section 3>
 
