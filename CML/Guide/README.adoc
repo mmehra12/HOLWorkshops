@@ -2,7 +2,7 @@ Table of Contents
 
 link:#introduction[*Introduction*]
 
-link:#lab-summary[*Lab summary *]
+*link:#lab-summary[Lab summary]*
 
 link:++#lab-0---initial-setup++[*Lab 0 - Initial setup*]
 
@@ -33,7 +33,7 @@ link:++#lab-2---data-exploration++[*Lab 2 - Data Exploration*]
 ** link:#step-2-execute-data-exploration-script[Step 2 : Execute Data Exploration script]
 
 
-link:++#lab-3---model-buildtrain-experiment++[*Lab 3 - Model Build/Train Experiment *]
+*link:++#lab-3---model-buildtrain-experiment++[Lab 3 - Model Build/Train Experiment]*
 
 
 ** link:#model-building[Model Building ]
@@ -51,9 +51,9 @@ link:++#lab-3---model-buildtrain-experiment++[*Lab 3 - Model Build/Train Experim
 *** link:#step-3-verify-experiment-metrics[Step 3 : Verify Experiment metrics ]
 
 
-link:++#lab-4---model-deployserve++[*Lab 4 - Model Deploy/Serve *]
+*link:++#lab-4---model-deployserve++[Lab 4 - Model Deploy/Serve]*
 
-link:++#lab-5---application-deploy++[*Lab 5 - Application Deploy *]
+*link:++#lab-5---application-deploy++[Lab 5 - Application Deploy]*
 
 == Introduction
 
