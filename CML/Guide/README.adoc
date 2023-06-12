@@ -120,7 +120,7 @@ ____
 
 You will be provided with a set of credentials along with a URL which will give you access to the CDP environment. The details will be shared by the instructor either before the lab starts or during the course of the labs
 
-[width="100%",cols="50%,50%",options="header",]
+[width="100%",cols="40%,60%",]
 |===
 |*Environment URL* |Will be shared by the instructor
 |*Login Email* |Will be shared by the instructor
@@ -143,7 +143,7 @@ Click on “New Project” to start with the creation of our project.
 
 Enter the following details in the New Project Page
 
-[width="100%",cols="26%,74%",options="header",]
+[width="100%",cols="26%,74%",]
 |===
 |*Project Name* |<Workload_Username>_telco_churn_project
 |*Project Description* |Telco churn analytics
@@ -171,7 +171,9 @@ Clicking on it will take you to the Project that you just cloned from GitHub and
 
 == Lab 1 - Data Ingest 
 
-In this lab, you will work on the Data Ingest Stage.image:cml-media/media/image64.png[cml-media/media/image64,width=524,height=262]
+In this lab, you will work on the Data Ingest Stage.
+
+image:cml-media/media/image64.png[cml-media/media/image64,width=524,height=262]
 
 === *Bootstrap Script*
 
@@ -185,7 +187,7 @@ image:cml-media/media/image65.png[cml-media/media/image65,width=496,height=287]
 
 Start a “*NEW SESSION*” and use the below configuration.
 
-[width="100%",cols="21%,79%",options="header",]
+[width="100%",cols="21%,79%",]
 |===
 |*Session Name* |prep_data_ingest
 |*Runtime Editor* |Workbench
@@ -284,9 +286,9 @@ Start a “*NEW SESSION*” and use the below configuration.
 |*Resource Profile* |2 vCPU / 4 GiB
 |===
 
-Click on *[.underline]#START SESSION#*image:cml-media/media/image81.png[cml-media/media/image81,width=470,height=339]
+Click on *[.underline]#START SESSION#*
 
-=== 
+image:cml-media/media/image81.png[cml-media/media/image81,width=470,height=339]
 
 ==== Step 2 : Execute Data Exploration script
 
@@ -308,7 +310,9 @@ Add this command at the start of your script and Run All Cells again.
 
 To add a new command block got to the start of the script and select the first block of code, Click on the + sign at the top of the editor and enter the following command
 
+====
 *!pip install seaborn*
+====
 
 image:cml-media/media/image71.png[cml-media/media/image71,width=424,height=328]
 
@@ -328,8 +332,6 @@ Now we can go back to _Project_
 
 This concludes this lab.
 
-* +
-*
 
 == Lab 3 - Model Build/Train Experiment 
 
@@ -447,35 +449,33 @@ image:cml-media/media/image33.png[cml-media/media/image33,width=624,height=88]
 
 This concludes the Lab
 
-== 
-
-== 
-
-===  +
 
 == Lab 4 - Model Deploy/Serve 
 
 In this lab, you will deploy/serve the model that you have trained in the Lab 3 as a REST endpoint. The model can be invoked as-needed, in real-time or batch fashion, by external services that need to score the prediction implemented by the model.
 
-=== image:cml-media/media/image9.png[cml-media/media/image9,width=624,height=350] +
+image:cml-media/media/image9.png[cml-media/media/image9,width=624,height=350] +
 
-=== image:cml-media/media/image62.png[cml-media/media/image62,width=624,height=350]
+image:cml-media/media/image62.png[cml-media/media/image62,width=624,height=350]
 
 Click on *_Files_* in the left tab, and go to the file *_5_model_serve_explainer.py_*:
 
-=== image:cml-media/media/image75.png[cml-media/media/image75,width=624,height=290]
+image:cml-media/media/image75.png[cml-media/media/image75,width=624,height=290]
 
 This is the script for serving the model, and the line below is loading the pickel model we have generated in the Lab 3
 
-=== image:cml-media/media/image67.png[cml-media/media/image67,width=498,height=58]
+image:cml-media/media/image67.png[cml-media/media/image67,width=498,height=58]
 
 and the function is the one that takes the input arguments, passes them to the model for scoring and gives back the result of the score.
 
-=== image:cml-media/media/image78.png[cml-media/media/image78,width=498,height=148]
+image:cml-media/media/image78.png[cml-media/media/image78,width=498,height=148]
 
 Copy the entire string as shown below because we are going to use it in the future and a sample JSON input parameters for the model.
 
-\{"StreamingTV":"No","MonthlyCharges":70.35,"PhoneService":"No","PaperlessBilling":"No","Partner":"No","OnlineBackup":"No","gender":"Female","Contract":"Month-to-month","TotalCharges":1397.475,"StreamingMovies":"No","DeviceProtection":"No","PaymentMethod":"Bank transfer (automatic)","tenure":29,"Dependents":"No","OnlineSecurity":"No","MultipleLines":"No","InternetService":"DSL","SeniorCitizen":"No","TechSupport":"No"}
+[source,json]
+----
+{"StreamingTV":"No","MonthlyCharges":70.35,"PhoneService":"No","PaperlessBilling":"No","Partner":"No","OnlineBackup":"No","gender":"Female","Contract":"Month-to-month","TotalCharges":1397.475,"StreamingMovies":"No","DeviceProtection":"No","PaymentMethod":"Bank transfer (automatic)","tenure":29,"Dependents":"No","OnlineSecurity":"No","MultipleLines":"No","InternetService":"DSL","SeniorCitizen":"No","TechSupport":"No"}
+----
 
 Now go to *_Model Deployments_*
 
@@ -487,7 +487,7 @@ image:cml-media/media/image59.png[cml-media/media/image59,width=496,height=199]
 
 Enter the following details
 
-[width="100%",cols="50%,50%",options="header",]
+[width="100%",cols="50%,50%",]
 |===
 |*Deployment Template* |Deploy Model from Code
 |*Name* |<workload_username>_telco_churn_mod
@@ -495,7 +495,7 @@ Enter the following details
 |*Enable Authentication* |*False (Disable)*
 |*File* |5_model_serve_explainer.py
 |*Function* |explain
-|*Example Input* |\{"StreamingTV":"No","MonthlyCharges":70.35,"PhoneService":"No","PaperlessBilling":"No","Partner":"No","OnlineBackup":"No","gender":"Female","Contract":"Month-to-month","TotalCharges":1397.475,"StreamingMovies":"No","DeviceProtection":"No","PaymentMethod":"Bank transfer (automatic)","tenure":29,"Dependents":"No","OnlineSecurity":"No","MultipleLines":"No","InternetService":"DSL","SeniorCitizen":"No","TechSupport":"No"}
+|*Example Input* |{"StreamingTV":"No","MonthlyCharges":70.35,"PhoneService":"No","PaperlessBilling":"No","Partner":"No","OnlineBackup":"No","gender":"Female","Contract":"Month-to-month","TotalCharges":1397.475,"StreamingMovies":"No","DeviceProtection":"No","PaymentMethod":"Bank transfer (automatic)","tenure":29,"Dependents":"No","OnlineSecurity":"No","MultipleLines":"No","InternetService":"DSL","SeniorCitizen":"No","TechSupport":"No"}
 |*Runtime Editor* |Workench
 |*Enable Spark* |TRUE - Spark 2.4.8
 |*Resource Profile* |2 vCPU / 4 GiB
@@ -523,7 +523,9 @@ And finally _Deployed_
 
 image:cml-media/media/image41.png[cml-media/media/image41,width=522,height=158]
 
-Now you can click on the model name and test it ...image:cml-media/media/image40.png[cml-media/media/image40,width=472,height=229]
+Now you can click on the model name and test it ...
+
+image:cml-media/media/image40.png[cml-media/media/image40,width=472,height=229]
 
 … you should get the following:
 
@@ -547,17 +549,15 @@ image:cml-media/media/image19.png[cml-media/media/image19,width=624,height=294]
 
 This concludes this lab.
 
-===  +
-
 == Lab 5 - Application Deploy 
 
 In this lab, you will create an application that embeds the model deployed in the previous lab, allowing business users, end-users that are not Data Scientists to interact and to get insight about the context of these analyses.
 
-== image:cml-media/media/image16.png[cml-media/media/image16,width=351,height=197]
+image:cml-media/media/image16.png[cml-media/media/image16,width=351,height=197]
 
 In the left tab, go to *_Applications_*
 
-== image:cml-media/media/image14.png[cml-media/media/image14,width=135,height=309]
+image:cml-media/media/image14.png[cml-media/media/image14,width=135,height=309]
 
 And as you can see we do not have any applications available yet. Go back to Files, here you can see that we provide the code on an application that is a Flask application as front-end
 
@@ -587,7 +587,7 @@ image:cml-media/media/image84.png[cml-media/media/image84,width=624,height=336]
 
 Provide the following details.
 
-[width="100%",cols="24%,76%",options="header",]
+[width="100%",cols="24%,76%",]
 |===
 |*Name* |<username>_telco_churn_app
 |*Subdomain* |<username>telco
@@ -641,5 +641,3 @@ Everytime you click and change a value, the application will call our model. To 
 image:cml-media/media/image2.png[cml-media/media/image2,width=624,height=216]
 
 This concludes the lab.
-
-== 
