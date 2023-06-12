@@ -1,74 +1,69 @@
 Table of Contents
 
-link:#introduction[*Introduction 2*]
+link:#introduction[*Introduction*]
 
-link:#lab-summary[*Lab summary 3*]
+link:#lab-summary[*Lab summary *]
 
-link:++#lab-0---initial-setup++[*Lab 0 - Initial setup 4*]
+link:++#lab-0---initial-setup++[*Lab 0 - Initial setup*]
 
-____
-link:#pre-requisites[Pre-requisites 4]
 
-link:#getting-connected[Getting Connected 4]
+** link:#pre-requisites[Pre-requisites]
 
-link:#create-project[Create Project 4]
-____
+** link:#getting-connected[Getting Connected]
 
-link:++#lab-1---data-ingest++[*Lab 1 - Data Ingest 8*]
+** link:#create-project[Create Project]
 
-____
-link:#bootstrap-script[Bootstrap Script 9]
 
-link:#step-1-create-new-session[Step 1 : Create New Session 9]
+link:++#lab-1---data-ingest++[*Lab 1 - Data Ingest*]
 
-link:#step-2-execute-bootstrap-script[Step 2 : Execute Bootstrap script 11]
 
-link:#execute-data-ingest-script[Execute Data Ingest Script 13]
-____
+** link:#bootstrap-script[Bootstrap Script]
 
-link:++#lab-2---data-exploration++[*Lab 2 - Data Exploration 17*]
+** link:#step-1-create-new-session[Step 1 : Create New Session]
 
-____
-link:#step-1-create-new-session-1[Step 1 : Create New Session 17]
+** link:#step-2-execute-bootstrap-script[Step 2 : Execute Bootstrap script]
 
-link:#step-2-execute-data-exploration-script[Step 2 : Execute Data Exploration script 19]
-____
+** link:#execute-data-ingest-script[Execute Data Ingest Script ]
 
-link:++#lab-3---model-buildtrain-experiment++[*Lab 3 - Model Build/Train Experiment 23*]
+link:++#lab-2---data-exploration++[*Lab 2 - Data Exploration*]
 
-____
-link:#model-building[Model Building 23]
 
-link:#step-1-create-session[Step 1 : Create Session 23]
+** link:#step-1-create-new-session-1[Step 1 : Create New Session]
 
-link:#step-2-execute-model-building-script[Step 2 : Execute model building script 25]
+** link:#step-2-execute-data-exploration-script[Step 2 : Execute Data Exploration script]
 
-link:#model-training[Model Training 26]
 
-link:#step-1-create-a-session[Step 1 : Create a session 26]
+link:++#lab-3---model-buildtrain-experiment++[*Lab 3 - Model Build/Train Experiment *]
 
-link:#step-2-run-experiments[Step 2 : Run Experiments 29]
 
-link:#step-3-verify-experiment-metrics[Step 3 : Verify Experiment metrics 31]
-____
+** link:#model-building[Model Building ]
 
-link:++#lab-4---model-deployserve++[*Lab 4 - Model Deploy/Serve 33*]
+*** link:#step-1-create-session[Step 1 : Create Session ]
 
-link:++#lab-5---application-deploy++[*Lab 5 - Application Deploy 43*]
+*** link:#step-2-execute-model-building-script[Step 2 : Execute model building script ]
 
-== 
+** link:#model-training[Model Training ]
 
-== 
+*** link:#step-1-create-a-session[Step 1 : Create a session ]
 
-== 
+*** link:#step-2-run-experiments[Step 2 : Run Experiments ]
 
-==  +
-Introduction
+*** link:#step-3-verify-experiment-metrics[Step 3 : Verify Experiment metrics ]
+
+
+link:++#lab-4---model-deployserve++[*Lab 4 - Model Deploy/Serve *]
+
+link:++#lab-5---application-deploy++[*Lab 5 - Application Deploy *]
+
+== Introduction
 
 In this workshop, we will introduce you to the World Wide Telco organization. They have many ML use cases, but we’ll focus on a specific one for today. In this use case they are trying to reduce customer churn (i.e. cancellations) and most of the cancellations are coming in from their call center. In these hands-on labs, a customer, “Francisco” will call in with the intent to cancel. The call center application will - based on the predicted reasoning for Francisco to cancel - provide recommendations to Stefan who is the customer service manager for WW Telco. He’ll then provide the offer to Francisco will choose or not to choose to accept - i.e. not cancel his account.
 
-image:cml-media/media/image63.png[cml-media/media/image63,width=547,height=242]
-
+++++
+<p align="center">
+  <img width="547" height="242" src="cml-media/media/image63.png">
+</p>
+++++
 The Hands on Labs will take you through the whole process of logging in, sourcing the code and building fully working applications with deployed models.
 
 == Lab summary
