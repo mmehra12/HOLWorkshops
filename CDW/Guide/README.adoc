@@ -782,7 +782,7 @@ In the output look for the following.
 * {blank}
 +
 
-*Location:* s3a://handsonworkshop/my-data/warehouse/tablespace/external/hive/wuser00_airlines.db/planes
+*Location:* s3a://handsonworkshop/my-data/warehouse/tablespace/external/hive/immiapac00_airlines.db/planes
 
 * {blank}
 +
@@ -1997,7 +1997,7 @@ Click on the + icon next to the flights table option.
 
 image:cdw-media/media/image104.png[cdw-media/media/image104,width=595,height=319]
 
-Select the appropriate Database Name base on your user id (Ex: wuser00_airlines) and table name planes.
+Select the appropriate Database Name base on your user id (Ex: immiapac00_airlines) and table name planes.
 
 image:cdw-media/media/image95.png[cdw-media/media/image95,width=480,height=288]
 
@@ -2015,7 +2015,7 @@ ____
 * {blank}
 +
 ____
-Now we will create a join between another table. Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: wuser00_airlines) and table name airlines.
+Now we will create a join between another table. Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: immiapac00_airlines) and table name airlines.
 
 
 image:cdw-media/media/image43.png[cdw-media/media/image43,width=505,height=248]
@@ -2035,7 +2035,7 @@ ____
 * {blank}
 +
 ____
-Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: wuser00_airlines) and table name airports.
+Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: immiapac00_airlines) and table name airports.
 
 
 image:cdw-media/media/image92.png[cdw-media/media/image92,width=483,height=236]
@@ -2055,7 +2055,7 @@ ____
 * {blank}
 +
 ____
-Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: wuser00_airlines) and table name airports.
+Click on + icon next to flights as shown below. Select the appropriate Database Name based on your <user_id> (Ex: immiapac00_airlines) and table name airports.
 
 image:cdw-media/media/image4.png[cdw-media/media/image4,width=624,height=358]
 ____

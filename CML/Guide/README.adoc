@@ -1,0 +1,650 @@
+Table of Contents
+
+link:#introduction[*Introduction 2*]
+
+link:#lab-summary[*Lab summary 3*]
+
+link:++#lab-0---initial-setup++[*Lab 0 - Initial setup 4*]
+
+____
+link:#pre-requisites[Pre-requisites 4]
+
+link:#getting-connected[Getting Connected 4]
+
+link:#create-project[Create Project 4]
+____
+
+link:++#lab-1---data-ingest++[*Lab 1 - Data Ingest 8*]
+
+____
+link:#bootstrap-script[Bootstrap Script 9]
+
+link:#step-1-create-new-session[Step 1 : Create New Session 9]
+
+link:#step-2-execute-bootstrap-script[Step 2 : Execute Bootstrap script 11]
+
+link:#execute-data-ingest-script[Execute Data Ingest Script 13]
+____
+
+link:++#lab-2---data-exploration++[*Lab 2 - Data Exploration 17*]
+
+____
+link:#step-1-create-new-session-1[Step 1 : Create New Session 17]
+
+link:#step-2-execute-data-exploration-script[Step 2 : Execute Data Exploration script 19]
+____
+
+link:++#lab-3---model-buildtrain-experiment++[*Lab 3 - Model Build/Train Experiment 23*]
+
+____
+link:#model-building[Model Building 23]
+
+link:#step-1-create-session[Step 1 : Create Session 23]
+
+link:#step-2-execute-model-building-script[Step 2 : Execute model building script 25]
+
+link:#model-training[Model Training 26]
+
+link:#step-1-create-a-session[Step 1 : Create a session 26]
+
+link:#step-2-run-experiments[Step 2 : Run Experiments 29]
+
+link:#step-3-verify-experiment-metrics[Step 3 : Verify Experiment metrics 31]
+____
+
+link:++#lab-4---model-deployserve++[*Lab 4 - Model Deploy/Serve 33*]
+
+link:++#lab-5---application-deploy++[*Lab 5 - Application Deploy 43*]
+
+== 
+
+== 
+
+== 
+
+==  +
+Introduction
+
+In this workshop, we will introduce you to the World Wide Telco organization. They have many ML use cases, but we’ll focus on a specific one for today. In this use case they are trying to reduce customer churn (i.e. cancellations) and most of the cancellations are coming in from their call center. In these hands-on labs, a customer, “Francisco” will call in with the intent to cancel. The call center application will - based on the predicted reasoning for Francisco to cancel - provide recommendations to Stefan who is the customer service manager for WW Telco. He’ll then provide the offer to Francisco will choose or not to choose to accept - i.e. not cancel his account.
+
+image:cml-media/media/image63.png[cml-media/media/image63,width=547,height=242]
+
+The Hands on Labs will take you through the whole process of logging in, sourcing the code and building fully working applications with deployed models.
+
+== Lab summary
+
+[arabic]
+. {blank}
++
+____
+Data Ingest.
+____
+. {blank}
++
+____
+Data Exploration.
+____
+. {blank}
++
+____
+Model Build Experiment.
+____
+. {blank}
++
+____
+Model Deploy.
+____
+. {blank}
++
+____
+Application Deploy
+____
+
+== Lab 0 - Initial setup
+
+=== Pre-requisites
+
+[arabic]
+. {blank}
++
+____
+Laptop with a supported OS (Windows 7 not supported) or Macbook.
+____
+. {blank}
++
+____
+A modern browser - Google Chrome (IE, Firefox, Safari not supported).
+____
+. {blank}
++
+____
+Firewall that prevents access to GitHub should not be present.
+____
+
+=== Getting Connected
+
+You will be provided with a set of credentials along with a URL which will give you access to the CDP environment. The details will be shared by the instructor either before the lab starts or during the course of the labs
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Environment URL* |Will be shared by the instructor
+|*Login Email* |Will be shared by the instructor
+|*Workload User Name* |Will be shared by the instructor
+|*Workload Password* |Will be shared by the instructor
+|*GitHub URL* |Will be shared by the instructor
+|===
+
+=== Create Project
+
+Login into CDP using the URL above and the credentials assigned to you. After logging into CDP you will have access to the main console and then go to Cloudera Machine Learning workspace. Click on Workspace to proceed to executing the hands-on labs.
+
+image:cml-media/media/image69.png[cml-media/media/image69,width=624,height=132]
+
+This will launch a ML workspace screen.
+
+image:cml-media/media/image76.png[cml-media/media/image76,width=407,height=206]
+
+Click on “New Project” to start with the creation of our project.
+
+Enter the following details in the New Project Page
+
+[width="100%",cols="26%,74%",options="header",]
+|===
+|*Project Name* |<Workload_Username>_telco_churn_project
+|*Project Description* |Telco churn analytics
+|*Project Visibility* |Private
+|*Initial Setup* |Select “Git”
+|*Protocol* |HTTPS
+|*Git URL of Project* |https://github.com/mmehra12/cml_churn_demo
+|*Runtime Setup* |Basic
+|*Kernel* |Python 3.7
+|===
+
+image:cml-media/media/image28.png[cml-media/media/image28,width=459,height=425]
+
+image:cml-media/media/image70.png[cml-media/media/image70,width=464,height=293]
+
+Click on *Create Project*
+
+On successful creation you should now see the project on your Project page
+
+image:cml-media/media/image42.png[cml-media/media/image42,width=489,height=281]
+
+Clicking on it will take you to the Project that you just cloned from GitHub and you will be able to manage all the files from GitHub here.
+
+== image:cml-media/media/image72.png[cml-media/media/image72,width=553,height=306]
+
+== Lab 1 - Data Ingest 
+
+In this lab, you will work on the Data Ingest Stage.image:cml-media/media/image64.png[cml-media/media/image64,width=524,height=262]
+
+=== *Bootstrap Script*
+
+We need to execute a bootstrap script at the start of the project. It will install the requirements, create the STORAGE environment variable and copy the data from raw/WA_Fn-UseC_-Telco-Customer-Churn-.csv into /datalake/data/churn of the STORAGE location, on AWS it will s3a://[something], on Azure it will be abfs://[something] and on CDSW cluster, it will be hdfs://[something]
+
+==== Step 1 : Create New Session
+
+To create a new session you can go into your project and click on *New Session*
+
+image:cml-media/media/image65.png[cml-media/media/image65,width=496,height=287]
+
+Start a “*NEW SESSION*” and use the below configuration.
+
+[width="100%",cols="21%,79%",options="header",]
+|===
+|*Session Name* |prep_data_ingest
+|*Runtime Editor* |Workbench
+|*Enable Spark* |Yes - Spark version 2.4.8
+|*Resource Profile* |2 vCPU / 4 GiB
+|===
+
+Click on *[.underline]#START SESSION#*
+
+image:cml-media/media/image49.png[cml-media/media/image49,width=500,height=361]
+
+____
+*_IMPORTANT :_ Please do not use the higher resource configurations.*
+
+On successful creation of the session you will get a Dialog box with a code snippet to connect to this session from an application. For now we can click on Close
+____
+
+image:cml-media/media/image66.png[cml-media/media/image66,width=367,height=256]
+
+==== Step 2 : Execute Bootstrap script
+
+Once the session is ready you should get a similar message
+
+image:cml-media/media/image30.png[cml-media/media/image30,width=445,height=222]
+
+Select the *0_bootstrap.py* on the left file browser
+
+image:cml-media/media/image53.png[cml-media/media/image53,width=211,height=386]
+
+Select *Run -> Rull All*
+
+image:cml-media/media/image18.png[cml-media/media/image18,width=356,height=223]
+
+As this will install all the dependencies and the first execution will take a bit tad longer as it needs to download all the binaries. You will start to see the execution logs on the right side of the screen.
+
+image:cml-media/media/image52.png[cml-media/media/image52,width=493,height=285]
+
+This execution will take a couple of minutes. The last command to be executed is this and post this the bootstrap step is completed, and you can move to the next step.
+
+image:cml-media/media/image1.png[cml-media/media/image1,width=548,height=325]
+
+=== Execute Data Ingest Script
+
+In the same Workbench, open the script “_1_data_ingest.py_”
+
+image:cml-media/media/image8.png[cml-media/media/image8,width=203,height=362]
+
+This script will load the data from an S3 bucket using Spark.
+
+It demonstrates how to read from files and tables using Spark file and SQL operators.
+
+Click on *Run → Run All.*
+
+image:cml-media/media/image37.png[cml-media/media/image37,width=377,height=254]
+
+Session output will show the code execution results. Observe the database, table, and data from the table.
+
+image:cml-media/media/image73.png[cml-media/media/image73,width=624,height=332]
+
+Also examine the logs and Spark UI for details of the run. +
+image:cml-media/media/image68.png[cml-media/media/image68,width=624,height=354]
+
+Stop the session once you data ingestion completes
+
+____
+image:cml-media/media/image34.png[cml-media/media/image34,width=362,height=281]
+____
+
+Go back to the Project page
+
+____
+image:cml-media/media/image57.png[cml-media/media/image57,width=484,height=235]
+____
+
+== Lab 2 - Data Exploration 
+
+In this lab, you will explore some dataset using a different editor from the previous lab.
+
+In fact, in this lab we are going to use a popular notebook, Jupyter, to show the flexibility of CML that allows you to bring your own editor.
+
+== image:cml-media/media/image38.png[cml-media/media/image38,width=425,height=239]
+
+=== Step 1 : Create New Session
+
+To create a new session you can go into your project and click on *New Session*
+
+image:cml-media/media/image65.png[cml-media/media/image65,width=428,height=247]
+
+Start a “*NEW SESSION*” and use the below configuration.
+
+[width="100%",cols="21%,79%",options="header",]
+|===
+|*Session Name* |data_explore
+|*Runtime Editor* |JupyterLab
+|*Enable Spark* |Yes - Spark version 2.4.8
+|*Resource Profile* |2 vCPU / 4 GiB
+|===
+
+Click on *[.underline]#START SESSION#*image:cml-media/media/image81.png[cml-media/media/image81,width=470,height=339]
+
+=== 
+
+==== Step 2 : Execute Data Exploration script
+
+Double-Click on *2_data_exploration.ipynb* it will take you into the notebookimage:cml-media/media/image51.png[cml-media/media/image51,width=624,height=312]
+
+As you notice we are interacting with the data lake, in particular with the database previously created
+
+image:cml-media/media/image55.png[cml-media/media/image55,width=624,height=154]
+
+At this point the data scientist realized that they forgot to add a dependency at the time of bootstrap process. They can still do that from here. Let’s see how that can be done.
+
+For our data exploration, if you run the script without making any changes you will see that it will fail at a point because of a missing dependency.
+
+image:cml-media/media/image20.png[cml-media/media/image20,width=624,height=348]
+
+This can be taken care of by adding the missing dependency before we make use of it.
+
+Add this command at the start of your script and Run All Cells again.
+
+To add a new command block got to the start of the script and select the first block of code, Click on the + sign at the top of the editor and enter the following command
+
+*!pip install seaborn*
+
+image:cml-media/media/image71.png[cml-media/media/image71,width=424,height=328]
+
+image:cml-media/media/image39.png[cml-media/media/image39,width=491,height=293]
+
+You are ready to run the notebook, go to _Cell_, _Run All_
+
+And you can analyze the plotted graphs
+
+____
+image:cml-media/media/image48.png[cml-media/media/image48,width=508,height=352]
+____
+
+image:cml-media/media/image27.png[cml-media/media/image27,width=513,height=288]
+
+Now we can go back to _Project_
+
+This concludes this lab.
+
+* +
+*
+
+== Lab 3 - Model Build/Train Experiment 
+
+In this lab, you will build and train the model, using the Experiment feature form CML that allows you to run offline different training sessions, with different parameters configuration, for your model so that you could promote in “Production” that configuration that showed the best results, KPIs.
+
+image:cml-media/media/image25.png[cml-media/media/image25,width=514,height=289]
+
+=== Model Building
+
+==== Step 1 : Create Session
+
+We will use a Jupyter Notebook to show the process of selecting and building the model to predict churn. It also shows more details on how the LIME model is created and a bit more on what LIME is actually doing.
+
+To create a new session you can go into your project and click on *New Session*
+
+image:cml-media/media/image65.png[cml-media/media/image65,width=428,height=247]
+
+Start a “*NEW SESSION*” and use the below configuration.
+
+[width="100%",cols="21%,79%",options="header",]
+|===
+|*Session Name* |model_building
+|*Runtime Editor* |JupyterLab
+|*Enable Spark* |Yes - Spark version 2.4.8
+|*Resource Profile* |2 vCPU / 4 GiB
+|===
+
+Click on *[.underline]#START SESSION#*
+
+image:cml-media/media/image82.png[cml-media/media/image82,width=439,height=315]
+
+==== Step 2 : Execute model building script
+
+Open the _3_model_building.ipynb_ file.
+
+image:cml-media/media/image60.png[cml-media/media/image60,width=624,height=462]
+
+At the top of the page click *Run > Run All Cells*.
+
+Once the script finishes executing you can scroll to the bottom of the screen and check the part of the code where the built model is getting saved in pickle format.
+
+image:cml-media/media/image17.png[cml-media/media/image17,width=624,height=134]
+
+You can now see this pickle file created in your project directory as shown below.
+
+image:cml-media/media/image79.png[cml-media/media/image79,width=299,height=366]
+
+=== Model Training
+
+==== Step 1 : Create a session
+
+For the training portion of the lab we will use the file *_4_train_models.py_*
+
+Click on it and familiarize yourself with the code. This can be done by going into your project, clicking on *_Files_* in the left pane, and viewing the file *_4_train_models.py_*
+
+image:cml-media/media/image77.png[cml-media/media/image77,width=524,height=422]
+
+The code also keeps track of the metrics associated to a particular train configuration:
+
+image:cml-media/media/image10.png[cml-media/media/image10,width=624,height=73]
+
+The real model that is being trained can be seen here. Go to the models folder:
+
+image:cml-media/media/image24.png[cml-media/media/image24,width=624,height=76]
+
+image:cml-media/media/image26.png[cml-media/media/image26,width=624,height=202]
+
+To create a new session you can go into your project, select *_Sessions_* in the left pane, and click on *New Session*
+
+image:cml-media/media/image65.png[cml-media/media/image65,width=496,height=287]
+
+Start a “*NEW SESSION*” and use the below configuration.
+
+[width="100%",cols="21%,79%",options="header",]
+|===
+|*Session Name* |experiment_runs
+|*Runtime Editor* |Workbench
+|*Enable Spark* |Yes - Spark version 2.4.8
+|*Resource Profile* |2 vCPU / 4 GiB
+|===
+
+Click on *[.underline]#START SESSION#*
+
+image:cml-media/media/image50.png[cml-media/media/image50,width=571,height=452]
+
+==== Step 2 : Run Experiments
+
+Select the file *_4_train_models.py_*
+
+Select *_Run -> Rull All_*
+
+Once this runs successfully Go back to the *Project Page*
+
+image:cml-media/media/image12.png[cml-media/media/image12,width=624,height=298]
+
+Select *_Experiments_* from the left tab
+
+image:cml-media/media/image22.png[cml-media/media/image22,width=136,height=322]
+
+You will see that the experiment we ran from the session shows up here as it has the same name that we specified in the script.
+
+image:cml-media/media/image54.png[cml-media/media/image54,width=369,height=265]
+
+image:cml-media/media/image13.png[cml-media/media/image13,width=624,height=172]
+
+==== Step 3 : Verify Experiment metrics
+
+Click on the Experiment you just ran and look for the train score and test score
+
+image:cml-media/media/image56.png[cml-media/media/image56,width=624,height=232]
+
+We can run multiple experiments and based on the best score we can decide which model to go with. The model is also one of the columns in the Experiment details.
+
+image:cml-media/media/image33.png[cml-media/media/image33,width=624,height=88]
+
+This concludes the Lab
+
+== 
+
+== 
+
+===  +
+
+== Lab 4 - Model Deploy/Serve 
+
+In this lab, you will deploy/serve the model that you have trained in the Lab 3 as a REST endpoint. The model can be invoked as-needed, in real-time or batch fashion, by external services that need to score the prediction implemented by the model.
+
+=== image:cml-media/media/image9.png[cml-media/media/image9,width=624,height=350] +
+
+=== image:cml-media/media/image62.png[cml-media/media/image62,width=624,height=350]
+
+Click on *_Files_* in the left tab, and go to the file *_5_model_serve_explainer.py_*:
+
+=== image:cml-media/media/image75.png[cml-media/media/image75,width=624,height=290]
+
+This is the script for serving the model, and the line below is loading the pickel model we have generated in the Lab 3
+
+=== image:cml-media/media/image67.png[cml-media/media/image67,width=498,height=58]
+
+and the function is the one that takes the input arguments, passes them to the model for scoring and gives back the result of the score.
+
+=== image:cml-media/media/image78.png[cml-media/media/image78,width=498,height=148]
+
+Copy the entire string as shown below because we are going to use it in the future and a sample JSON input parameters for the model.
+
+\{"StreamingTV":"No","MonthlyCharges":70.35,"PhoneService":"No","PaperlessBilling":"No","Partner":"No","OnlineBackup":"No","gender":"Female","Contract":"Month-to-month","TotalCharges":1397.475,"StreamingMovies":"No","DeviceProtection":"No","PaymentMethod":"Bank transfer (automatic)","tenure":29,"Dependents":"No","OnlineSecurity":"No","MultipleLines":"No","InternetService":"DSL","SeniorCitizen":"No","TechSupport":"No"}
+
+Now go to *_Model Deployments_*
+
+image:cml-media/media/image61.png[cml-media/media/image61,width=126,height=307]
+
+Click *_New Model_*
+
+image:cml-media/media/image59.png[cml-media/media/image59,width=496,height=199]
+
+Enter the following details
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|*Deployment Template* |Deploy Model from Code
+|*Name* |<workload_username>_telco_churn_mod
+|*Description* |Deploying the telco churn model
+|*Enable Authentication* |*False (Disable)*
+|*File* |5_model_serve_explainer.py
+|*Function* |explain
+|*Example Input* |\{"StreamingTV":"No","MonthlyCharges":70.35,"PhoneService":"No","PaperlessBilling":"No","Partner":"No","OnlineBackup":"No","gender":"Female","Contract":"Month-to-month","TotalCharges":1397.475,"StreamingMovies":"No","DeviceProtection":"No","PaymentMethod":"Bank transfer (automatic)","tenure":29,"Dependents":"No","OnlineSecurity":"No","MultipleLines":"No","InternetService":"DSL","SeniorCitizen":"No","TechSupport":"No"}
+|*Runtime Editor* |Workench
+|*Enable Spark* |TRUE - Spark 2.4.8
+|*Resource Profile* |2 vCPU / 4 GiB
+|===
+
+image:cml-media/media/image85.png[cml-media/media/image85,width=396,height=398]
+
+image:cml-media/media/image86.png[cml-media/media/image86,width=397,height=433]
+
+image:cml-media/media/image29.png[cml-media/media/image29,width=397,height=173]
+
+At this point you can deploy the model by clicking *_Deploy model_*
+
+image:cml-media/media/image32.png[cml-media/media/image32,width=624,height=190]
+
+The status will go thru the life-cycle of the container _Pending_ -> _Building_
+
+image:cml-media/media/image36.png[cml-media/media/image36,width=624,height=189]
+
+_Building_ -> _Deploying_
+
+image:cml-media/media/image46.png[cml-media/media/image46,width=624,height=189]
+
+And finally _Deployed_
+
+image:cml-media/media/image41.png[cml-media/media/image41,width=522,height=158]
+
+Now you can click on the model name and test it ...image:cml-media/media/image40.png[cml-media/media/image40,width=472,height=229]
+
+… you should get the following:
+
+image:cml-media/media/image45.png[cml-media/media/image45,width=624,height=100]
+
+If you want to call the model from external services, the sample codes for invoking this REST endpoint are provided in Shell, Python and R
+
+image:cml-media/media/image44.png[cml-media/media/image44,width=624,height=93]
+
+As you can see the sample codes also provide an _accesskey_ for invoking this model, so only the services that provide a correct _accesskey_ can invoke it. You can manage the access key by going to *_Settings_*:
+
+image:cml-media/media/image47.png[cml-media/media/image47,width=536,height=436]
+
+Copy the Access Key for the next lab
+
+image:cml-media/media/image31.png[cml-media/media/image31,width=624,height=129]
+
+The model can be monitored going to the *_Monitoring_* tab
+
+image:cml-media/media/image19.png[cml-media/media/image19,width=624,height=294]
+
+This concludes this lab.
+
+===  +
+
+== Lab 5 - Application Deploy 
+
+In this lab, you will create an application that embeds the model deployed in the previous lab, allowing business users, end-users that are not Data Scientists to interact and to get insight about the context of these analyses.
+
+== image:cml-media/media/image16.png[cml-media/media/image16,width=351,height=197]
+
+In the left tab, go to *_Applications_*
+
+== image:cml-media/media/image14.png[cml-media/media/image14,width=135,height=309]
+
+And as you can see we do not have any applications available yet. Go back to Files, here you can see that we provide the code on an application that is a Flask application as front-end
+
+And the back-end is provided by the 6_application.py code
+
+And now update the access key in the *single_view.html* (this file is under the *flask* folder)
+
+image:cml-media/media/image58.png[cml-media/media/image58,width=501,height=433]
+
+Click on *single_view.html* and you can see the accesskey that we need to substitute to the one we copied in the previous lab
+
+image:cml-media/media/image3.png[cml-media/media/image3,width=624,height=412]
+
+In order to edit this file, open it in a workbench (click Open in Session)
+
+image:cml-media/media/image23.png[cml-media/media/image23,width=624,height=182]
+
+You do not need to launch a session. Just substitute the access key with yours and select *File > Save*.
+
+image:cml-media/media/image21.png[cml-media/media/image21,width=618,height=168]
+
+This is going to be used to call our deployed model when the end-user of this application will interact with it.
+
+Now go back to Application, and click the New Application button.
+
+image:cml-media/media/image84.png[cml-media/media/image84,width=624,height=336]
+
+Provide the following details.
+
+[width="100%",cols="24%,76%",options="header",]
+|===
+|*Name* |<username>_telco_churn_app
+|*Subdomain* |<username>telco
+|*Description* |Application that leverages the built model
+|*Script* |6_application.py
+|*Runtime - Editor* |Workbench
+|*Enable Spark* |TRUE - Spark 2.4.8
+|*Resource Profile* |2 vCPU / 4 GiB
+|===
+
+image:cml-media/media/image83.png[cml-media/media/image83,width=389,height=501]
+
+image:cml-media/media/image74.png[cml-media/media/image74,width=379,height=179]
+
+And then click *Create Application*
+
+Then you should see the status *Starting* state
+
+image:cml-media/media/image35.png[cml-media/media/image35,width=624,height=450]
+
+After a while it will change to *Running*
+
+image:cml-media/media/image11.png[cml-media/media/image11,width=466,height=196]
+
+Click now in your newly created application
+
+image:cml-media/media/image80.png[cml-media/media/image80,width=362,height=185]
+
+You can see the subdomain we have specified before as a prefix of your application url.
+
+image:cml-media/media/image4.png[cml-media/media/image4,width=624,height=142]
+
+Once the application is loaded
+
+image:cml-media/media/image6.png[cml-media/media/image6,width=624,height=113]
+
+Click on one of the item in the Probability column
+
+image:cml-media/media/image7.png[cml-media/media/image7,width=212,height=372]
+
+To get the detailed view
+
+image:cml-media/media/image5.png[cml-media/media/image5,width=624,height=681]
+
+If you change some of the values, that will also change the churn probability by calling the model we have deployed in the previous lab.
+
+image:cml-media/media/image15.png[cml-media/media/image15,width=624,height=681]
+
+Everytime you click and change a value, the application will call our model. To check this go back to your model deployed, click Monitoring bd you should see that the Receive value is increased
+
+image:cml-media/media/image2.png[cml-media/media/image2,width=624,height=216]
+
+This concludes the lab.
+
+== 
