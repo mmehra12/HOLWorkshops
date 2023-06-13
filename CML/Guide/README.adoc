@@ -133,11 +133,19 @@ You will be provided with a set of credentials along with a URL which will give 
 
 Login into CDP using the URL above and the credentials assigned to you. After logging into CDP you will have access to the main console and then go to Cloudera Machine Learning workspace. Click on Workspace to proceed to executing the hands-on labs.
 
-image:cml-media/media/image69.png[cml-media/media/image69,width=624,height=132]
+++++
+<p align="center">
+  <img width="624" height="132" src="cml-media/media/image69.png">
+</p>
+++++
 
 This will launch a ML workspace screen.
 
-image:cml-media/media/image76.png[cml-media/media/image76,width=407,height=206]
+++++
+<p align="center">
+  <img width="407" height="206" src="cml-media/media/image76.png">
+</p>
+++++
 
 Click on “New Project” to start with the creation of our project.
 
@@ -155,25 +163,48 @@ Enter the following details in the New Project Page
 |*Kernel* |Python 3.7
 |===
 
-image:cml-media/media/image28.png[cml-media/media/image28,width=459,height=425]
+++++
+<p align="center">
+  <img width="459" height="425" src="cml-media/media/image28.png">
+</p>
+++++
 
-image:cml-media/media/image70.png[cml-media/media/image70,width=464,height=293]
+++++
+<p align="center">
+  <img width="459" height="293" src="cml-media/media/image70.png">
+</p>
+++++
+
 
 Click on *Create Project*
 
 On successful creation you should now see the project on your Project page
 
-image:cml-media/media/image42.png[cml-media/media/image42,width=489,height=281]
+++++
+<p align="center">
+  <img width="489" height="281" src="cml-media/media/image42.png">
+</p>
+++++
 
 Clicking on it will take you to the Project that you just cloned from GitHub and you will be able to manage all the files from GitHub here.
 
-== image:cml-media/media/image72.png[cml-media/media/image72,width=553,height=306]
+++++
+<p align="center">
+  <img width="553" height="306" src="cml-media/media/image72.png">
+</p>
+++++
+
 
 == Lab 1 - Data Ingest 
 
 In this lab, you will work on the Data Ingest Stage.
 
-image:cml-media/media/image64.png[cml-media/media/image64,width=524,height=262]
+++++
+<p align="center">
+  <img width="553" height="262" src="cml-media/media/image64.png">
+</p>
+++++
+
 
 === *Bootstrap Script*
 
@@ -183,7 +214,13 @@ We need to execute a bootstrap script at the start of the project. It will insta
 
 To create a new session you can go into your project and click on *New Session*
 
-image:cml-media/media/image65.png[cml-media/media/image65,width=496,height=287]
+
+++++
+<p align="center">
+  <img width="496" height="287" src="cml-media/media/image65.png">
+</p>
+++++
+
 
 Start a “*NEW SESSION*” and use the below configuration.
 
@@ -197,43 +234,77 @@ Start a “*NEW SESSION*” and use the below configuration.
 
 Click on *[.underline]#START SESSION#*
 
-image:cml-media/media/image49.png[cml-media/media/image49,width=500,height=361]
+++++
+<p align="center">
+  <img width="500" height="361" src="cml-media/media/image49.png">
+</p>
+++++
 
-____
-*_IMPORTANT :_ Please do not use the higher resource configurations.*
+[IMPORTANT]
+Please do not use the higher resource configurations.
+
 
 On successful creation of the session you will get a Dialog box with a code snippet to connect to this session from an application. For now we can click on Close
-____
 
-image:cml-media/media/image66.png[cml-media/media/image66,width=367,height=256]
+++++
+<p align="center">
+  <img width="367" height="256" src="cml-media/media/image66.png">
+</p>
+++++
+
 
 ==== Step 2 : Execute Bootstrap script
 
 Once the session is ready you should get a similar message
 
-image:cml-media/media/image30.png[cml-media/media/image30,width=445,height=222]
+++++
+<p align="center">
+  <img width="445" height="222" src="cml-media/media/image30.png">
+</p>
+++++
+
 
 Select the *0_bootstrap.py* on the left file browser
 
-image:cml-media/media/image53.png[cml-media/media/image53,width=211,height=386]
+++++
+<p align="center">
+  <img width="211" height="386" src="cml-media/media/image53.png">
+</p>
+++++
+
 
 Select *Run -> Rull All*
+++++
+<p align="center">
+  <img width="356" height="222" src="cml-media/media/image18.png">
+</p>
+++++
 
-image:cml-media/media/image18.png[cml-media/media/image18,width=356,height=223]
 
 As this will install all the dependencies and the first execution will take a bit tad longer as it needs to download all the binaries. You will start to see the execution logs on the right side of the screen.
-
-image:cml-media/media/image52.png[cml-media/media/image52,width=493,height=285]
+++++
+<p align="center">
+  <img width="492" height="285" src="cml-media/media/image52.png">
+</p>
+++++
 
 This execution will take a couple of minutes. The last command to be executed is this and post this the bootstrap step is completed, and you can move to the next step.
 
-image:cml-media/media/image1.png[cml-media/media/image1,width=548,height=325]
+++++
+<p align="center">
+  <img width="548" height="325" src="cml-media/media/image1.png">
+</p>
+++++
 
 === Execute Data Ingest Script
 
 In the same Workbench, open the script “_1_data_ingest.py_”
 
-image:cml-media/media/image8.png[cml-media/media/image8,width=203,height=362]
+++++
+<p align="center">
+  <img width="203" height="362" src="cml-media/media/image8.png">
+</p>
+++++
 
 This script will load the data from an S3 bucket using Spark.
 
@@ -241,26 +312,42 @@ It demonstrates how to read from files and tables using Spark file and SQL opera
 
 Click on *Run → Run All.*
 
-image:cml-media/media/image37.png[cml-media/media/image37,width=377,height=254]
+++++
+<p align="center">
+  <img width="377" height="254" src="cml-media/media/image37.png">
+</p>
+++++
 
 Session output will show the code execution results. Observe the database, table, and data from the table.
 
-image:cml-media/media/image73.png[cml-media/media/image73,width=624,height=332]
+++++
+<p align="center">
+  <img width="624" height="332" src="cml-media/media/image73.png">
+</p>
+++++
 
 Also examine the logs and Spark UI for details of the run. +
-image:cml-media/media/image68.png[cml-media/media/image68,width=624,height=354]
+++++
+<p align="center">
+  <img width="624" height="354" src="cml-media/media/image68.png">
+</p>
+++++
 
 Stop the session once you data ingestion completes
 
-____
-image:cml-media/media/image34.png[cml-media/media/image34,width=362,height=281]
-____
+++++
+<p align="center">
+  <img width="362" height="281" src="cml-media/media/image34.png">
+</p>
+++++
 
 Go back to the Project page
 
-____
-image:cml-media/media/image57.png[cml-media/media/image57,width=484,height=235]
-____
+++++
+<p align="center">
+  <img width="484" height="234" src="cml-media/media/image57.png">
+</p>
+++++
 
 == Lab 2 - Data Exploration 
 
@@ -268,17 +355,25 @@ In this lab, you will explore some dataset using a different editor from the pre
 
 In fact, in this lab we are going to use a popular notebook, Jupyter, to show the flexibility of CML that allows you to bring your own editor.
 
-== image:cml-media/media/image38.png[cml-media/media/image38,width=425,height=239]
-
+++++
+<p align="center">
+  <img width="445" height="239" src="cml-media/media/image38.png">
+</p>
+++++
 === Step 1 : Create New Session
 
 To create a new session you can go into your project and click on *New Session*
 
-image:cml-media/media/image65.png[cml-media/media/image65,width=428,height=247]
+
+++++
+<p align="center">
+  <img width="445" height="247" src="cml-media/media/image65.png">
+</p>
+++++
 
 Start a “*NEW SESSION*” and use the below configuration.
 
-[width="100%",cols="21%,79%",options="header",]
+[width="100%",cols="21%,79%",]
 |===
 |*Session Name* |data_explore
 |*Runtime Editor* |JupyterLab
@@ -288,21 +383,40 @@ Start a “*NEW SESSION*” and use the below configuration.
 
 Click on *[.underline]#START SESSION#*
 
-image:cml-media/media/image81.png[cml-media/media/image81,width=470,height=339]
+++++
+<p align="center">
+  <img width="470" height="339" src="cml-media/media/image81.png">
+</p>
+++++
 
 ==== Step 2 : Execute Data Exploration script
 
-Double-Click on *2_data_exploration.ipynb* it will take you into the notebookimage:cml-media/media/image51.png[cml-media/media/image51,width=624,height=312]
+Double-Click on *2_data_exploration.ipynb* it will take you into the notebook
+
+++++
+<p align="center">
+  <img width="624" height="312" src="cml-media/media/image51.png">
+</p>
+++++
 
 As you notice we are interacting with the data lake, in particular with the database previously created
 
-image:cml-media/media/image55.png[cml-media/media/image55,width=624,height=154]
+
+++++
+<p align="center">
+  <img width="624" height="154" src="cml-media/media/image55.png">
+</p>
+++++
 
 At this point the data scientist realized that they forgot to add a dependency at the time of bootstrap process. They can still do that from here. Let’s see how that can be done.
 
 For our data exploration, if you run the script without making any changes you will see that it will fail at a point because of a missing dependency.
 
-image:cml-media/media/image20.png[cml-media/media/image20,width=624,height=348]
+++++
+<p align="center">
+  <img width="624" height="348" src="cml-media/media/image20.png">
+</p>
+++++
 
 This can be taken care of by adding the missing dependency before we make use of it.
 
@@ -313,22 +427,36 @@ To add a new command block got to the start of the script and select the first b
 ====
 *!pip install seaborn*
 ====
+++++
+<p align="center">
+  <img width="424" height="328" src="cml-media/media/image71.png">
+</p>
+++++
 
-image:cml-media/media/image71.png[cml-media/media/image71,width=424,height=328]
-
-image:cml-media/media/image39.png[cml-media/media/image39,width=491,height=293]
+++++
+<p align="center">
+  <img width="491" height="293" src="cml-media/media/image39.png">
+</p>
+++++
 
 You are ready to run the notebook, go to _Cell_, _Run All_
 
 And you can analyze the plotted graphs
 
-____
-image:cml-media/media/image48.png[cml-media/media/image48,width=508,height=352]
-____
+++++
+<p align="center">
+  <img width="508" height="352" src="cml-media/media/image48.png">
+</p>
+++++
 
-image:cml-media/media/image27.png[cml-media/media/image27,width=513,height=288]
 
-Now we can go back to _Project_
+++++
+<p align="center">
+  <img width="513" height="288" src="cml-media/media/image27.png">
+</p>
+++++
+
+Now we can go back to *Project*
 
 This concludes this lab.
 
@@ -337,7 +465,11 @@ This concludes this lab.
 
 In this lab, you will build and train the model, using the Experiment feature form CML that allows you to run offline different training sessions, with different parameters configuration, for your model so that you could promote in “Production” that configuration that showed the best results, KPIs.
 
-image:cml-media/media/image25.png[cml-media/media/image25,width=514,height=289]
+++++
+<p align="center">
+  <img width="514" height="289" src="cml-media/media/image25.png">
+</p>
+++++
 
 === Model Building
 
@@ -347,11 +479,15 @@ We will use a Jupyter Notebook to show the process of selecting and building the
 
 To create a new session you can go into your project and click on *New Session*
 
-image:cml-media/media/image65.png[cml-media/media/image65,width=428,height=247]
+++++
+<p align="center">
+  <img width="428" height="247" src="cml-media/media/image65.png">
+</p>
+++++
 
 Start a “*NEW SESSION*” and use the below configuration.
 
-[width="100%",cols="21%,79%",options="header",]
+[width="100%",cols="21%,79%",]
 |===
 |*Session Name* |model_building
 |*Runtime Editor* |JupyterLab
@@ -361,13 +497,21 @@ Start a “*NEW SESSION*” and use the below configuration.
 
 Click on *[.underline]#START SESSION#*
 
-image:cml-media/media/image82.png[cml-media/media/image82,width=439,height=315]
+++++
+<p align="center">
+  <img width="439" height="315" src="cml-media/media/image82.png">
+</p>
+++++
 
 ==== Step 2 : Execute model building script
 
 Open the _3_model_building.ipynb_ file.
 
-image:cml-media/media/image60.png[cml-media/media/image60,width=624,height=462]
+++++
+<p align="center">
+  <img width="624" height="462" src="cml-media/media/image60.png">
+</p>
+++++
 
 At the top of the page click *Run > Run All Cells*.
 
