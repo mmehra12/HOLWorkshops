@@ -408,7 +408,7 @@ In the virtual cluster that has been assigned to you select HUE from the top rig
 
 ++++
 <p align="center">
-  <img width="624" height="350" src="cdw-media/media/image80.png">
+  <img width="750" height="400" src="cdw-media/media/image80.png">
 </p>
 ++++
 ____
