@@ -556,7 +556,7 @@ Go to the page where now you will access HUE of an Impala virtual warehouse assi
 
 ++++
 <p align="center">
-  <img width="559" height="155" src="cdw-media/media/image40.png">
+  <img width="559" height="275" src="cdw-media/media/image40.png">
 </p>
 ++++
 
@@ -692,7 +692,7 @@ Make sure that you are using the HUE of the HIVE virtual warehouse that has been
 
 ++++
 <p align="center">
-  <img width="624" height="153" src="cdw-media/media/image56.png">
+  <img width="750" height="400" src="cdw-media/media/image80.png">
 </p>
 ++++
 
@@ -1159,7 +1159,7 @@ In this Step we will look at some of the performance optimization and table main
 ____
 ++++
 <p align="center">
-  <img width="624" height="172" src="cdw-media/media/image53.png">
+  <img width="750" height="400" src="cdw-media/media/image80.png">
 </p>
 ++++
 ____
@@ -1458,7 +1458,7 @@ Go to the HUE UI of the HIVE virtual warehouse assigned to you
 
 ++++
 <p align="center">
-  <img width="624" height="157" src="cdw-media/media/image124.png">
+  <img width="750" height="400" src="cdw-media/media/image80.png">
 </p>
 ++++
 
