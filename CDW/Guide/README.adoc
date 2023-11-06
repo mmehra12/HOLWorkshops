@@ -1752,14 +1752,6 @@ ____
 
 ____
 
-++++
-<p align="center">
-  <img width="545" height="192" src="cdw-media/media/image117.png">
-</p>
-++++
-
-
-
 * {blank}
 +
 
