@@ -1078,7 +1078,7 @@ As a final step here let’s run the same analytic query we ran against the Raw 
 
 ++++
 <p align="center">
-  <img width="624" height="152" src="cdw-media/media/image58.png">
+  <img width="750" height="400" src="cdw-media/media/image40.png">
 </p>
 ++++
 
