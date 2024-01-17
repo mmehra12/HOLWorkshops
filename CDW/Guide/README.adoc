@@ -648,7 +648,7 @@ WHERE
 </p>
 ++++
 
-
+////
 Post execution, look at the graph on your virtual warehouse.
 
 ++++
@@ -664,6 +664,7 @@ Go back to the editor and observe the amount of time the query has taken to comp
   <img width="624" height="285" src="cdw-media/media/image113.png">
 </p>
 ++++
+////
 ____
 
 == LAB 3 - DATA LAKEHOUSE
