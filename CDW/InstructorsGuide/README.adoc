@@ -1,0 +1,95 @@
+= CDW Workshop Instructor's Guide
+Author : Manick Mehra
+Version : 0.1
+:toc: left
+:toclevels: 3
+:icons: font
+:sectnums:
+
+== Overview
+
+This guide provides instructions for setting up, validating, and destroying the environment for our workshop. Use the navigation links below to quickly jump to each section.
+
+== INIT
+
+[.underline]
+* Environment and Keycloak Creation
+
+For environment and Keycloak creation, use the following automation:
+
+link:https://github.com/pjoshi06/cdp-public-cloud-provisioner/blob/main/README.adoc[GitHub Repository]
+
+[NOTE]
+====
+Ensure you have all necessary permissions and configurations before proceeding with the automation scripts.
+====
+
+[.underline]
+* Data Upload
+
+Once the environment and the Keycloak servers are created, upload the data to the object store. This data will be used to create tables during the workshop.
+
+The data can be found in this repo under the "data" directory
+
+Upload this data to S3 if working on AWS.
+
+Example:
+
+Bucket Name : workshopcdpenvbucket
+
+Create a folder called "cdwworkshop" and upload the folder in the "data" directory to that s3 folder.
+
+The final directory structure on S3 should look like
+
+s3://workshopcdpenvbucket/cdwworkshop/airlines-raw/airlines-csv
+
+[.underline]
+* Grant permission to user group
+
+Goto <YOUR ENVIRONMENT> -> ACTIONS -> MANAGE ACCESS -> IDBroker Mapping
+
+Click on "+" at the bottom right to add a new row.
+
+Under username or Group add the group name of the user group that the automation creates. <ENVIRONMENT NAME>-aw-env-user-group
+
+Under "Role" copy past the Data Access role from above click on "Save and Sync"
+
+++++
+<p align="center">
+  ER - Diagram of the data
+</p>
+++++
+++++
+<p align="center">
+  <img width="508" height="462" src="media/usermgmt.png">
+</p>
+++++
+
+== SETUP
+
+[.underline]
+* Data Services Creation
+
+    - *Environment Activation*: Activate the created environment to begin using the services. Visit the link:https://docs.cloudera.com/cdp-public-cloud-patterns/cloud/bi-at-scale/topics/pat-bias-cdw-activate-environment.html[link] for more information
+
+    - *Virtual Warehouse Creation*: Create one hive(xsmall) and one impala virtual warehouse for every 4 participants. Visit the link:https://docs.cloudera.com/data-warehouse/cloud/managing-warehouses/topics/dw-adding-new-virtual-warehouse.html[link] for more information
+
+== VALIDATE
+
+[.underline]
+* User Login
+
+Ensure that all users can log in successfully.
+
+[.underline]
+* Lab Execution
+
+Execute the lab exercises to validate the setup.
+Find the student lab link:https://github.com/mmehra12/HOLWorkshops/tree/main/CDW/Guide[guide] here
+
+== DESTROY
+
+[.underline]
+* Environment and Keycloak Destruction
+
+Clean up and destroy the environment and Keycloak instances to avoid unnecessary charges.
